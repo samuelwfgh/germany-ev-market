@@ -1,0 +1,940 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Germany car market — EV sales, fleet, used cars, prices & charging</title>
+<meta name="description" content="German passenger-car market data: registrations, fleet, used cars, purchase prices, EV technology, charging, mileage, policy and transport energy." />
+<style>
+  :root{
+    --bg:#fff;
+    --text:#222;
+    --muted:#707070;
+    --grid:#e4e4e4;
+    --axis:#8b8b8b;
+    --link:#1565a7;
+    --bev:#3a923a;
+    --phev:#76b947;
+    --hev:#b8d86b;
+    --petrol:#e39a33;
+    --diesel:#6e6e6e;
+    --other:#bdbdbd;
+    --hydrogen:#65b9c7;
+    --accent:#237a45;
+    --warn:#8c641a;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family:Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-weight:300;
+    color:var(--text);
+    background:var(--bg);
+    line-height:1.5;
+  }
+  a{color:var(--link);text-decoration:none}
+  a:hover{text-decoration:underline}
+  h1,h2,h3,p,.centered{
+    text-align:center;
+    padding-left:10px;
+    padding-right:10px;
+    margin-left:auto;
+    margin-right:auto;
+    max-width:1000px;
+    display:block;
+  }
+  h1{font-size:2rem;font-weight:300;margin-top:30px;margin-bottom:7px}
+  h2{font-size:1.55rem;font-weight:300;margin-top:48px;margin-bottom:12px}
+  h3{font-size:1.08rem;font-weight:400;margin:18px auto 5px}
+  p{margin-top:7px;margin-bottom:7px}
+  .subtitle{color:var(--muted);font-size:.96rem}
+  .nav{font-size:.93rem;margin:12px auto 24px;word-spacing:5px}
+  .rule{height:1px;background:#ececec;max-width:1200px;margin:28px auto 0}
+  .status{
+    max-width:1040px;margin:18px auto 8px;padding:10px 14px;border:1px solid #e4e4e4;
+    background:#fafafa;font-size:.9rem;color:#555;text-align:center;
+  }
+  .status strong{font-weight:500;color:#333}
+  .status .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#aaa;margin-right:7px}
+  .status.live .dot{background:var(--bev)}
+  .status.fallback .dot{background:#d29231}
+  .load-progress{
+    width:min(560px,92%);height:4px;margin:9px auto 1px;background:#e7e7e7;overflow:hidden;border-radius:999px;
+  }
+  .load-progress-bar{
+    width:35%;height:100%;background:var(--accent);border-radius:999px;
+    animation:loadingSweep 1.35s ease-in-out infinite;transform:translateX(-120%);
+  }
+  .status.live .load-progress{display:none}
+  .status.failed .load-progress-bar{animation:none;width:100%;transform:none;background:#d29231}
+  @keyframes loadingSweep{
+    0%{transform:translateX(-120%)}
+    50%{transform:translateX(120%)}
+    100%{transform:translateX(320%)}
+  }
+  .grid{
+    max-width:1280px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:5px 18px;
+    padding:0 12px;
+  }
+  .fig{max-width:800px;display:block;margin-left:auto;margin-right:auto;width:100%}
+  .chartbox{min-height:340px;padding:2px 4px 8px}
+  .chartbox svg{display:block;width:100%;height:auto;overflow:visible}
+  .chart-title{text-align:center;font-size:14px;font-weight:400;margin:1px 0 0}
+  .chart-note{text-align:center;color:#747474;font-size:11px;margin:0 12px 5px;line-height:1.35}
+  .full{grid-column:1/-1}
+  .cards{max-width:1100px;margin:12px auto 20px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;padding:0 12px}
+  .card{border-top:1px solid #dedede;padding:12px 8px 10px;text-align:center}
+  .card .value{font-size:1.72rem;font-weight:300;line-height:1.2}
+  .card .label{font-size:.78rem;color:#666;margin-top:4px}
+  .card .detail{font-size:.72rem;color:#888;margin-top:2px}
+  .range-panel{
+    max-width:920px;margin:10px auto 22px;padding:14px 18px 12px;border:1px solid #e0e0e0;background:#fbfbfb;
+  }
+  .range-head{display:flex;justify-content:space-between;gap:16px;align-items:baseline;margin-bottom:7px}
+  .range-head .range-title{font-size:.9rem;font-weight:500;color:#444}
+  .range-head .range-value{font-size:.92rem;font-weight:500;color:var(--accent);font-variant-numeric:tabular-nums}
+  .dual-range{position:relative;height:28px;margin:2px 2px 1px}
+  .range-rail{position:absolute;left:0;right:0;top:13px;height:4px;border-radius:999px;background:#dedede;overflow:hidden}
+  .range-fill{position:absolute;top:0;bottom:0;background:var(--accent);border-radius:999px}
+  .dual-range input[type=range]{
+    position:absolute;left:0;top:2px;width:100%;height:24px;margin:0;background:transparent;appearance:none;-webkit-appearance:none;pointer-events:none;
+  }
+  .dual-range input[type=range]::-webkit-slider-runnable-track{height:4px;background:transparent;border:none}
+  .dual-range input[type=range]::-moz-range-track{height:4px;background:transparent;border:none}
+  .dual-range input[type=range]::-webkit-slider-thumb{
+    -webkit-appearance:none;appearance:none;width:16px;height:16px;margin-top:-6px;border-radius:50%;background:#fff;border:2px solid var(--accent);box-shadow:0 1px 3px rgba(0,0,0,.18);pointer-events:auto;cursor:grab;
+  }
+  .dual-range input[type=range]::-moz-range-thumb{
+    width:14px;height:14px;border-radius:50%;background:#fff;border:2px solid var(--accent);box-shadow:0 1px 3px rgba(0,0,0,.18);pointer-events:auto;cursor:grab;
+  }
+  .range-actions{text-align:center;margin-top:4px}
+  .range-actions button{padding:4px 8px;font-size:.75rem;margin:2px 3px;border-color:#d2d2d2}
+  .range-actions button.active{border-color:var(--accent);color:var(--accent);background:#f1f8f3}
+  .range-meta{text-align:center;color:#777;font-size:.74rem;margin-top:5px}
+  .insight-strip{max-width:1080px;margin:12px auto 8px;padding:0 12px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+  .insight{border:1px solid #e4e4e4;background:#fcfcfc;padding:12px 13px;text-align:center}
+  .insight .big{font-size:1.45rem;font-weight:300;line-height:1.2;color:#2b2b2b}
+  .insight .caption{font-size:.76rem;color:#666;margin-top:4px}
+  .insight .sub{font-size:.69rem;color:#888;margin-top:2px}
+  .section-kicker{max-width:950px;margin:4px auto 15px;text-align:center;color:#707070;font-size:.86rem}
+  .chart-source{text-align:center;color:#858585;font-size:10px;margin:-3px 10px 5px}
+  .timeline{max-width:970px;margin:14px auto 0;padding:0 18px;position:relative}
+  .timeline:before{content:"";position:absolute;left:84px;top:5px;bottom:5px;width:1px;background:#ddd}
+  .event{display:grid;grid-template-columns:64px 1fr;gap:28px;margin:0 0 17px;align-items:start}
+  .year{text-align:right;font-weight:500;color:#444}
+  .event p{text-align:left;margin:0;padding:0;max-width:none;font-size:.93rem}
+  .data-note{max-width:980px;margin:18px auto;border-left:3px solid #bbb;padding:8px 14px;color:#555;font-size:.9rem;text-align:left}
+  .data-note.good{border-color:var(--bev)}
+  .data-note.proxy{border-color:#d29b3f}
+  .sources{max-width:1050px;margin:15px auto 45px;padding:0 18px;font-size:.9rem}
+  .sources p{text-align:left;max-width:none;margin:7px 0;padding:0}
+  .source-tag{display:inline-block;min-width:86px;color:#666;font-weight:400}
+  button{
+    font:inherit;font-size:.82rem;font-weight:400;background:#fff;border:1px solid #bbb;border-radius:2px;
+    padding:6px 10px;cursor:pointer;color:#333;margin:4px
+  }
+  button:hover{background:#f5f5f5}
+  .small{font-size:.82rem;color:#757575}
+  .legend{display:flex;flex-wrap:wrap;justify-content:center;gap:5px 13px;font-size:11px;color:#555;margin:4px auto 7px;max-width:650px}
+  .legend span{white-space:nowrap}
+  .swatch{display:inline-block;width:10px;height:10px;margin-right:4px;vertical-align:-1px}
+  footer{border-top:1px solid #eee;padding:22px 12px 34px;color:#777;text-align:center;font-size:.8rem}
+  @media(max-width:850px){
+    .grid{grid-template-columns:1fr}
+    .full{grid-column:auto}
+    .cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .insight-strip{grid-template-columns:1fr}
+    h1{font-size:1.65rem}
+  }
+  @media(max-width:520px){
+    .cards{grid-template-columns:1fr 1fr;gap:4px}
+    .chartbox{min-height:290px}
+    .timeline:before{left:65px}
+    .event{grid-template-columns:47px 1fr;gap:23px}
+  }
+</style>
+</head>
+<body>
+
+<h1>Germany EV sales and related data</h1>
+<p class="subtitle">A German-market counterpart to Robbie Andrew's Norway EV data page</p>
+<p class="nav"><a href="#sales">new cars</a> · <a href="#market">used &amp; prices</a> · <a href="#fleet">fleet</a> · <a href="#technology">EV technology</a> · <a href="#distance">distance</a> · <a href="#policy">policy</a> · <a href="#energy">energy</a> · <a href="#sources">sources</a></p>
+
+<p>
+  This page collates German passenger-car data from the <a href="https://www.kba.de/" target="_blank" rel="noreferrer">Kraftfahrt-Bundesamt (KBA)</a>,
+  <a href="https://www.vda.de/de/aktuelles/zahlen-und-daten/monatszahlen" target="_blank" rel="noreferrer">VDA</a>,
+  <a href="https://www.umweltbundesamt.de/" target="_blank" rel="noreferrer">Umweltbundesamt (UBA)</a> and federal government sources.
+  The monthly drivetrain series is loaded from Robbie Andrew's consolidated car-sales dataset, which itself collates official registration data. Where a directly equivalent German series was not readily available, the closest defensible proxy is identified explicitly.
+</p>
+
+<div id="dataStatus" class="status fallback">
+  <span class="dot"></span><strong>Fallback data in use while the full historical series loads…</strong>
+  <div class="load-progress" aria-label="Loading full historical Germany registration data"><div class="load-progress-bar"></div></div>
+</div>
+
+<section id="sales">
+<h2>New vehicle registrations</h2>
+<p>
+  German registrations are grouped into petrol, diesel, non-plug-in hybrid (HEV), plug-in hybrid (PHEV), battery electric (BEV) and other drivetrains.
+  Registration data are not identical to retail “sales”: registration timing, fleets and dealer registrations can affect individual months.
+</p>
+
+<div class="cards">
+  <div class="card"><div class="value" id="latestBEV">68,930</div><div class="label">BEV registrations · Aug 2026</div><div class="detail">VDA/KBA</div></div>
+  <div class="card"><div class="value" id="latestBEVShare">32.4%</div><div class="label">BEV share · Aug 2026</div><div class="detail">of all passenger-car registrations</div></div>
+  <div class="card"><div class="value">515,545</div><div class="label">BEV registrations · Jan–Aug 2026</div><div class="detail">+53% vs. Jan–Aug 2025</div></div>
+  <div class="card"><div class="value">44.4%</div><div class="label">BEV + PHEV share · Aug 2026</div><div class="detail">94,336 electrified plug-in cars</div></div>
+</div>
+
+<div class="range-panel" id="rangePanel">
+  <div class="range-head">
+    <span class="range-title">Registration chart range</span>
+    <span class="range-value" id="rangeLabel">2024 — 2026</span>
+  </div>
+  <div class="dual-range" aria-label="Select registration chart year range">
+    <div class="range-rail"><div class="range-fill" id="rangeFill"></div></div>
+    <input id="yearStart" type="range" min="2024" max="2026" value="2024" step="1" aria-label="Start year">
+    <input id="yearEnd" type="range" min="2024" max="2026" value="2026" step="1" aria-label="End year">
+  </div>
+  <div class="range-actions">
+    <button type="button" data-range="all" class="active">All</button>
+    <button type="button" data-range="5">Last 5 years</button>
+    <button type="button" data-range="10">Last 10 years</button>
+    <button type="button" data-range="2020">Since 2020</button>
+  </div>
+  <div class="range-meta" id="rangeMeta">Applies to the seven time-series charts below. Latest-market headline cards remain unchanged.</div>
+</div>
+
+<div class="grid">
+  <div class="chartbox full">
+    <div class="chart-title">Monthly sales of new passenger cars: Germany</div>
+    <div class="chart-note">100% stacked monthly drivetrain share. Labels at right show the latest month and the year-to-date share for the latest year in view.</div>
+    <div id="monthlyAreaShare" class="fig"></div>
+  </div>
+  <div class="chartbox">
+    <div class="chart-title">Monthly new registrations by drivetrain — market share</div>
+    <div id="shareLegend" class="legend"></div>
+    <div id="monthlyShare" class="fig"></div>
+  </div>
+  <div class="chartbox">
+    <div class="chart-title">Annual new registrations by drivetrain — market share</div>
+    <div id="annualShare" class="fig"></div>
+  </div>
+  <div class="chartbox">
+    <div class="chart-title">Monthly new registrations — absolute</div>
+    <div class="chart-note">Thin monthly lines expose seasonality and registration spikes.</div>
+    <div id="monthlyAbs" class="fig"></div>
+  </div>
+  <div class="chartbox">
+    <div class="chart-title">Monthly new registrations — 3-month moving average</div>
+    <div class="chart-note">Smoothing makes underlying drivetrain trends easier to see.</div>
+    <div id="monthlyMA" class="fig"></div>
+  </div>
+  <div class="chartbox">
+    <div class="chart-title">Monthly registrations — stacked</div>
+    <div id="monthlyStacked" class="fig"></div>
+  </div>
+  <div class="chartbox">
+    <div class="chart-title">Plug-in share of new registrations</div>
+    <div class="chart-note">BEV and PHEV shown separately; line total is their combined share.</div>
+    <div id="plugShare" class="fig"></div>
+  </div>
+</div>
+
+<h3>Leading BEV brands</h3>
+<p>BEV registrations by brand, January–August 2026. The ranking is derived from KBA FZ 10 data.</p>
+<div class="grid">
+  <div class="chartbox full" style="max-width:850px;margin:auto;width:100%">
+    <div id="bevBrands" class="fig"></div>
+  </div>
+</div>
+<p class="small">Top six: Volkswagen 66,584; Škoda 48,323; BMW 44,332; Mercedes-Benz 37,584; Audi 34,260; Tesla 32,258.</p>
+</section>
+
+<div class="rule"></div>
+<section id="market">
+<h2>Used-car market and prices</h2>
+<p>
+  Germany's used-car market is much larger than the new-car market and changes drivetrain mix more slowly.
+  KBA calls used-car transactions <em>Besitzumschreibungen</em> (ownership transfers). Price figures below are the actual average prices paid by private buyers in the DAT survey — not list prices.
+</p>
+<div class="cards">
+  <div class="card"><div class="value">6.51m</div><div class="label">used-car ownership transfers · 2025</div><div class="detail">+0.5% vs. 2024 · KBA</div></div>
+  <div class="card"><div class="value">2.86m</div><div class="label">new passenger-car registrations · 2025</div><div class="detail">+1.4% vs. 2024 · KBA</div></div>
+  <div class="card"><div class="value">2.28×</div><div class="label">used transactions vs. new registrations</div><div class="detail">6,512,427 ÷ 2,857,591</div></div>
+  <div class="card"><div class="value">€18,310</div><div class="label">average used-car purchase price · 2025</div><div class="detail">private buyers · DAT</div></div>
+</div>
+<div class="grid">
+  <div class="chartbox">
+    <div class="chart-title">New vs used market mix by drivetrain · 2025</div>
+    <div id="usedNewLegend" class="legend"></div>
+    <div class="chart-note">Used BEVs are growing quickly, but the used market still reflects the combustion-heavy fleet built up over many years.</div>
+    <div id="usedVsNew" class="fig"></div>
+    <div class="chart-source">Source: KBA FZ 8 / FZ 9 via e-mobil BW</div>
+  </div>
+  <div class="chartbox">
+    <div class="chart-title">Average actual purchase price — new vs used</div>
+    <div class="chart-note">Private buyers, Germany. Transaction price, not manufacturer's list price.</div>
+    <div id="priceTrend" class="fig"></div>
+    <div class="chart-source">Source: DAT Report 2026</div>
+  </div>
+  <div class="chartbox full" style="max-width:850px;margin:auto;width:100%">
+    <div class="chart-title">Average new-car purchase price by drivetrain · 2025</div>
+    <div class="chart-note">These are prices of cars actually bought, so differences also reflect segment, equipment and buyer mix.</div>
+    <div id="newPriceByDrive" class="fig"></div>
+  </div>
+</div>
+<div class="data-note good"><strong>Why this matters:</strong> BEVs were 19.1% of new registrations in 2025 but only 3.6% of used-car ownership transfers. The gap shows how slowly a change in new-car demand propagates into the much larger second-hand market.</div>
+</section>
+
+<div class="rule"></div>
+<section id="fleet">
+<h2>Passenger-car fleet</h2>
+<p>
+  The fleet changes much more slowly than new registrations. Germany had 49,486,487 passenger cars on 1 January 2026; 2,034,260 were battery electric and 1,122,958 were plug-in hybrids.
+</p>
+<div class="cards">
+  <div class="card"><div class="value">49.49m</div><div class="label">passenger cars in fleet</div><div class="detail">1 Jan 2026 · KBA</div></div>
+  <div class="card"><div class="value">2.03m</div><div class="label">battery-electric cars</div><div class="detail">4.1% of fleet</div></div>
+  <div class="card"><div class="value">1.123m</div><div class="label">plug-in hybrid cars</div><div class="detail">2.3% of fleet</div></div>
+  <div class="card"><div class="value">3.157m</div><div class="label">BEV + PHEV in fleet</div><div class="detail">6.38% combined</div></div>
+</div>
+<div class="grid">
+  <div class="chartbox full">
+    <div class="chart-title">Passenger-car fleet by drivetrain — market share</div>
+    <div id="fleetLegend" class="legend"></div>
+    <div class="chart-note">Stock at 1 January of each year. This is the direct fleet analogue to the new-registration market-share chart above.</div>
+    <div id="fleetShare" class="fig"></div>
+    <div class="chart-source">Sources: KBA fleet statistics (annual 1 January stock), cross-checked against UBA/e-mobil BW. HEV excludes PHEV; “Other” groups gas and remaining minor drivetrains.</div>
+  </div>
+  <div class="chartbox">
+    <div class="chart-title">Average motor power in the passenger-car fleet</div>
+    <div class="chart-note">The stock average rose from 88 kW in 2017 to 96 kW in 2025 (≈131 PS). The share above 120 kW rose from 16.2% to 22.3%.</div>
+    <div id="avgPower" class="fig"></div>
+    <div class="chart-source">Source: Verkehr in Zahlen 2025/2026, KBA</div>
+  </div>
+  <div class="chartbox">
+    <div class="chart-title">Vehicle-size proxy: Vans + SUVs + Utilities</div>
+    <div class="chart-note">A defensible proxy for the long-run shift toward larger/heavier cars where a clean drivetrain-by-weight time series is not available.</div>
+    <div id="segmentProxy" class="fig"></div>
+    <div class="chart-source">Source: UBA/KBA</div>
+  </div>
+</div>
+<div class="data-note proxy"><strong>Weight data:</strong> I still do not show an invented average vehicle-weight history. The size/segment proxy is official, while the average-power series adds another measurable dimension of how the German fleet has changed.</div>
+</section>
+<div class="rule"></div>
+<section id="technology">
+<h2>EV technology and public charging</h2>
+<p>
+  Product choice, usable range and charging infrastructure help explain EV adoption beyond registrations alone. The technology figures come from a 2026 ICCT/Fraunhofer ISI study of more than 100,000 German-market vehicle observations; charging-point data come from the Bundesnetzagentur.
+</p>
+<div class="cards">
+  <div class="card"><div class="value">159</div><div class="label">BEV models offered · 2025</div><div class="detail">38 in 2020</div></div>
+  <div class="card"><div class="value">≈+30%</div><div class="label">average BEV electric range · 2020→2025</div><div class="detail">ICCT/Fraunhofer ISI</div></div>
+  <div class="card"><div class="value">≈−18%</div><div class="label">real price of comparable BEVs · 2020→2025</div><div class="detail">controls for vehicle characteristics + inflation</div></div>
+  <div class="card"><div class="value">212,064</div><div class="label">public charging points · 1 Aug 2026</div><div class="detail">156,399 normal + 55,665 fast</div></div>
+</div>
+<div class="grid">
+  <div class="chartbox">
+    <div class="chart-title">Model availability in Germany</div>
+    <div class="chart-note">The BEV catalogue expanded more than fourfold while the number of ICE models declined.</div>
+    <div id="modelAvailability" class="fig"></div>
+    <div class="chart-source">Source: ICCT &amp; Fraunhofer ISI, 2026</div>
+  </div>
+  <div class="chartbox">
+    <div class="chart-title">Public charging-point growth</div>
+    <div id="chargingLegend" class="legend"></div>
+    <div class="chart-note">Publicly accessible charging points, each 1 January. The latest August 2026 snapshot is shown in the cards above.</div>
+    <div id="chargingGrowth" class="fig"></div>
+    <div class="chart-source">Source: Bundesnetzagentur</div>
+  </div>
+</div>
+<div class="insight-strip">
+  <div class="insight"><div class="big">55,665</div><div class="caption">fast public charging points</div><div class="sub">1 Aug 2026 · 26.3% of all public points</div></div>
+  <div class="insight"><div class="big">9.22 GW</div><div class="caption">simultaneous rated public charging power</div><div class="sub">Bundesnetzagentur · 1 Aug 2026</div></div>
+  <div class="insight"><div class="big">19 vs 35</div><div class="caption">BEV vs ICE models in mini + small segments</div><div class="sub">2025 · affordability gap remains</div></div>
+</div>
+<div class="data-note good"><strong>Battery size / charging time:</strong> I have not added a national “average battery kWh” or “average 10–80% charging time” series because I did not find a clean, comparable German historical series I trust enough to put beside the official data. The ICCT study does report roughly 30% more average electric range from 2020 to 2025, and the Bundesnetzagentur provides an official charging-power/infrastructure series, so those are used instead.</div>
+</section>
+
+<div class="rule"></div>
+<section id="distance">
+<h2>Distance travelled</h2>
+<p>
+  KBA's “Verkehr in Kilometern” series uses odometer differences from periodic technical inspections and modelling. In 2025, German passenger cars travelled an estimated 562.3 billion km in total.
+</p>
+<div class="grid">
+  <div class="chartbox">
+    <div class="chart-title">Average annual distance by drivetrain · 2025</div>
+    <div id="distanceBars" class="fig"></div>
+  </div>
+  <div class="chartbox">
+    <div class="chart-title">Share of all passenger-car kilometres · 2025</div>
+    <div id="distanceShare" class="fig"></div>
+  </div>
+</div>
+<div class="data-note proxy"><strong>Data gap:</strong> the current KBA summary reports average annual kilometres for BEV, petrol, non-plug-in hybrid and PHEV, but not a separate 2025 average for diesel in the same release. I therefore leave that value out rather than mixing it with an older year. KBA does report that diesel cars account for 35.4% of total passenger-car kilometres.</div>
+</section>
+
+<div class="rule"></div>
+<section id="policy">
+<h2>Subsidies, taxes and selected EV policy</h2>
+<p>Germany's support has changed more abruptly than Norway's. The timeline below uses federal-government sources and focuses on measures that materially affected private EV demand.</p>
+<div class="timeline">
+  <div class="event"><div class="year">2016</div><p>The federal <strong>Umweltbonus</strong> purchase incentive begins. Over its lifetime, roughly €10bn was paid for around 2.1m electric vehicles.</p></div>
+  <div class="event"><div class="year">2020</div><p>The temporary <strong>Innovationsprämie</strong> doubles the federal share of the purchase incentive. A qualifying BEV below €40,000 net list price could receive up to €9,000 combined government/manufacturer support.</p></div>
+  <div class="event"><div class="year">2023</div><p>Direct purchase support is narrowed to BEVs/fuel-cell vehicles at the start of the year. The Umweltbonus then ends abruptly after <strong>17 December 2023</strong>.</p></div>
+  <div class="event"><div class="year">2026</div><p>A new income-targeted programme applies from <strong>1 January 2026</strong>: eligible private buyers/leasers of new BEVs, PHEVs or range-extender vehicles can receive €1,500–€6,000 depending on drivetrain, taxable household income and children. The application portal opened 20 May 2026.</p></div>
+  <div class="event"><div class="year">2026</div><p>Pure EVs first registered through <strong>31 December 2030</strong> can qualify for German motor-vehicle-tax exemption, with the exemption capped at <strong>31 December 2035</strong>.</p></div>
+</div>
+</section>
+
+<div class="rule"></div>
+<section id="energy">
+<h2>Transport energy consumption</h2>
+<p>
+  The Norway page contains detailed road-energy and biofuel series. For Germany, UBA/TREMOD provides broad transport-energy data and road-fuel series. The charts below use the latest clearly comparable headline values rather than combining incompatible datasets.
+</p>
+<div class="grid">
+  <div class="chartbox">
+    <div class="chart-title">German transport final energy · 2024</div>
+    <div id="energyCarrier" class="fig"></div>
+  </div>
+  <div class="chartbox">
+    <div class="chart-title">Within transport fuels · 2024</div>
+    <div class="chart-note">Shares by energy content; rounding means the displayed components need not sum to exactly 100%.</div>
+    <div id="fuelMix" class="fig"></div>
+  </div>
+</div>
+<p>In 2024, about 97.5% of German transport final energy came from fuels and 2.5% from electricity. UBA reports the fuel-energy mix as roughly 49.4% diesel, 29.5% petrol, 16.0% aviation fuels, 5.0% biofuels and 0.4% LPG/natural gas.</p>
+<div class="data-note good"><strong>Useful direct analogue:</strong> UBA also publishes downloadable spreadsheet series for road-fuel consumption and passenger-car fuel consumption. Those are linked below so the page can be extended later with the same long-run depth as the original Norway energy section.</div>
+</section>
+
+<div class="rule"></div>
+<section id="sources">
+<h2>Data sources and what maps cleanly</h2>
+<div class="sources">
+  <p><span class="source-tag">Monthly sales</span><a href="https://robbieandrew.github.io/carsales/" target="_blank" rel="noreferrer">Robbie Andrew global car-sales dataset</a> — Germany monthly registrations by drivetrain, sourced from official registration statistics; used for the long-run charts.</p>
+  <p><span class="source-tag">Latest sales</span><a href="https://www.vda.de/de/aktuelles/zahlen-und-daten/monatszahlen" target="_blank" rel="noreferrer">VDA monthly statistics</a> — official VDA/KBA headline totals, including August and Jan–Aug 2026.</p>
+  <p><span class="source-tag">Fleet</span><a href="https://www.umweltbundesamt.de/daten/umweltzustand-trends/verkehr/verkehrsinfrastruktur-fahrzeugbestand" target="_blank" rel="noreferrer">UBA / KBA vehicle fleet</a> — drivetrain stock and segment trends; current 2026 figures cross-checked against KBA FZ 27.</p>
+  <p><span class="source-tag">Used market</span><a href="https://www.e-mobilbw.de/fileadmin/media/e-mobilbw/Publikationen/Broschueren/Datenmonitor_2026_Januar.pdf" target="_blank" rel="noreferrer">e-mobil BW Datenmonitor January 2026</a> — KBA FZ 9 ownership transfers and FZ 8 new registrations by drivetrain for 2025.</p>
+  <p><span class="source-tag">Prices</span><a href="https://www.dat.de/fileadmin/de/images/produkte/DAT_Report/DAT_Report_NEW/2026/DAT-Report-2026-Kurzbericht.pdf" target="_blank" rel="noreferrer">DAT Report 2026</a> — actual average purchase prices paid by private new- and used-car buyers.</p>
+  <p><span class="source-tag">Technology</span><a href="https://theicct.org/publication/price-and-market-trends-of-battery-electric-and-internal-combustion-engine-vehicles-in-germany-2020-2025-jul26/" target="_blank" rel="noreferrer">ICCT / Fraunhofer ISI 2020–2025 study</a> — model availability, comparable real prices and electric-range development.</p>
+  <p><span class="source-tag">Charging</span><a href="https://www.bundesnetzagentur.de/DE/Fachthemen/ElektrizitaetundGas/E-Mobilitaet/artikel.html" target="_blank" rel="noreferrer">Bundesnetzagentur charging register</a> — public normal/fast charging points and installed rated power.</p>
+  <p><span class="source-tag">Power</span><a href="https://www.bmv.de/SharedDocs/DE/Anlage/G/verkehr-in-zahlen25-26-pdf.pdf?__blob=publicationFile" target="_blank" rel="noreferrer">Verkehr in Zahlen 2025/2026</a> — KBA passenger-car fleet by motor-power class and average kW.</p>
+  <p><span class="source-tag">Mileage</span><a href="https://www.kba.de/DE/Statistik/Kraftverkehr/VerkehrKilometer/verkehr_in_kilometern_node.html" target="_blank" rel="noreferrer">KBA Verkehr in Kilometern</a> — odometer-based annual mileage statistics. Current 2025 figures are also summarised by specialist press from the KBA release.</p>
+  <p><span class="source-tag">Energy</span><a href="https://www.umweltbundesamt.de/daten/umweltzustand-trends/verkehr/energieverbrauch-kraftstoffe" target="_blank" rel="noreferrer">UBA energy use and fuels</a> — TREMOD / transport final-energy and road-fuel series.</p>
+  <p><span class="source-tag">Policy</span><a href="https://www.bundesregierung.de/breg-de/aktuelles/e-auto-foerderportal-2403088" target="_blank" rel="noreferrer">Federal Government 2026 EV support</a> and <a href="https://www.bundesregierung.de/breg-de/aktuelles/e-autos-steuerfrei-2389328" target="_blank" rel="noreferrer">EV vehicle-tax exemption</a>.</p>
+  <p><span class="source-tag">Historical</span><a href="https://www.bmwk.de/Redaktion/DE/Pressemitteilungen/2023/12/20231216-umweltbonus-endet-mit-ablauf-des-17-dezember-2023.html" target="_blank" rel="noreferrer">BMWE Umweltbonus end notice</a> and archived BMWE incentive guidance.</p>
+
+  <div style="text-align:center;margin-top:20px">
+    <button id="downloadBtn" type="button">Download Germany monthly data as CSV</button>
+  </div>
+  <p class="small" style="text-align:center">If the live source is unavailable, the download contains the embedded 2024–Aug 2026 fallback data.</p>
+</div>
+</section>
+
+<footer>
+  German-market adaptation created for analytical use. Inspired by Robbie Andrew's public Norway EV page; not affiliated with KBA, VDA, UBA, DAT, ICCT, Fraunhofer ISI or the German federal government.
+</footer>
+
+<script>
+const COLORS={
+  Diesel:'#6e6e6e', Petrol:'#e39a33', NonPluginHybrid:'#b8d86b', PluginHybrid:'#76b947', BatteryElectric:'#3a923a', Hydrogen:'#65b9c7', Others:'#bdbdbd'
+};
+const LABELS={Diesel:'Diesel',Petrol:'Petrol',NonPluginHybrid:'HEV',PluginHybrid:'PHEV',BatteryElectric:'BEV',Hydrogen:'Hydrogen',Others:'Other'};
+const ORDER=['Diesel','Petrol','NonPluginHybrid','PluginHybrid','BatteryElectric','Hydrogen','Others'];
+const MAIN_ORDER=['Diesel','Petrol','NonPluginHybrid','PluginHybrid','BatteryElectric','Others'];
+const REMOTE='https://raw.githubusercontent.com/robbieandrew/robbieandrew.github.io/master/carsales/data/all_carsales_monthly.csv';
+
+const fallbackRows=[];
+function addFallback(year, rows){
+  rows.forEach((r,i)=>{
+    const mm=String(i+1).padStart(2,'0');
+    const vals={Diesel:r[0],Petrol:r[1],NonPluginHybrid:r[2],PluginHybrid:r[3],BatteryElectric:r[4],Hydrogen:r[5],Others:r[6]};
+    Object.entries(vals).forEach(([fuel,value])=>fallbackRows.push({ym:`${year}${mm}`,year,month:i+1,fuel,value}));
+  });
+}
+addFallback(2024,[
+[40936,81724,52102,14394,22474,5,1918],[42153,77106,54792,14575,27479,8,1275],[48365,99753,67033,16016,31384,21,1272],[46317,90729,60047,15135,29668,5,1201],[44893,89498,57413,14038,29708,10,865],[52688,111768,72579,15391,43412,13,1478],[43107,83405,65059,14811,30762,11,1108],[29974,70007,55779,13565,27024,17,956],[31115,67009,60497,14936,34479,39,773],[36172,74264,65671,19337,35491,15,1042],[36510,77352,73950,20602,35167,9,954],[31031,69333,70570,19103,33561,8,1115]
+]);
+addFallback(2025,[
+[32956,62358,59252,17712,34498,2,862],[32116,56911,58153,19532,35949,5,768],[37890,70414,74860,26553,42521,3,1256],[37649,66814,67379,24316,45535,7,1028],[35106,67921,66990,25180,43060,11,1029],[35665,73041,73332,25608,47163,19,1365],[40529,72192,75172,27197,48614,2,1096],[27219,57253,58605,23972,39367,3,810],[28871,63047,69527,27684,45495,2,902],[30462,64706,70652,30946,52425,0,942],[29471,61067,70916,32433,55741,2,1041],[27088,61917,71263,30259,54774,0,1138]
+]);
+addFallback(2026,[
+[27309,43695,58194,21790,42692,2,299],[31338,48404,60383,24328,46275,3,531],[37664,66959,87331,29996,70663,1,1547],[32437,53420,69708,27544,64350,4,1700],[30547,51806,66857,27921,59969,0,2348],[33862,60796,82615,32210,84057,3,2835],[31703,50732,74041,30609,78609,6,2368],[22516,35536,59197,25406,68930,0,971]
+]);
+
+let germanyRows=[];
+let usingLive=false;
+let allMonthly=[];
+let selectedStartYear=null;
+let selectedEndYear=null;
+let rangeUserTouched=false;
+
+const NEW_USED_2025=[
+  {label:'New registrations',Petrol:777641,Diesel:395022,NonPluginHybrid:816111,PluginHybrid:311398,BatteryElectric:545142,Others:12277,total:2857591},
+  {label:'Used transfers',Petrol:3732841,Diesel:1775741,NonPluginHybrid:551903,PluginHybrid:169621,BatteryElectric:232000,Others:50321,total:6512427}
+];
+const PRICE_TREND=[
+  {year:2016,newPrice:29650,usedPrice:11430},{year:2017,newPrice:30350,usedPrice:11250},{year:2018,newPrice:31130,usedPrice:11780},
+  {year:2019,newPrice:33580,usedPrice:12470},{year:2020,newPrice:36340,usedPrice:14730},{year:2021,newPrice:37790,usedPrice:15740},
+  {year:2022,newPrice:42790,usedPrice:18800},{year:2023,newPrice:44630,usedPrice:18620},{year:2024,newPrice:43530,usedPrice:18600},{year:2025,newPrice:44560,usedPrice:18310}
+];
+const FLEET_DATA=[
+  {label:'2020',year:2020,total:47715977,Petrol:31464680,Diesel:15111382,NonPluginHybrid:437208,PluginHybrid:102175,BatteryElectric:136617,Others:463915},
+  {label:'2021',year:2021,total:48248584,Petrol:31435340,Diesel:15060124,NonPluginHybrid:724228,PluginHybrid:279861,BatteryElectric:309083,Others:439948},
+  {label:'2022',year:2022,total:48540878,Petrol:31005134,Diesel:14824262,NonPluginHybrid:1103095,PluginHybrid:565956,BatteryElectric:618460,Others:423971},
+  {label:'2023',year:2023,total:48763036,Petrol:30556538,Diesel:14437489,NonPluginHybrid:1473185,PluginHybrid:864712,BatteryElectric:1013009,Others:418103},
+  {label:'2024',year:2024,total:49098685,Petrol:30235032,Diesel:14142184,NonPluginHybrid:1989376,PluginHybrid:921886,BatteryElectric:1408681,Others:401526},
+  {label:'2025',year:2025,total:49339166,Petrol:29918520,Diesel:13829261,NonPluginHybrid:2589533,PluginHybrid:967423,BatteryElectric:1651643,Others:382786},
+  {label:'2026',year:2026,total:49486487,Petrol:29343732,Diesel:13385662,NonPluginHybrid:3239605,PluginHybrid:1122958,BatteryElectric:2034260,Others:360270}
+];
+const POWER_TREND=[
+  {year:2017,kW:88},{year:2018,kW:89},{year:2019,kW:91},{year:2020,kW:92},{year:2021,kW:93},{year:2022,kW:94},{year:2023,kW:95},{year:2024,kW:95},{year:2025,kW:96}
+];
+const CHARGING_DATA=[
+  {label:'2017',normal:5904,fast:774},{label:'2018',normal:9524,fast:1668},{label:'2019',normal:16972,fast:2840},
+  {label:'2020',normal:26678,fast:4328},{label:'2021',normal:37817,fast:6711},{label:'2022',normal:52210,fast:9889},
+  {label:'2023',normal:74960,fast:14953},{label:'2024',normal:104885,fast:25619},{label:'2025',normal:124870,fast:35939}
+];
+const MODEL_AVAILABILITY=[{label:'2020',BEV:38,ICE:275},{label:'2025',BEV:159,ICE:194}];
+
+function parseCSV(text){
+  const lines=text.trim().split(/\r?\n/);
+  if(lines.length < 2) return [];
+
+  // Normalise the header and match exact column names.
+  // Important: a loose /count/ match also matches "Country", which would
+  // make the parser read the country name as the numeric value.
+  const header=lines[0].split(',').map(s=>
+    s.replace(/^\uFEFF/, '').replace(/^"|"$/g,'').trim().toLowerCase()
+  );
+
+  const findColumn=(names, fallback)=>{
+    const idx=header.findIndex(x=>names.includes(x));
+    return idx>=0 ? idx : fallback;
+  };
+
+  const dateIdx=findColumn(['yyyymm','date','month'],0);
+  const countryIdx=findColumn(['country'],1);
+  const fuelIdx=findColumn(['fuel','drivetrain','powertrain'],2);
+  const valueIdx=findColumn(['value','sales','registrations','registration','count'],3);
+
+  const out=[];
+  for(let n=1;n<lines.length;n++){
+    const cols=lines[n].split(',').map(x=>x.replace(/^"|"$/g,'').trim());
+    if(cols.length <= Math.max(dateIdx,countryIdx,fuelIdx,valueIdx)) continue;
+    if(cols[countryIdx] !== 'Germany') continue;
+
+    const ym=(cols[dateIdx]||'').replace(/\D/g,'').slice(0,6);
+    const fuel=cols[fuelIdx];
+    const value=Number(cols[valueIdx]);
+
+    if(ym.length===6 && fuel && Number.isFinite(value)){
+      out.push({ym,year:+ym.slice(0,4),month:+ym.slice(4,6),fuel,value});
+    }
+  }
+  return out;
+}
+function cleanRows(rows){
+  return rows.filter(r=>ORDER.includes(r.fuel) && r.year>=2009).sort((a,b)=>a.ym.localeCompare(b.ym)||ORDER.indexOf(a.fuel)-ORDER.indexOf(b.fuel));
+}
+function pivot(rows){
+  const map=new Map();
+  rows.forEach(r=>{
+    if(!map.has(r.ym)) map.set(r.ym,{ym:r.ym,year:r.year,month:r.month});
+    map.get(r.ym)[r.fuel]=(map.get(r.ym)[r.fuel]||0)+r.value;
+  });
+  return [...map.values()].sort((a,b)=>a.ym.localeCompare(b.ym)).map(d=>{
+    ORDER.forEach(k=>{if(d[k]==null)d[k]=0});
+    d.Others += d.Hydrogen||0;
+    d.total=MAIN_ORDER.reduce((s,k)=>s+(d[k]||0),0);
+    return d;
+  });
+}
+function annualize(monthly){
+  const map=new Map();
+  monthly.forEach(d=>{
+    if(!map.has(d.year)) map.set(d.year,{year:d.year,months:0});
+    const a=map.get(d.year);a.months++;
+    MAIN_ORDER.forEach(k=>a[k]=(a[k]||0)+(d[k]||0));
+  });
+  return [...map.values()].sort((a,b)=>a.year-b.year).map(a=>{a.total=MAIN_ORDER.reduce((s,k)=>s+(a[k]||0),0);return a});
+}
+
+function fmt(n){return Math.round(n).toLocaleString('en-US')}
+function svg(tag,attrs={},text=''){
+  const el=document.createElementNS('http://www.w3.org/2000/svg',tag);
+  Object.entries(attrs).forEach(([k,v])=>el.setAttribute(k,v));
+  if(text!==undefined && text!==null) el.textContent=text;
+  return el;
+}
+function baseSVG(w=650,h=300,margin={l:52,r:16,t:17,b:36}){
+  const s=svg('svg',{viewBox:`0 0 ${w} ${h}`,role:'img'}); return {s,w,h,m:margin,iw:w-margin.l-margin.r,ih:h-margin.t-margin.b};
+}
+function niceMax(v){
+  if(v<=0)return 1; const p=Math.pow(10,Math.floor(Math.log10(v))); const x=v/p;
+  const n=x<=1?1:x<=2?2:x<=5?5:10; return n*p;
+}
+function axes(ctx,xLabels,yMax,yFormatter=(v)=>v,{yTicks=5,grid=true}={}){
+  const {s,w,h,m,iw,ih}=ctx;
+  for(let i=0;i<=yTicks;i++){
+    const val=yMax*i/yTicks, y=m.t+ih-(val/yMax)*ih;
+    if(grid)s.appendChild(svg('line',{x1:m.l,y1:y,x2:m.l+iw,y2:y,stroke:'#e5e5e5','stroke-width':1}));
+    const t=svg('text',{x:m.l-7,y:y+4,'text-anchor':'end','font-size':10,fill:'#777'},yFormatter(val));s.appendChild(t);
+  }
+  s.appendChild(svg('line',{x1:m.l,y1:m.t+ih,x2:m.l+iw,y2:m.t+ih,stroke:'#888','stroke-width':1}));
+  xLabels.forEach(({x,label})=>{s.appendChild(svg('text',{x,y:m.t+ih+18,'text-anchor':'middle','font-size':10,fill:'#777'},label))});
+}
+function yearTicks(data,ctx){
+  if(!data.length)return[];
+  const first=data[0].year,last=data[data.length-1].year;
+  const span=last-first; const step=span>12?3:span>7?2:1;
+  const ticks=[];
+  for(let y=Math.ceil(first/step)*step;y<=last;y+=step){
+    const idx=data.findIndex(d=>d.year===y && d.month===1);
+    if(idx>=0)ticks.push({x:ctx.m.l+(idx/(Math.max(1,data.length-1)))*ctx.iw,label:String(y)});
+  }
+  if(!ticks.length||ticks[ticks.length-1].label!==String(last)) ticks.push({x:ctx.m.l+ctx.iw,label:String(last)});
+  return ticks;
+}
+function setChart(id,el){const d=document.getElementById(id);d.innerHTML='';d.appendChild(el)}
+
+function lineChart(id,data,series,{percent=false,moving=false,yMax=null}={}){
+  const ctx=baseSVG(); const rows=data;
+  const vals=[];
+  series.forEach(k=>rows.forEach((d,i)=>{
+    let v=d[k]||0;
+    if(percent)v=d.total?100*v/d.total:0;
+    if(moving){const slice=rows.slice(Math.max(0,i-2),i+1);v=slice.reduce((s,x)=>s+(percent?(x.total?100*(x[k]||0)/x.total:0):(x[k]||0)),0)/slice.length;}
+    vals.push(v);
+  }));
+  const ym=yMax??niceMax(Math.max(...vals,1));
+  axes(ctx,yearTicks(rows,ctx),ym,v=>percent?`${Math.round(v)}%`:v>=1000?`${Math.round(v/1000)}k`:Math.round(v));
+  series.forEach(k=>{
+    const pts=rows.map((d,i)=>{
+      let v=d[k]||0;
+      if(percent)v=d.total?100*v/d.total:0;
+      if(moving){const slice=rows.slice(Math.max(0,i-2),i+1);v=slice.reduce((s,x)=>s+(percent?(x.total?100*(x[k]||0)/x.total:0):(x[k]||0)),0)/slice.length;}
+      const x=ctx.m.l+(i/Math.max(1,rows.length-1))*ctx.iw; const y=ctx.m.t+ctx.ih-(v/ym)*ctx.ih; return `${x},${y}`;
+    }).join(' ');
+    ctx.s.appendChild(svg('polyline',{points:pts,fill:'none',stroke:COLORS[k],'stroke-width':k==='BatteryElectric'?2.4:1.5,'stroke-linejoin':'round','stroke-linecap':'round'}));
+  });
+  setChart(id,ctx.s);
+}
+function stackedChart(id,data,{percent=false,annual=false}={}){
+  const ctx=baseSVG(); const n=data.length; const gap=annual?3:0; const bw=Math.max(1,(ctx.iw/n)-gap);
+  const max=percent?100:niceMax(Math.max(...data.map(d=>d.total||0),1));
+  const ticks=annual?data.filter((d,i)=>i%Math.max(1,Math.ceil(data.length/8))===0).map((d,i,a)=>({x:ctx.m.l+(data.indexOf(d)+.5)*(ctx.iw/n),label:String(d.year)+(d.months&&d.months<12?'*':'')})):yearTicks(data,ctx);
+  axes(ctx,ticks,max,v=>percent?`${Math.round(v)}%`:v>=1000?`${Math.round(v/1000)}k`:Math.round(v));
+  data.forEach((d,i)=>{
+    let y0=0; const x=ctx.m.l+i*(ctx.iw/n)+(gap/2);
+    MAIN_ORDER.forEach(k=>{
+      const raw=d[k]||0, v=percent?(d.total?100*raw/d.total:0):raw;
+      if(v<=0)return;
+      const y=ctx.m.t+ctx.ih-((y0+v)/max)*ctx.ih; const hh=(v/max)*ctx.ih;
+      ctx.s.appendChild(svg('rect',{x,y,width:bw,height:Math.max(.2,hh),fill:COLORS[k],stroke:'none'})); y0+=v;
+    });
+  });
+  setChart(id,ctx.s);
+}
+function stackedAreaShareChart(id,data){
+  if(!data.length){
+    const d=document.getElementById(id); if(d)d.innerHTML=''; return;
+  }
+  // Keep BEV as the visually dominant top layer, mirroring the Norway chart.
+  const areaOrder=['Diesel','Petrol','NonPluginHybrid','PluginHybrid','Others','BatteryElectric'];
+  const ctx=baseSVG(860,390,{l:58,r:205,t:18,b:45});
+  const n=data.length;
+  axes(ctx,yearTicks(data,ctx),100,v=>`${Math.round(v)}%`,{yTicks:5,grid:true});
+
+  // Subtle vertical guides at year ticks, close to the visual language of the source chart.
+  yearTicks(data,ctx).forEach(t=>ctx.s.insertBefore(svg('line',{x1:t.x,y1:ctx.m.t,x2:t.x,y2:ctx.m.t+ctx.ih,stroke:'#ffffff','stroke-opacity':.17,'stroke-width':1}),ctx.s.firstChild));
+
+  const cumulative=new Array(n).fill(0);
+  const topLines={};
+  areaOrder.forEach(k=>{
+    const lower=cumulative.slice();
+    const upper=data.map((d,i)=>{
+      const share=d.total?100*(d[k]||0)/d.total:0;
+      cumulative[i]+=share;
+      return cumulative[i];
+    });
+    const topPts=upper.map((v,i)=>[ctx.m.l+i/Math.max(1,n-1)*ctx.iw,ctx.m.t+ctx.ih-(v/100)*ctx.ih]);
+    const botPts=lower.map((v,i)=>[ctx.m.l+i/Math.max(1,n-1)*ctx.iw,ctx.m.t+ctx.ih-(v/100)*ctx.ih]).reverse();
+    const points=[...topPts,...botPts].map(p=>p.join(',')).join(' ');
+    const poly=svg('polygon',{points,fill:COLORS[k],stroke:'none','fill-opacity':.92});
+    poly.appendChild(svg('title',{},LABELS[k]));
+    ctx.s.appendChild(poly);
+    topLines[k]=topPts;
+  });
+
+  // Boundary lines make the stacked bands easier to read at monthly resolution.
+  areaOrder.slice(0,-1).forEach(k=>{
+    const pts=topLines[k].map(p=>p.join(',')).join(' ');
+    ctx.s.appendChild(svg('polyline',{points:pts,fill:'none',stroke:'#242424','stroke-width':.75,'stroke-linejoin':'round','stroke-linecap':'round'}));
+  });
+
+  const latest=data[data.length-1];
+  const latestYear=latest.year;
+  const ytdRows=data.filter(d=>d.year===latestYear && d.ym<=latest.ym);
+  const ytdTotals={}; MAIN_ORDER.forEach(k=>ytdTotals[k]=0);
+  let ytdGrand=0;
+  ytdRows.forEach(d=>{MAIN_ORDER.forEach(k=>ytdTotals[k]+=(d[k]||0));ytdGrand+=d.total||0;});
+
+  // Find each band midpoint at the latest month, then spread labels just enough
+  // to prevent small drivetrain shares from colliding.
+  let base=0;
+  const labels=areaOrder.map(k=>{
+    const share=latest.total?100*(latest[k]||0)/latest.total:0;
+    const mid=base+share/2;base+=share;
+    const ytd=ytdGrand?100*ytdTotals[k]/ytdGrand:0;
+    return {k,share,ytd,target:ctx.m.t+ctx.ih-(mid/100)*ctx.ih};
+  }).sort((a,b)=>a.target-b.target);
+  const top=ctx.m.t+7,bottom=ctx.m.t+ctx.ih-7,minGap=31;
+  labels.forEach((d,i)=>{d.y=Math.max(d.target,i===0?top:labels[i-1].y+minGap)});
+  if(labels.length && labels[labels.length-1].y>bottom){
+    const shift=labels[labels.length-1].y-bottom;
+    labels.forEach(d=>d.y-=shift);
+    for(let i=labels.length-2;i>=0;i--)labels[i].y=Math.min(labels[i].y,labels[i+1].y-minGap);
+  }
+
+  const xEdge=ctx.m.l+ctx.iw,xText=xEdge+27;
+  labels.forEach(d=>{
+    const centerY=d.target;
+    ctx.s.appendChild(svg('polyline',{points:`${xEdge},${centerY} ${xEdge+12},${centerY} ${xText-6},${d.y}`,fill:'none',stroke:COLORS[d.k],'stroke-width':1,'stroke-opacity':.85}));
+    ctx.s.appendChild(svg('text',{x:xText,y:d.y-4,'font-size':12.5,fill:COLORS[d.k],'font-weight':500},LABELS[d.k]));
+    ctx.s.appendChild(svg('text',{x:xText,y:d.y+10,'font-size':9.5,fill:'#686868'},`${d.share.toFixed(d.share<1?1:0)}% in ${latestYear}-${String(latest.month).padStart(2,'0')}`));
+    ctx.s.appendChild(svg('text',{x:xText,y:d.y+21,'font-size':9.5,fill:'#8a8a8a'},`${d.ytd.toFixed(d.ytd<1?1:0)}% so far in ${latestYear}`));
+  });
+
+  // Outer plot border on top of the fills.
+  ctx.s.appendChild(svg('rect',{x:ctx.m.l,y:ctx.m.t,width:ctx.iw,height:ctx.ih,fill:'none',stroke:'#888','stroke-width':.8}));
+  setChart(id,ctx.s);
+}
+
+function plugShareChart(id,data){
+  const ctx=baseSVG(); axes(ctx,yearTicks(data,ctx),60,v=>`${Math.round(v)}%`);
+  const defs=[['BatteryElectric','#3a923a',2],['PluginHybrid','#76b947',1.7],['Combined','#166534',2.7]];
+  defs.forEach(([k,c,sw])=>{
+    const pts=data.map((d,i)=>{
+      const v=k==='Combined'?100*((d.BatteryElectric+d.PluginHybrid)/d.total):100*(d[k]||0)/d.total;
+      const x=ctx.m.l+i/Math.max(1,data.length-1)*ctx.iw,y=ctx.m.t+ctx.ih-(v/60)*ctx.ih;return `${x},${y}`;
+    }).join(' ');
+    ctx.s.appendChild(svg('polyline',{points:pts,fill:'none',stroke:c,'stroke-width':sw,'stroke-linejoin':'round'}));
+  });
+  const lg=[['BEV','#3a923a'],['PHEV','#76b947'],['combined','#166534']];
+  lg.forEach((x,i)=>{ctx.s.appendChild(svg('line',{x1:ctx.m.l+10+i*90,y1:ctx.m.t+8,x2:ctx.m.l+26+i*90,y2:ctx.m.t+8,stroke:x[1],'stroke-width':2.5}));ctx.s.appendChild(svg('text',{x:ctx.m.l+31+i*90,y:ctx.m.t+12,'font-size':10,fill:'#555'},x[0]));});
+  setChart(id,ctx.s);
+}
+function horizontalBars(id,items,{max=null,suffix='',valueFormatter=null,colors=null}={}){
+  const w=650,h=Math.max(220,55+items.length*38),m={l:145,r:65,t:20,b:25}; const ctx=baseSVG(w,h,m); const mx=max??niceMax(Math.max(...items.map(x=>x.value),1));
+  items.forEach((d,i)=>{
+    const y=m.t+i*38+8; const width=(d.value/mx)*ctx.iw;
+    ctx.s.appendChild(svg('text',{x:m.l-9,y:y+13,'text-anchor':'end','font-size':11,fill:'#555'},d.label));
+    ctx.s.appendChild(svg('rect',{x:m.l,y,width,height:18,fill:colors?colors[i%colors.length]:(d.color||'#4e8f5b')}));
+    const lab=valueFormatter?valueFormatter(d.value):`${d.value.toLocaleString('en-US')}${suffix}`;
+    ctx.s.appendChild(svg('text',{x:m.l+width+7,y:y+13,'font-size':11,fill:'#555'},lab));
+  });
+  ctx.s.appendChild(svg('line',{x1:m.l,y1:h-m.b,x2:m.l+ctx.iw,y2:h-m.b,stroke:'#ddd'}));
+  setChart(id,ctx.s);
+}
+function twoBars(id,items,max=40){
+  const ctx=baseSVG(650,300,{l:65,r:24,t:20,b:45});axes(ctx,items.map((d,i)=>({x:ctx.m.l+(i+.5)*(ctx.iw/items.length),label:d.label})),max,v=>`${v}%`);
+  const bw=Math.min(105,ctx.iw/items.length*.45);
+  items.forEach((d,i)=>{const x=ctx.m.l+(i+.5)*ctx.iw/items.length-bw/2;const hh=d.value/max*ctx.ih;const y=ctx.m.t+ctx.ih-hh;ctx.s.appendChild(svg('rect',{x,y,width:bw,height:hh,fill:'#718f78'}));ctx.s.appendChild(svg('text',{x:x+bw/2,y:y-7,'text-anchor':'middle','font-size':12,fill:'#444'},`${d.value}%`));});setChart(id,ctx.s);
+}
+function donutBars(id,items){
+  horizontalBars(id,items,{max:100,suffix:'%',colors:items.map(x=>x.color)});
+}
+function renderKeyLegend(id,keys,labels=LABELS,colors=COLORS){
+  const d=document.getElementById(id); if(!d)return; d.innerHTML='';
+  keys.forEach(k=>{const s=document.createElement('span');s.innerHTML=`<i class="swatch" style="background:${colors[k]}"></i>${labels[k]||k}`;d.appendChild(s)});
+}
+function genericStacked100(id,data,keys,colors=COLORS,labels=LABELS){
+  const ctx=baseSVG(650,310,{l:54,r:16,t:18,b:48});
+  const n=data.length; const slot=ctx.iw/Math.max(1,n); const bw=Math.min(105,slot*.62);
+  axes(ctx,data.map((d,i)=>({x:ctx.m.l+(i+.5)*slot,label:d.label})),100,v=>`${Math.round(v)}%`);
+  data.forEach((d,i)=>{
+    let y0=0; const x=ctx.m.l+(i+.5)*slot-bw/2;
+    keys.forEach(k=>{
+      const share=d.total?100*(d[k]||0)/d.total:0;if(share<=0)return;
+      const y=ctx.m.t+ctx.ih-((y0+share)/100)*ctx.ih; const hh=(share/100)*ctx.ih;
+      const r=svg('rect',{x,y,width:bw,height:Math.max(.25,hh),fill:colors[k]||'#999'});
+      r.appendChild(svg('title',{},`${d.label} · ${labels[k]||k}: ${share.toFixed(1)}% (${fmt(d[k]||0)})`));ctx.s.appendChild(r);y0+=share;
+    });
+  });
+  setChart(id,ctx.s);
+}
+function genericLineChart(id,data,series,{yMin=0,yMax=null,yFormatter=v=>String(Math.round(v)),xKey='year'}={}){
+  const ctx=baseSVG(650,300,{l:62,r:20,t:22,b:40});
+  const vals=series.flatMap(s=>data.map(d=>d[s.key]));
+  const max=yMax??niceMax(Math.max(...vals)); const min=yMin; const span=Math.max(1,max-min);
+  const tickCount=5;
+  for(let i=0;i<=tickCount;i++){
+    const val=min+span*i/tickCount,y=ctx.m.t+ctx.ih-(val-min)/span*ctx.ih;
+    ctx.s.appendChild(svg('line',{x1:ctx.m.l,y1:y,x2:ctx.m.l+ctx.iw,y2:y,stroke:'#e5e5e5'}));
+    ctx.s.appendChild(svg('text',{x:ctx.m.l-7,y:y+4,'text-anchor':'end','font-size':10,fill:'#777'},yFormatter(val)));
+  }
+  ctx.s.appendChild(svg('line',{x1:ctx.m.l,y1:ctx.m.t+ctx.ih,x2:ctx.m.l+ctx.iw,y2:ctx.m.t+ctx.ih,stroke:'#888'}));
+  const every=data.length>10?2:1;
+  data.forEach((d,i)=>{if(i%every===0||i===data.length-1){const x=ctx.m.l+i/Math.max(1,data.length-1)*ctx.iw;ctx.s.appendChild(svg('text',{x,y:ctx.m.t+ctx.ih+18,'text-anchor':'middle','font-size':10,fill:'#777'},String(d[xKey])));}});
+  series.forEach((ser,si)=>{
+    const pts=data.map((d,i)=>{const v=d[ser.key],x=ctx.m.l+i/Math.max(1,data.length-1)*ctx.iw,y=ctx.m.t+ctx.ih-(v-min)/span*ctx.ih;return `${x},${y}`}).join(' ');
+    ctx.s.appendChild(svg('polyline',{points:pts,fill:'none',stroke:ser.color,'stroke-width':ser.width||2.3,'stroke-linejoin':'round','stroke-linecap':'round'}));
+    data.forEach((d,i)=>{const v=d[ser.key],x=ctx.m.l+i/Math.max(1,data.length-1)*ctx.iw,y=ctx.m.t+ctx.ih-(v-min)/span*ctx.ih;const c=svg('circle',{cx:x,cy:y,r:2.4,fill:ser.color});c.appendChild(svg('title',{},`${d[xKey]} · ${ser.label}: ${yFormatter(v)}`));ctx.s.appendChild(c)});
+    const lx=ctx.m.l+10+si*110;ctx.s.appendChild(svg('line',{x1:lx,y1:ctx.m.t+7,x2:lx+18,y2:ctx.m.t+7,stroke:ser.color,'stroke-width':2.5}));ctx.s.appendChild(svg('text',{x:lx+23,y:ctx.m.t+11,'font-size':10,fill:'#555'},ser.label));
+  });
+  setChart(id,ctx.s);
+}
+function groupedBars(id,data,series,{yMax=null,yFormatter=v=>String(Math.round(v))}={}){
+  const ctx=baseSVG(650,300,{l:55,r:20,t:20,b:42});
+  const mx=yMax??niceMax(Math.max(...series.flatMap(s=>data.map(d=>d[s.key]))));
+  axes(ctx,data.map((d,i)=>({x:ctx.m.l+(i+.5)*ctx.iw/data.length,label:d.label})),mx,yFormatter);
+  const slot=ctx.iw/data.length,groupW=Math.min(180,slot*.64),bw=groupW/series.length;
+  data.forEach((d,i)=>series.forEach((ser,j)=>{const v=d[ser.key],x=ctx.m.l+(i+.5)*slot-groupW/2+j*bw,hh=v/mx*ctx.ih,y=ctx.m.t+ctx.ih-hh;const r=svg('rect',{x:x+2,y,width:Math.max(1,bw-4),height:hh,fill:ser.color});r.appendChild(svg('title',{},`${d.label} · ${ser.label}: ${fmt(v)}`));ctx.s.appendChild(r);ctx.s.appendChild(svg('text',{x:x+bw/2,y:y-5,'text-anchor':'middle','font-size':10,fill:'#555'},fmt(v)));}));
+  series.forEach((ser,i)=>{const x=ctx.m.l+8+i*100;ctx.s.appendChild(svg('rect',{x,y:ctx.m.t+2,width:10,height:10,fill:ser.color}));ctx.s.appendChild(svg('text',{x:x+15,y:ctx.m.t+11,'font-size':10,fill:'#555'},ser.label));});
+  setChart(id,ctx.s);
+}
+function chargingStackedChart(id,data){
+  const ctx=baseSVG(650,300,{l:58,r:18,t:18,b:42});const totals=data.map(d=>d.normal+d.fast);const mx=niceMax(Math.max(...totals));
+  axes(ctx,data.map((d,i)=>({x:ctx.m.l+(i+.5)*ctx.iw/data.length,label:d.label})),mx,v=>v>=1000?`${Math.round(v/1000)}k`:Math.round(v));
+  const slot=ctx.iw/data.length,bw=Math.min(44,slot*.62);
+  data.forEach((d,i)=>{const x=ctx.m.l+(i+.5)*slot-bw/2;let y0=0;[['normal','#78917e'],['fast','#2f6f45']].forEach(([k,c])=>{const v=d[k],hh=v/mx*ctx.ih,y=ctx.m.t+ctx.ih-(y0+v)/mx*ctx.ih;const r=svg('rect',{x,y,width:bw,height:hh,fill:c});r.appendChild(svg('title',{},`${d.label} · ${k==='normal'?'Normal':'Fast'}: ${fmt(v)}`));ctx.s.appendChild(r);y0+=v;});});
+  setChart(id,ctx.s);
+}
+function renderLegend(){
+  const d=document.getElementById('shareLegend');d.innerHTML='';MAIN_ORDER.forEach(k=>{const s=document.createElement('span');s.innerHTML=`<i class="swatch" style="background:${COLORS[k]}"></i>${LABELS[k]}`;d.appendChild(s)});
+}
+function renderStatic(){
+  horizontalBars('bevBrands',[
+    {label:'Volkswagen',value:66584},{label:'Škoda',value:48323},{label:'BMW',value:44332},{label:'Mercedes-Benz',value:37584},{label:'Audi',value:34260},{label:'Tesla',value:32258}
+  ],{max:70000,valueFormatter:v=>fmt(v),colors:['#3d7c4a','#4d8959','#5d9668','#6da378','#7db087','#8dbd96']});
+
+  renderKeyLegend('usedNewLegend',MAIN_ORDER);
+  genericStacked100('usedVsNew',NEW_USED_2025,MAIN_ORDER);
+  genericLineChart('priceTrend',PRICE_TREND,[
+    {key:'newPrice',label:'New',color:'#2f6f45'},{key:'usedPrice',label:'Used',color:'#777'}
+  ],{yMin:0,yMax:50000,yFormatter:v=>`€${Math.round(v/1000)}k`});
+  horizontalBars('newPriceByDrive',[
+    {label:'Petrol',value:33150},{label:'BEV',value:47160},{label:'Diesel',value:50030},{label:'PHEV',value:64570}
+  ],{max:70000,valueFormatter:v=>`€${fmt(v)}`,colors:['#e39a33','#3a923a','#6e6e6e','#76b947']});
+
+  renderKeyLegend('fleetLegend',MAIN_ORDER);
+  genericStacked100('fleetShare',FLEET_DATA,MAIN_ORDER);
+  genericLineChart('avgPower',POWER_TREND,[{key:'kW',label:'average kW',color:'#446f52'}],{yMin:80,yMax:100,yFormatter:v=>`${Math.round(v)} kW`});
+  twoBars('segmentProxy',[{label:'2016',value:20.8},{label:'2026',value:32.5}],40);
+
+  groupedBars('modelAvailability',MODEL_AVAILABILITY,[{key:'BEV',label:'BEV',color:'#3a923a'},{key:'ICE',label:'ICE',color:'#8a8a8a'}],{yMax:300});
+  renderKeyLegend('chargingLegend',['normal','fast'],{normal:'Normal',fast:'Fast'},{normal:'#78917e',fast:'#2f6f45'});
+  chargingStackedChart('chargingGrowth',CHARGING_DATA);
+
+  horizontalBars('distanceBars',[{label:'Petrol',value:8406},{label:'BEV',value:11312},{label:'HEV',value:13526},{label:'PHEV',value:13575}],{max:15000,valueFormatter:v=>`${fmt(v)} km`,colors:['#e39a33','#3a923a','#b8d86b','#76b947']});
+  horizontalBars('distanceShare',[{label:'Petrol',value:47.4},{label:'Diesel',value:35.4},{label:'All other',value:17.2}],{max:55,suffix:'%',colors:['#e39a33','#6e6e6e','#9fcaa6']});
+  donutBars('energyCarrier',[{label:'Fuels',value:97.5,color:'#6e6e6e'},{label:'Electricity',value:2.5,color:'#3a923a'}]);
+  horizontalBars('fuelMix',[{label:'Diesel',value:49.4},{label:'Petrol',value:29.5},{label:'Aviation',value:16.0},{label:'Biofuels',value:5.0},{label:'LPG / natural gas',value:0.4}],{max:55,suffix:'%',colors:['#6e6e6e','#e39a33','#8f9cc0','#74a65c','#bdbdbd']});
+}
+function updateRangeUI(){
+  const a=document.getElementById('yearStart'),b=document.getElementById('yearEnd');
+  if(!a||!b||selectedStartYear==null||selectedEndYear==null)return;
+  a.value=selectedStartYear;b.value=selectedEndYear;
+  const min=+a.min,max=+a.max,span=Math.max(1,max-min);
+  const left=100*(selectedStartYear-min)/span,right=100*(selectedEndYear-min)/span;
+  const fill=document.getElementById('rangeFill');fill.style.left=`${left}%`;fill.style.width=`${Math.max(0,right-left)}%`;
+  document.getElementById('rangeLabel').textContent=selectedStartYear===selectedEndYear?String(selectedStartYear):`${selectedStartYear} — ${selectedEndYear}`;
+  const months=allMonthly.filter(d=>d.year>=selectedStartYear&&d.year<=selectedEndYear).length;
+  document.getElementById('rangeMeta').textContent=`${months} monthly observations shown. Applies to the seven registration time-series charts; latest headline cards stay on the newest month.`;
+  document.querySelectorAll('.range-actions button').forEach(btn=>btn.classList.remove('active'));
+  if(selectedStartYear===min&&selectedEndYear===max)document.querySelector('[data-range="all"]')?.classList.add('active');
+}
+function configureRange(monthly){
+  if(!monthly.length)return;
+  const min=Math.min(...monthly.map(d=>d.year)),max=Math.max(...monthly.map(d=>d.year));
+  const a=document.getElementById('yearStart'),b=document.getElementById('yearEnd');
+  a.min=b.min=min;a.max=b.max=max;
+  if(!rangeUserTouched||selectedStartYear==null||selectedEndYear==null){selectedStartYear=min;selectedEndYear=max;}
+  else{selectedStartYear=Math.max(min,Math.min(selectedStartYear,max));selectedEndYear=Math.max(selectedStartYear,Math.min(selectedEndYear,max));}
+  updateRangeUI();
+}
+function renderFilteredDynamic(){
+  if(!allMonthly.length)return;
+  const monthly=allMonthly.filter(d=>d.year>=selectedStartYear&&d.year<=selectedEndYear);
+  const annual=annualize(monthly);
+  renderLegend();
+  stackedAreaShareChart('monthlyAreaShare',monthly);
+  lineChart('monthlyShare',monthly,MAIN_ORDER,{percent:true,yMax:100});
+  stackedChart('annualShare',annual,{percent:true,annual:true});
+  lineChart('monthlyAbs',monthly,['Diesel','Petrol','NonPluginHybrid','PluginHybrid','BatteryElectric'],{});
+  lineChart('monthlyMA',monthly,['Diesel','Petrol','NonPluginHybrid','PluginHybrid','BatteryElectric'],{moving:true});
+  stackedChart('monthlyStacked',monthly,{percent:false});
+  plugShareChart('plugShare',monthly);
+}
+function renderDynamic(rows){
+  germanyRows=cleanRows(rows);allMonthly=pivot(germanyRows);configureRange(allMonthly);renderFilteredDynamic();
+  const latest=allMonthly[allMonthly.length-1];
+  if(latest){
+    document.getElementById('latestBEV').textContent=fmt(latest.BatteryElectric);
+    document.getElementById('latestBEVShare').textContent=`${(100*latest.BatteryElectric/latest.total).toFixed(1)}%`;
+  }
+}
+function setQuickRange(mode){
+  if(!allMonthly.length)return;rangeUserTouched=true;
+  const min=Math.min(...allMonthly.map(d=>d.year)),max=Math.max(...allMonthly.map(d=>d.year));selectedEndYear=max;
+  if(mode==='all')selectedStartYear=min;
+  else if(mode==='2020')selectedStartYear=Math.max(min,2020);
+  else selectedStartYear=Math.max(min,max-(+mode)+1);
+  updateRangeUI();renderFilteredDynamic();
+}
+const startSlider=document.getElementById('yearStart'),endSlider=document.getElementById('yearEnd');
+startSlider.addEventListener('input',()=>{rangeUserTouched=true;selectedStartYear=Math.min(+startSlider.value,selectedEndYear);updateRangeUI();renderFilteredDynamic();});
+endSlider.addEventListener('input',()=>{rangeUserTouched=true;selectedEndYear=Math.max(+endSlider.value,selectedStartYear);updateRangeUI();renderFilteredDynamic();});
+document.querySelectorAll('.range-actions button').forEach(btn=>btn.addEventListener('click',()=>setQuickRange(btn.dataset.range)));
+
+function downloadCSV(){
+  const rows=germanyRows.length?germanyRows:fallbackRows;
+  const lines=['YYYYMM,Country,Fuel,Value',...rows.map(r=>`${r.ym},Germany,${r.fuel},${r.value}`)];
+  const blob=new Blob([lines.join('\n')],{type:'text/csv;charset=utf-8'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='germany_carsales_monthly.csv';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+}
+document.getElementById('downloadBtn').addEventListener('click',downloadCSV);
+renderStatic();
+
+// Show the embedded fallback immediately, then replace it only after the
+// complete long-run Germany series has loaded and passed validation.
+renderDynamic(fallbackRows);
+
+(async()=>{
+  const status=document.getElementById('dataStatus');
+  try{
+    // Intentionally no timeout: the fallback remains visible for as long as
+    // the remote request needs. The progress bar is indeterminate because
+    // browsers are not guaranteed to expose a usable Content-Length header
+    // for this cross-origin GitHub raw-file request.
+    const r=await fetch(REMOTE,{cache:'no-store'});
+    if(!r.ok)throw new Error(`HTTP ${r.status}`);
+
+    const parsed=parseCSV(await r.text());
+    if(parsed.length<100)throw new Error(`Germany series unexpectedly short (${parsed.length} rows parsed)`);
+
+    usingLive=true;
+    renderDynamic(parsed);
+    status.className='status live';
+    const p=pivot(cleanRows(parsed));
+    const first=p[0],last=p[p.length-1];
+    status.innerHTML=`<span class="dot"></span><strong>Full historical monthly series loaded successfully.</strong> Germany data shown from ${first.year} to ${last.year}-${String(last.month).padStart(2,'0')}. Headline 2026 figures below are cross-checked against VDA/KBA.`;
+  }catch(e){
+    // Do not remove the fallback. It is already rendered and remains usable.
+    usingLive=false;
+    status.className='status fallback failed';
+    status.innerHTML=`<span class="dot"></span><strong>Fallback data remains in use.</strong> The full historical CSV could not be loaded (${String(e.message||e)}). The charts continue to show embedded data from Jan 2024 through Aug 2026.<div class="load-progress"><div class="load-progress-bar"></div></div>`;
+    console.error('Could not load full Germany monthly series:',e);
+  }
+})();
+</script>
+</body>
+</html>
