@@ -1,0 +1,600 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-14T00:00:00Z",
+  "unit": "1000 tonnes",
+  "source": {
+    "name": "BAFA official mineral-oil statistics / UFOP historical tables",
+    "url": "https://www.bafa.de/DE/Energie/Rohstoffe/Mineraloelstatistik/mineraloel_node.html"
+  },
+  "definition": "Domestic deliveries/consumption for diesel incl. bio-component and petrol incl. bioethanol; not literal retail till sales.",
+  "rows": [
+    {
+      "ym": "201901",
+      "year": 2019,
+      "month": 1,
+      "Diesel": 2956.4,
+      "Petrol": 1361.7
+    },
+    {
+      "ym": "201902",
+      "year": 2019,
+      "month": 2,
+      "Diesel": 2950.9,
+      "Petrol": 1274.8
+    },
+    {
+      "ym": "201903",
+      "year": 2019,
+      "month": 3,
+      "Diesel": 3100.5,
+      "Petrol": 1469.7
+    },
+    {
+      "ym": "201904",
+      "year": 2019,
+      "month": 4,
+      "Diesel": 3229.1,
+      "Petrol": 1473.9
+    },
+    {
+      "ym": "201905",
+      "year": 2019,
+      "month": 5,
+      "Diesel": 3270.1,
+      "Petrol": 1580.4
+    },
+    {
+      "ym": "201906",
+      "year": 2019,
+      "month": 6,
+      "Diesel": 3023.5,
+      "Petrol": 1536.0
+    },
+    {
+      "ym": "201907",
+      "year": 2019,
+      "month": 7,
+      "Diesel": 3401.0,
+      "Petrol": 1615.3
+    },
+    {
+      "ym": "201908",
+      "year": 2019,
+      "month": 8,
+      "Diesel": 3238.6,
+      "Petrol": 1613.0
+    },
+    {
+      "ym": "201909",
+      "year": 2019,
+      "month": 9,
+      "Diesel": 3146.9,
+      "Petrol": 1502.3
+    },
+    {
+      "ym": "201910",
+      "year": 2019,
+      "month": 10,
+      "Diesel": 3365.1,
+      "Petrol": 1583.1
+    },
+    {
+      "ym": "201911",
+      "year": 2019,
+      "month": 11,
+      "Diesel": 3185.2,
+      "Petrol": 1448.7
+    },
+    {
+      "ym": "201912",
+      "year": 2019,
+      "month": 12,
+      "Diesel": 2930.8,
+      "Petrol": 1492.1
+    },
+    {
+      "ym": "202001",
+      "year": 2020,
+      "month": 1,
+      "Diesel": 2935.7,
+      "Petrol": 1460.0
+    },
+    {
+      "ym": "202002",
+      "year": 2020,
+      "month": 2,
+      "Diesel": 2877.9,
+      "Petrol": 1374.8
+    },
+    {
+      "ym": "202003",
+      "year": 2020,
+      "month": 3,
+      "Diesel": 2859.8,
+      "Petrol": 1268.3
+    },
+    {
+      "ym": "202004",
+      "year": 2020,
+      "month": 4,
+      "Diesel": 2532.3,
+      "Petrol": 965.4
+    },
+    {
+      "ym": "202005",
+      "year": 2020,
+      "month": 5,
+      "Diesel": 2673.8,
+      "Petrol": 1182.9
+    },
+    {
+      "ym": "202006",
+      "year": 2020,
+      "month": 6,
+      "Diesel": 2791.9,
+      "Petrol": 1300.1
+    },
+    {
+      "ym": "202007",
+      "year": 2020,
+      "month": 7,
+      "Diesel": 3233.1,
+      "Petrol": 1562.5
+    },
+    {
+      "ym": "202008",
+      "year": 2020,
+      "month": 8,
+      "Diesel": 2947.9,
+      "Petrol": 1469.3
+    },
+    {
+      "ym": "202009",
+      "year": 2020,
+      "month": 9,
+      "Diesel": 3120.9,
+      "Petrol": 1481.4
+    },
+    {
+      "ym": "202010",
+      "year": 2020,
+      "month": 10,
+      "Diesel": 3239.8,
+      "Petrol": 1497.4
+    },
+    {
+      "ym": "202011",
+      "year": 2020,
+      "month": 11,
+      "Diesel": 2820.0,
+      "Petrol": 1248.5
+    },
+    {
+      "ym": "202012",
+      "year": 2020,
+      "month": 12,
+      "Diesel": 2807.6,
+      "Petrol": 1232.0
+    },
+    {
+      "ym": "202101",
+      "year": 2021,
+      "month": 1,
+      "Diesel": 2206.1,
+      "Petrol": 1024.3
+    },
+    {
+      "ym": "202102",
+      "year": 2021,
+      "month": 2,
+      "Diesel": 2222.9,
+      "Petrol": 1016.2
+    },
+    {
+      "ym": "202103",
+      "year": 2021,
+      "month": 3,
+      "Diesel": 2909.9,
+      "Petrol": 1330.0
+    },
+    {
+      "ym": "202104",
+      "year": 2021,
+      "month": 4,
+      "Diesel": 2785.4,
+      "Petrol": 1267.5
+    },
+    {
+      "ym": "202105",
+      "year": 2021,
+      "month": 5,
+      "Diesel": 2727.7,
+      "Petrol": 1318.7
+    },
+    {
+      "ym": "202106",
+      "year": 2021,
+      "month": 6,
+      "Diesel": 3095.7,
+      "Petrol": 1489.1
+    },
+    {
+      "ym": "202107",
+      "year": 2021,
+      "month": 7,
+      "Diesel": 3114.6,
+      "Petrol": 1494.7
+    },
+    {
+      "ym": "202108",
+      "year": 2021,
+      "month": 8,
+      "Diesel": 3209.4,
+      "Petrol": 1583.0
+    },
+    {
+      "ym": "202109",
+      "year": 2021,
+      "month": 9,
+      "Diesel": 3110.6,
+      "Petrol": 1539.9
+    },
+    {
+      "ym": "202110",
+      "year": 2021,
+      "month": 10,
+      "Diesel": 3253.0,
+      "Petrol": 1513.4
+    },
+    {
+      "ym": "202111",
+      "year": 2021,
+      "month": 11,
+      "Diesel": 3159.7,
+      "Petrol": 1439.7
+    },
+    {
+      "ym": "202112",
+      "year": 2021,
+      "month": 12,
+      "Diesel": 2931.5,
+      "Petrol": 1391.8
+    },
+    {
+      "ym": "202201",
+      "year": 2022,
+      "month": 1,
+      "Diesel": 2584.1,
+      "Petrol": 1227.4
+    },
+    {
+      "ym": "202202",
+      "year": 2022,
+      "month": 2,
+      "Diesel": 2403.4,
+      "Petrol": 1186.9
+    },
+    {
+      "ym": "202203",
+      "year": 2022,
+      "month": 3,
+      "Diesel": 2631.5,
+      "Petrol": 1574.1
+    },
+    {
+      "ym": "202204",
+      "year": 2022,
+      "month": 4,
+      "Diesel": 2714.2,
+      "Petrol": 1326.4
+    },
+    {
+      "ym": "202205",
+      "year": 2022,
+      "month": 5,
+      "Diesel": 2574.9,
+      "Petrol": 1292.6
+    },
+    {
+      "ym": "202206",
+      "year": 2022,
+      "month": 6,
+      "Diesel": 2898.8,
+      "Petrol": 1578.7
+    },
+    {
+      "ym": "202207",
+      "year": 2022,
+      "month": 7,
+      "Diesel": 3048.8,
+      "Petrol": 1569.8
+    },
+    {
+      "ym": "202208",
+      "year": 2022,
+      "month": 8,
+      "Diesel": 3312.4,
+      "Petrol": 1713.9
+    },
+    {
+      "ym": "202209",
+      "year": 2022,
+      "month": 9,
+      "Diesel": 2832.2,
+      "Petrol": 1366.5
+    },
+    {
+      "ym": "202210",
+      "year": 2022,
+      "month": 10,
+      "Diesel": 2918.1,
+      "Petrol": 1442.8
+    },
+    {
+      "ym": "202211",
+      "year": 2022,
+      "month": 11,
+      "Diesel": 3101.3,
+      "Petrol": 1480.2
+    },
+    {
+      "ym": "202212",
+      "year": 2022,
+      "month": 12,
+      "Diesel": 2883.2,
+      "Petrol": 1338.1
+    },
+    {
+      "ym": "202301",
+      "year": 2023,
+      "month": 1,
+      "Diesel": 2457.3,
+      "Petrol": 1298.6
+    },
+    {
+      "ym": "202302",
+      "year": 2023,
+      "month": 2,
+      "Diesel": 2574.8,
+      "Petrol": 1327.0
+    },
+    {
+      "ym": "202303",
+      "year": 2023,
+      "month": 3,
+      "Diesel": 3017.1,
+      "Petrol": 1477.7
+    },
+    {
+      "ym": "202304",
+      "year": 2023,
+      "month": 4,
+      "Diesel": 2583.0,
+      "Petrol": 1406.9
+    },
+    {
+      "ym": "202305",
+      "year": 2023,
+      "month": 5,
+      "Diesel": 2967.5,
+      "Petrol": 1525.4
+    },
+    {
+      "ym": "202306",
+      "year": 2023,
+      "month": 6,
+      "Diesel": 2835.4,
+      "Petrol": 1507.8
+    },
+    {
+      "ym": "202307",
+      "year": 2023,
+      "month": 7,
+      "Diesel": 2802.7,
+      "Petrol": 1505.5
+    },
+    {
+      "ym": "202308",
+      "year": 2023,
+      "month": 8,
+      "Diesel": 2791.0,
+      "Petrol": 1451.3
+    },
+    {
+      "ym": "202309",
+      "year": 2023,
+      "month": 9,
+      "Diesel": 2754.7,
+      "Petrol": 1513.8
+    },
+    {
+      "ym": "202310",
+      "year": 2023,
+      "month": 10,
+      "Diesel": 2916.3,
+      "Petrol": 1531.0
+    },
+    {
+      "ym": "202311",
+      "year": 2023,
+      "month": 11,
+      "Diesel": 3009.7,
+      "Petrol": 1412.0
+    },
+    {
+      "ym": "202312",
+      "year": 2023,
+      "month": 12,
+      "Diesel": 2728.2,
+      "Petrol": 1463.8
+    },
+    {
+      "ym": "202401",
+      "year": 2024,
+      "month": 1,
+      "Diesel": 2272.6,
+      "Petrol": 1306.5
+    },
+    {
+      "ym": "202402",
+      "year": 2024,
+      "month": 2,
+      "Diesel": 2518.9,
+      "Petrol": 1310.7
+    },
+    {
+      "ym": "202403",
+      "year": 2024,
+      "month": 3,
+      "Diesel": 2635.1,
+      "Petrol": 1429.4
+    },
+    {
+      "ym": "202404",
+      "year": 2024,
+      "month": 4,
+      "Diesel": 2737.7,
+      "Petrol": 1483.6
+    },
+    {
+      "ym": "202405",
+      "year": 2024,
+      "month": 5,
+      "Diesel": 2567.0,
+      "Petrol": 1573.7
+    },
+    {
+      "ym": "202406",
+      "year": 2024,
+      "month": 6,
+      "Diesel": 2675.7,
+      "Petrol": 1481.6
+    },
+    {
+      "ym": "202407",
+      "year": 2024,
+      "month": 7,
+      "Diesel": 2896.0,
+      "Petrol": 1581.9
+    },
+    {
+      "ym": "202408",
+      "year": 2024,
+      "month": 8,
+      "Diesel": 2716.8,
+      "Petrol": 1587.7
+    },
+    {
+      "ym": "202409",
+      "year": 2024,
+      "month": 9,
+      "Diesel": 2813.7,
+      "Petrol": 1519.3
+    },
+    {
+      "ym": "202410",
+      "year": 2024,
+      "month": 10,
+      "Diesel": 2636.4,
+      "Petrol": 1515.4
+    },
+    {
+      "ym": "202411",
+      "year": 2024,
+      "month": 11,
+      "Diesel": 2713.4,
+      "Petrol": 1482.5
+    },
+    {
+      "ym": "202412",
+      "year": 2024,
+      "month": 12,
+      "Diesel": 2540.7,
+      "Petrol": 1479.4
+    },
+    {
+      "ym": "202501",
+      "year": 2025,
+      "month": 1,
+      "Diesel": 2393.5,
+      "Petrol": 1423.3
+    },
+    {
+      "ym": "202502",
+      "year": 2025,
+      "month": 2,
+      "Diesel": 2507.1,
+      "Petrol": 1339.6
+    },
+    {
+      "ym": "202503",
+      "year": 2025,
+      "month": 3,
+      "Diesel": 3015.0,
+      "Petrol": 1458.0
+    },
+    {
+      "ym": "202504",
+      "year": 2025,
+      "month": 4,
+      "Diesel": 2890.2,
+      "Petrol": 1502.3
+    },
+    {
+      "ym": "202505",
+      "year": 2025,
+      "month": 5,
+      "Diesel": 2753.0,
+      "Petrol": 1560.5
+    },
+    {
+      "ym": "202506",
+      "year": 2025,
+      "month": 6,
+      "Diesel": 2546.0,
+      "Petrol": 1267.2
+    },
+    {
+      "ym": "202507",
+      "year": 2025,
+      "month": 7,
+      "Diesel": 2992.2,
+      "Petrol": 1603.9
+    },
+    {
+      "ym": "202508",
+      "year": 2025,
+      "month": 8,
+      "Diesel": 2814.2,
+      "Petrol": 1509.8
+    },
+    {
+      "ym": "202509",
+      "year": 2025,
+      "month": 9,
+      "Diesel": 2993.7,
+      "Petrol": 1502.8
+    },
+    {
+      "ym": "202510",
+      "year": 2025,
+      "month": 10,
+      "Diesel": 2977.5,
+      "Petrol": null
+    },
+    {
+      "ym": "202511",
+      "year": 2025,
+      "month": 11,
+      "Diesel": 2730.8,
+      "Petrol": null
+    },
+    {
+      "ym": "202512",
+      "year": 2025,
+      "month": 12,
+      "Diesel": 2766.1,
+      "Petrol": null
+    }
+  ]
+}
