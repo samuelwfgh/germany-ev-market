@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-14T00:00:00Z",
+  "datasets": {
+    "new_registrations": {
+      "label": "New registrations",
+      "status": "seeded",
+      "latest": "2026-09",
+      "cadence": "monthly",
+      "source": "KBA / VDA + consolidated historical series",
+      "note": "Updater refreshes the long-run Germany rows and attempts an official KBA monthly overlay."
+    },
+    "used_transfers": {
+      "label": "Used transfers",
+      "status": "seeded",
+      "latest": "2026-09 total / 2026-07 drivetrain",
+      "cadence": "monthly",
+      "source": "KBA FZ 9",
+      "note": "Detailed drivetrain series updates only when a complete source row can be validated."
+    },
+    "road_fuels": {
+      "label": "Road fuels",
+      "status": "seeded",
+      "latest": "2025-12 diesel / 2025-09 petrol",
+      "cadence": "monthly with publication lag",
+      "source": "BAFA / UFOP",
+      "note": "Missing values stay missing; the updater never interpolates them."
+    },
+    "charging": {
+      "label": "Charging infrastructure",
+      "status": "seeded",
+      "latest": "2026-09-01",
+      "cadence": "monthly",
+      "source": "Bundesnetzagentur",
+      "note": "Normal, fast and simultaneous rated power where published."
+    },
+    "hydrogen": {
+      "label": "Hydrogen stations",
+      "status": "seeded",
+      "latest": "2026-04",
+      "cadence": "irregular snapshots",
+      "source": "IPHE / H2 Mobility",
+      "note": "No monthly interpolation; only documented operational snapshots are appended."
+    }
+  }
+}
