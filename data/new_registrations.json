@@ -1,13 +1,8834 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-14T00:00:00Z",
+  "updated_at": "2026-10-14T07:57:48Z",
   "latest": "2026-09",
   "source": {
-    "primary": "KBA/VDA for current German monthly registrations; seeded history from prior consolidated series",
-    "updater": "Robbie Andrew consolidated CSV plus KBA monthly overlay when parsable",
-    "url": "https://raw.githubusercontent.com/robbieandrew/robbieandrew.github.io/master/carsales/data/all_carsales_monthly.csv"
+    "history": "Robbie Andrew consolidated monthly car-sales dataset (German rows; official registration sources collated)",
+    "current_overlay": "ADAC rolling KBA summary when a complete latest-month parse is available",
+    "history_url": "https://raw.githubusercontent.com/robbieandrew/robbieandrew.github.io/master/carsales/data/all_carsales_monthly.csv",
+    "current_url": "https://www.adac.de/news/neuzulassungen-kba/"
   },
   "rows": [
+    {
+      "ym": "200901",
+      "year": 2009,
+      "month": 1,
+      "fuel": "Diesel",
+      "value": 74917
+    },
+    {
+      "ym": "200901",
+      "year": 2009,
+      "month": 1,
+      "fuel": "Petrol",
+      "value": 112286
+    },
+    {
+      "ym": "200901",
+      "year": 2009,
+      "month": 1,
+      "fuel": "NonPluginHybrid",
+      "value": 245
+    },
+    {
+      "ym": "200901",
+      "year": 2009,
+      "month": 1,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "200901",
+      "year": 2009,
+      "month": 1,
+      "fuel": "BatteryElectric",
+      "value": 0
+    },
+    {
+      "ym": "200901",
+      "year": 2009,
+      "month": 1,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "200901",
+      "year": 2009,
+      "month": 1,
+      "fuel": "Others",
+      "value": 1937
+    },
+    {
+      "ym": "200902",
+      "year": 2009,
+      "month": 2,
+      "fuel": "Diesel",
+      "value": 85681
+    },
+    {
+      "ym": "200902",
+      "year": 2009,
+      "month": 2,
+      "fuel": "Petrol",
+      "value": 189592
+    },
+    {
+      "ym": "200902",
+      "year": 2009,
+      "month": 2,
+      "fuel": "NonPluginHybrid",
+      "value": 420
+    },
+    {
+      "ym": "200902",
+      "year": 2009,
+      "month": 2,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "200902",
+      "year": 2009,
+      "month": 2,
+      "fuel": "BatteryElectric",
+      "value": 0
+    },
+    {
+      "ym": "200902",
+      "year": 2009,
+      "month": 2,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "200902",
+      "year": 2009,
+      "month": 2,
+      "fuel": "Others",
+      "value": 2047
+    },
+    {
+      "ym": "200903",
+      "year": 2009,
+      "month": 3,
+      "fuel": "Diesel",
+      "value": 113392
+    },
+    {
+      "ym": "200903",
+      "year": 2009,
+      "month": 3,
+      "fuel": "Petrol",
+      "value": 284868
+    },
+    {
+      "ym": "200903",
+      "year": 2009,
+      "month": 3,
+      "fuel": "NonPluginHybrid",
+      "value": 519
+    },
+    {
+      "ym": "200903",
+      "year": 2009,
+      "month": 3,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "200903",
+      "year": 2009,
+      "month": 3,
+      "fuel": "BatteryElectric",
+      "value": 5
+    },
+    {
+      "ym": "200903",
+      "year": 2009,
+      "month": 3,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "200903",
+      "year": 2009,
+      "month": 3,
+      "fuel": "Others",
+      "value": 2181
+    },
+    {
+      "ym": "200904",
+      "year": 2009,
+      "month": 4,
+      "fuel": "Diesel",
+      "value": 106229
+    },
+    {
+      "ym": "200904",
+      "year": 2009,
+      "month": 4,
+      "fuel": "Petrol",
+      "value": 270832
+    },
+    {
+      "ym": "200904",
+      "year": 2009,
+      "month": 4,
+      "fuel": "NonPluginHybrid",
+      "value": 689
+    },
+    {
+      "ym": "200904",
+      "year": 2009,
+      "month": 4,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "200904",
+      "year": 2009,
+      "month": 4,
+      "fuel": "BatteryElectric",
+      "value": 1
+    },
+    {
+      "ym": "200904",
+      "year": 2009,
+      "month": 4,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "200904",
+      "year": 2009,
+      "month": 4,
+      "fuel": "Others",
+      "value": 1875
+    },
+    {
+      "ym": "200905",
+      "year": 2009,
+      "month": 5,
+      "fuel": "Diesel",
+      "value": 104372
+    },
+    {
+      "ym": "200905",
+      "year": 2009,
+      "month": 5,
+      "fuel": "Petrol",
+      "value": 277869
+    },
+    {
+      "ym": "200905",
+      "year": 2009,
+      "month": 5,
+      "fuel": "NonPluginHybrid",
+      "value": 470
+    },
+    {
+      "ym": "200905",
+      "year": 2009,
+      "month": 5,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "200905",
+      "year": 2009,
+      "month": 5,
+      "fuel": "BatteryElectric",
+      "value": 69
+    },
+    {
+      "ym": "200905",
+      "year": 2009,
+      "month": 5,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "200905",
+      "year": 2009,
+      "month": 5,
+      "fuel": "Others",
+      "value": 1798
+    },
+    {
+      "ym": "200906",
+      "year": 2009,
+      "month": 6,
+      "fuel": "Diesel",
+      "value": 124826
+    },
+    {
+      "ym": "200906",
+      "year": 2009,
+      "month": 6,
+      "fuel": "Petrol",
+      "value": 299368
+    },
+    {
+      "ym": "200906",
+      "year": 2009,
+      "month": 6,
+      "fuel": "NonPluginHybrid",
+      "value": 688
+    },
+    {
+      "ym": "200906",
+      "year": 2009,
+      "month": 6,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "200906",
+      "year": 2009,
+      "month": 6,
+      "fuel": "BatteryElectric",
+      "value": 1
+    },
+    {
+      "ym": "200906",
+      "year": 2009,
+      "month": 6,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "200906",
+      "year": 2009,
+      "month": 6,
+      "fuel": "Others",
+      "value": 2228
+    },
+    {
+      "ym": "200907",
+      "year": 2009,
+      "month": 7,
+      "fuel": "Diesel",
+      "value": 99577
+    },
+    {
+      "ym": "200907",
+      "year": 2009,
+      "month": 7,
+      "fuel": "Petrol",
+      "value": 237973
+    },
+    {
+      "ym": "200907",
+      "year": 2009,
+      "month": 7,
+      "fuel": "NonPluginHybrid",
+      "value": 873
+    },
+    {
+      "ym": "200907",
+      "year": 2009,
+      "month": 7,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "200907",
+      "year": 2009,
+      "month": 7,
+      "fuel": "BatteryElectric",
+      "value": 4
+    },
+    {
+      "ym": "200907",
+      "year": 2009,
+      "month": 7,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "200907",
+      "year": 2009,
+      "month": 7,
+      "fuel": "Others",
+      "value": 1549
+    },
+    {
+      "ym": "200908",
+      "year": 2009,
+      "month": 8,
+      "fuel": "Diesel",
+      "value": 78514
+    },
+    {
+      "ym": "200908",
+      "year": 2009,
+      "month": 8,
+      "fuel": "Petrol",
+      "value": 194433
+    },
+    {
+      "ym": "200908",
+      "year": 2009,
+      "month": 8,
+      "fuel": "NonPluginHybrid",
+      "value": 893
+    },
+    {
+      "ym": "200908",
+      "year": 2009,
+      "month": 8,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "200908",
+      "year": 2009,
+      "month": 8,
+      "fuel": "BatteryElectric",
+      "value": 8
+    },
+    {
+      "ym": "200908",
+      "year": 2009,
+      "month": 8,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "200908",
+      "year": 2009,
+      "month": 8,
+      "fuel": "Others",
+      "value": 1371
+    },
+    {
+      "ym": "200909",
+      "year": 2009,
+      "month": 9,
+      "fuel": "Diesel",
+      "value": 97193
+    },
+    {
+      "ym": "200909",
+      "year": 2009,
+      "month": 9,
+      "fuel": "Petrol",
+      "value": 216299
+    },
+    {
+      "ym": "200909",
+      "year": 2009,
+      "month": 9,
+      "fuel": "NonPluginHybrid",
+      "value": 1051
+    },
+    {
+      "ym": "200909",
+      "year": 2009,
+      "month": 9,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "200909",
+      "year": 2009,
+      "month": 9,
+      "fuel": "BatteryElectric",
+      "value": 28
+    },
+    {
+      "ym": "200909",
+      "year": 2009,
+      "month": 9,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "200909",
+      "year": 2009,
+      "month": 9,
+      "fuel": "Others",
+      "value": 1595
+    },
+    {
+      "ym": "200910",
+      "year": 2009,
+      "month": 10,
+      "fuel": "Diesel",
+      "value": 101917
+    },
+    {
+      "ym": "200910",
+      "year": 2009,
+      "month": 10,
+      "fuel": "Petrol",
+      "value": 216863
+    },
+    {
+      "ym": "200910",
+      "year": 2009,
+      "month": 10,
+      "fuel": "NonPluginHybrid",
+      "value": 804
+    },
+    {
+      "ym": "200910",
+      "year": 2009,
+      "month": 10,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "200910",
+      "year": 2009,
+      "month": 10,
+      "fuel": "BatteryElectric",
+      "value": 13
+    },
+    {
+      "ym": "200910",
+      "year": 2009,
+      "month": 10,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "200910",
+      "year": 2009,
+      "month": 10,
+      "fuel": "Others",
+      "value": 1523
+    },
+    {
+      "ym": "200911",
+      "year": 2009,
+      "month": 11,
+      "fuel": "Diesel",
+      "value": 98029
+    },
+    {
+      "ym": "200911",
+      "year": 2009,
+      "month": 11,
+      "fuel": "Petrol",
+      "value": 179152
+    },
+    {
+      "ym": "200911",
+      "year": 2009,
+      "month": 11,
+      "fuel": "NonPluginHybrid",
+      "value": 923
+    },
+    {
+      "ym": "200911",
+      "year": 2009,
+      "month": 11,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "200911",
+      "year": 2009,
+      "month": 11,
+      "fuel": "BatteryElectric",
+      "value": 22
+    },
+    {
+      "ym": "200911",
+      "year": 2009,
+      "month": 11,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "200911",
+      "year": 2009,
+      "month": 11,
+      "fuel": "Others",
+      "value": 1599
+    },
+    {
+      "ym": "200912",
+      "year": 2009,
+      "month": 12,
+      "fuel": "Diesel",
+      "value": 83986
+    },
+    {
+      "ym": "200912",
+      "year": 2009,
+      "month": 12,
+      "fuel": "Petrol",
+      "value": 129232
+    },
+    {
+      "ym": "200912",
+      "year": 2009,
+      "month": 12,
+      "fuel": "NonPluginHybrid",
+      "value": 799
+    },
+    {
+      "ym": "200912",
+      "year": 2009,
+      "month": 12,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "200912",
+      "year": 2009,
+      "month": 12,
+      "fuel": "BatteryElectric",
+      "value": 11
+    },
+    {
+      "ym": "200912",
+      "year": 2009,
+      "month": 12,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "200912",
+      "year": 2009,
+      "month": 12,
+      "fuel": "Others",
+      "value": 1536
+    },
+    {
+      "ym": "201001",
+      "year": 2010,
+      "month": 1,
+      "fuel": "Diesel",
+      "value": 70201
+    },
+    {
+      "ym": "201001",
+      "year": 2010,
+      "month": 1,
+      "fuel": "Petrol",
+      "value": 109206
+    },
+    {
+      "ym": "201001",
+      "year": 2010,
+      "month": 1,
+      "fuel": "NonPluginHybrid",
+      "value": 662
+    },
+    {
+      "ym": "201001",
+      "year": 2010,
+      "month": 1,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "201001",
+      "year": 2010,
+      "month": 1,
+      "fuel": "BatteryElectric",
+      "value": 17
+    },
+    {
+      "ym": "201001",
+      "year": 2010,
+      "month": 1,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201001",
+      "year": 2010,
+      "month": 1,
+      "fuel": "Others",
+      "value": 1103
+    },
+    {
+      "ym": "201002",
+      "year": 2010,
+      "month": 2,
+      "fuel": "Diesel",
+      "value": 78899
+    },
+    {
+      "ym": "201002",
+      "year": 2010,
+      "month": 2,
+      "fuel": "Petrol",
+      "value": 114139
+    },
+    {
+      "ym": "201002",
+      "year": 2010,
+      "month": 2,
+      "fuel": "NonPluginHybrid",
+      "value": 760
+    },
+    {
+      "ym": "201002",
+      "year": 2010,
+      "month": 2,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "201002",
+      "year": 2010,
+      "month": 2,
+      "fuel": "BatteryElectric",
+      "value": 12
+    },
+    {
+      "ym": "201002",
+      "year": 2010,
+      "month": 2,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201002",
+      "year": 2010,
+      "month": 2,
+      "fuel": "Others",
+      "value": 1036
+    },
+    {
+      "ym": "201003",
+      "year": 2010,
+      "month": 3,
+      "fuel": "Diesel",
+      "value": 117036
+    },
+    {
+      "ym": "201003",
+      "year": 2010,
+      "month": 3,
+      "fuel": "Petrol",
+      "value": 175174
+    },
+    {
+      "ym": "201003",
+      "year": 2010,
+      "month": 3,
+      "fuel": "NonPluginHybrid",
+      "value": 738
+    },
+    {
+      "ym": "201003",
+      "year": 2010,
+      "month": 3,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "201003",
+      "year": 2010,
+      "month": 3,
+      "fuel": "BatteryElectric",
+      "value": 27
+    },
+    {
+      "ym": "201003",
+      "year": 2010,
+      "month": 3,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201003",
+      "year": 2010,
+      "month": 3,
+      "fuel": "Others",
+      "value": 1400
+    },
+    {
+      "ym": "201004",
+      "year": 2010,
+      "month": 4,
+      "fuel": "Diesel",
+      "value": 104775
+    },
+    {
+      "ym": "201004",
+      "year": 2010,
+      "month": 4,
+      "fuel": "Petrol",
+      "value": 152597
+    },
+    {
+      "ym": "201004",
+      "year": 2010,
+      "month": 4,
+      "fuel": "NonPluginHybrid",
+      "value": 827
+    },
+    {
+      "ym": "201004",
+      "year": 2010,
+      "month": 4,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "201004",
+      "year": 2010,
+      "month": 4,
+      "fuel": "BatteryElectric",
+      "value": 33
+    },
+    {
+      "ym": "201004",
+      "year": 2010,
+      "month": 4,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201004",
+      "year": 2010,
+      "month": 4,
+      "fuel": "Others",
+      "value": 1182
+    },
+    {
+      "ym": "201005",
+      "year": 2010,
+      "month": 5,
+      "fuel": "Diesel",
+      "value": 101889
+    },
+    {
+      "ym": "201005",
+      "year": 2010,
+      "month": 5,
+      "fuel": "Petrol",
+      "value": 145823
+    },
+    {
+      "ym": "201005",
+      "year": 2010,
+      "month": 5,
+      "fuel": "NonPluginHybrid",
+      "value": 787
+    },
+    {
+      "ym": "201005",
+      "year": 2010,
+      "month": 5,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "201005",
+      "year": 2010,
+      "month": 5,
+      "fuel": "BatteryElectric",
+      "value": 35
+    },
+    {
+      "ym": "201005",
+      "year": 2010,
+      "month": 5,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201005",
+      "year": 2010,
+      "month": 5,
+      "fuel": "Others",
+      "value": 1174
+    },
+    {
+      "ym": "201006",
+      "year": 2010,
+      "month": 6,
+      "fuel": "Diesel",
+      "value": 119110
+    },
+    {
+      "ym": "201006",
+      "year": 2010,
+      "month": 6,
+      "fuel": "Petrol",
+      "value": 167651
+    },
+    {
+      "ym": "201006",
+      "year": 2010,
+      "month": 6,
+      "fuel": "NonPluginHybrid",
+      "value": 952
+    },
+    {
+      "ym": "201006",
+      "year": 2010,
+      "month": 6,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "201006",
+      "year": 2010,
+      "month": 6,
+      "fuel": "BatteryElectric",
+      "value": 47
+    },
+    {
+      "ym": "201006",
+      "year": 2010,
+      "month": 6,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201006",
+      "year": 2010,
+      "month": 6,
+      "fuel": "Others",
+      "value": 1499
+    },
+    {
+      "ym": "201007",
+      "year": 2010,
+      "month": 7,
+      "fuel": "Diesel",
+      "value": 103091
+    },
+    {
+      "ym": "201007",
+      "year": 2010,
+      "month": 7,
+      "fuel": "Petrol",
+      "value": 132456
+    },
+    {
+      "ym": "201007",
+      "year": 2010,
+      "month": 7,
+      "fuel": "NonPluginHybrid",
+      "value": 770
+    },
+    {
+      "ym": "201007",
+      "year": 2010,
+      "month": 7,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "201007",
+      "year": 2010,
+      "month": 7,
+      "fuel": "BatteryElectric",
+      "value": 53
+    },
+    {
+      "ym": "201007",
+      "year": 2010,
+      "month": 7,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201007",
+      "year": 2010,
+      "month": 7,
+      "fuel": "Others",
+      "value": 1058
+    },
+    {
+      "ym": "201008",
+      "year": 2010,
+      "month": 8,
+      "fuel": "Diesel",
+      "value": 78973
+    },
+    {
+      "ym": "201008",
+      "year": 2010,
+      "month": 8,
+      "fuel": "Petrol",
+      "value": 120137
+    },
+    {
+      "ym": "201008",
+      "year": 2010,
+      "month": 8,
+      "fuel": "NonPluginHybrid",
+      "value": 737
+    },
+    {
+      "ym": "201008",
+      "year": 2010,
+      "month": 8,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "201008",
+      "year": 2010,
+      "month": 8,
+      "fuel": "BatteryElectric",
+      "value": 43
+    },
+    {
+      "ym": "201008",
+      "year": 2010,
+      "month": 8,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201008",
+      "year": 2010,
+      "month": 8,
+      "fuel": "Others",
+      "value": 995
+    },
+    {
+      "ym": "201009",
+      "year": 2010,
+      "month": 9,
+      "fuel": "Diesel",
+      "value": 107487
+    },
+    {
+      "ym": "201009",
+      "year": 2010,
+      "month": 9,
+      "fuel": "Petrol",
+      "value": 149635
+    },
+    {
+      "ym": "201009",
+      "year": 2010,
+      "month": 9,
+      "fuel": "NonPluginHybrid",
+      "value": 1527
+    },
+    {
+      "ym": "201009",
+      "year": 2010,
+      "month": 9,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "201009",
+      "year": 2010,
+      "month": 9,
+      "fuel": "BatteryElectric",
+      "value": 73
+    },
+    {
+      "ym": "201009",
+      "year": 2010,
+      "month": 9,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201009",
+      "year": 2010,
+      "month": 9,
+      "fuel": "Others",
+      "value": 1026
+    },
+    {
+      "ym": "201010",
+      "year": 2010,
+      "month": 10,
+      "fuel": "Diesel",
+      "value": 114295
+    },
+    {
+      "ym": "201010",
+      "year": 2010,
+      "month": 10,
+      "fuel": "Petrol",
+      "value": 140558
+    },
+    {
+      "ym": "201010",
+      "year": 2010,
+      "month": 10,
+      "fuel": "NonPluginHybrid",
+      "value": 898
+    },
+    {
+      "ym": "201010",
+      "year": 2010,
+      "month": 10,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "201010",
+      "year": 2010,
+      "month": 10,
+      "fuel": "BatteryElectric",
+      "value": 68
+    },
+    {
+      "ym": "201010",
+      "year": 2010,
+      "month": 10,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201010",
+      "year": 2010,
+      "month": 10,
+      "fuel": "Others",
+      "value": 956
+    },
+    {
+      "ym": "201011",
+      "year": 2010,
+      "month": 11,
+      "fuel": "Diesel",
+      "value": 120510
+    },
+    {
+      "ym": "201011",
+      "year": 2010,
+      "month": 11,
+      "fuel": "Petrol",
+      "value": 139553
+    },
+    {
+      "ym": "201011",
+      "year": 2010,
+      "month": 11,
+      "fuel": "NonPluginHybrid",
+      "value": 1164
+    },
+    {
+      "ym": "201011",
+      "year": 2010,
+      "month": 11,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "201011",
+      "year": 2010,
+      "month": 11,
+      "fuel": "BatteryElectric",
+      "value": 84
+    },
+    {
+      "ym": "201011",
+      "year": 2010,
+      "month": 11,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201011",
+      "year": 2010,
+      "month": 11,
+      "fuel": "Others",
+      "value": 951
+    },
+    {
+      "ym": "201012",
+      "year": 2010,
+      "month": 12,
+      "fuel": "Diesel",
+      "value": 105672
+    },
+    {
+      "ym": "201012",
+      "year": 2010,
+      "month": 12,
+      "fuel": "Petrol",
+      "value": 122998
+    },
+    {
+      "ym": "201012",
+      "year": 2010,
+      "month": 12,
+      "fuel": "NonPluginHybrid",
+      "value": 839
+    },
+    {
+      "ym": "201012",
+      "year": 2010,
+      "month": 12,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "201012",
+      "year": 2010,
+      "month": 12,
+      "fuel": "BatteryElectric",
+      "value": 49
+    },
+    {
+      "ym": "201012",
+      "year": 2010,
+      "month": 12,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201012",
+      "year": 2010,
+      "month": 12,
+      "fuel": "Others",
+      "value": 813
+    },
+    {
+      "ym": "201101",
+      "year": 2011,
+      "month": 1,
+      "fuel": "Diesel",
+      "value": 101266
+    },
+    {
+      "ym": "201101",
+      "year": 2011,
+      "month": 1,
+      "fuel": "Petrol",
+      "value": 108380
+    },
+    {
+      "ym": "201101",
+      "year": 2011,
+      "month": 1,
+      "fuel": "NonPluginHybrid",
+      "value": 766
+    },
+    {
+      "ym": "201101",
+      "year": 2011,
+      "month": 1,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "201101",
+      "year": 2011,
+      "month": 1,
+      "fuel": "BatteryElectric",
+      "value": 105
+    },
+    {
+      "ym": "201101",
+      "year": 2011,
+      "month": 1,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201101",
+      "year": 2011,
+      "month": 1,
+      "fuel": "Others",
+      "value": 539
+    },
+    {
+      "ym": "201102",
+      "year": 2011,
+      "month": 2,
+      "fuel": "Diesel",
+      "value": 103926
+    },
+    {
+      "ym": "201102",
+      "year": 2011,
+      "month": 2,
+      "fuel": "Petrol",
+      "value": 118742
+    },
+    {
+      "ym": "201102",
+      "year": 2011,
+      "month": 2,
+      "fuel": "NonPluginHybrid",
+      "value": 891
+    },
+    {
+      "ym": "201102",
+      "year": 2011,
+      "month": 2,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "201102",
+      "year": 2011,
+      "month": 2,
+      "fuel": "BatteryElectric",
+      "value": 247
+    },
+    {
+      "ym": "201102",
+      "year": 2011,
+      "month": 2,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201102",
+      "year": 2011,
+      "month": 2,
+      "fuel": "Others",
+      "value": 620
+    },
+    {
+      "ym": "201103",
+      "year": 2011,
+      "month": 3,
+      "fuel": "Diesel",
+      "value": 142847
+    },
+    {
+      "ym": "201103",
+      "year": 2011,
+      "month": 3,
+      "fuel": "Petrol",
+      "value": 182470
+    },
+    {
+      "ym": "201103",
+      "year": 2011,
+      "month": 3,
+      "fuel": "NonPluginHybrid",
+      "value": 1568
+    },
+    {
+      "ym": "201103",
+      "year": 2011,
+      "month": 3,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "201103",
+      "year": 2011,
+      "month": 3,
+      "fuel": "BatteryElectric",
+      "value": 230
+    },
+    {
+      "ym": "201103",
+      "year": 2011,
+      "month": 3,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201103",
+      "year": 2011,
+      "month": 3,
+      "fuel": "Others",
+      "value": 806
+    },
+    {
+      "ym": "201104",
+      "year": 2011,
+      "month": 4,
+      "fuel": "Diesel",
+      "value": 124307
+    },
+    {
+      "ym": "201104",
+      "year": 2011,
+      "month": 4,
+      "fuel": "Petrol",
+      "value": 139918
+    },
+    {
+      "ym": "201104",
+      "year": 2011,
+      "month": 4,
+      "fuel": "NonPluginHybrid",
+      "value": 1036
+    },
+    {
+      "ym": "201104",
+      "year": 2011,
+      "month": 4,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "201104",
+      "year": 2011,
+      "month": 4,
+      "fuel": "BatteryElectric",
+      "value": 274
+    },
+    {
+      "ym": "201104",
+      "year": 2011,
+      "month": 4,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201104",
+      "year": 2011,
+      "month": 4,
+      "fuel": "Others",
+      "value": 716
+    },
+    {
+      "ym": "201105",
+      "year": 2011,
+      "month": 5,
+      "fuel": "Diesel",
+      "value": 143615
+    },
+    {
+      "ym": "201105",
+      "year": 2011,
+      "month": 5,
+      "fuel": "Petrol",
+      "value": 158831
+    },
+    {
+      "ym": "201105",
+      "year": 2011,
+      "month": 5,
+      "fuel": "NonPluginHybrid",
+      "value": 890
+    },
+    {
+      "ym": "201105",
+      "year": 2011,
+      "month": 5,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "201105",
+      "year": 2011,
+      "month": 5,
+      "fuel": "BatteryElectric",
+      "value": 240
+    },
+    {
+      "ym": "201105",
+      "year": 2011,
+      "month": 5,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201105",
+      "year": 2011,
+      "month": 5,
+      "fuel": "Others",
+      "value": 967
+    },
+    {
+      "ym": "201106",
+      "year": 2011,
+      "month": 6,
+      "fuel": "Diesel",
+      "value": 132650
+    },
+    {
+      "ym": "201106",
+      "year": 2011,
+      "month": 6,
+      "fuel": "Petrol",
+      "value": 153725
+    },
+    {
+      "ym": "201106",
+      "year": 2011,
+      "month": 6,
+      "fuel": "NonPluginHybrid",
+      "value": 718
+    },
+    {
+      "ym": "201106",
+      "year": 2011,
+      "month": 6,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "201106",
+      "year": 2011,
+      "month": 6,
+      "fuel": "BatteryElectric",
+      "value": 179
+    },
+    {
+      "ym": "201106",
+      "year": 2011,
+      "month": 6,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201106",
+      "year": 2011,
+      "month": 6,
+      "fuel": "Others",
+      "value": 1110
+    },
+    {
+      "ym": "201107",
+      "year": 2011,
+      "month": 7,
+      "fuel": "Diesel",
+      "value": 126876
+    },
+    {
+      "ym": "201107",
+      "year": 2011,
+      "month": 7,
+      "fuel": "Petrol",
+      "value": 131911
+    },
+    {
+      "ym": "201107",
+      "year": 2011,
+      "month": 7,
+      "fuel": "NonPluginHybrid",
+      "value": 1006
+    },
+    {
+      "ym": "201107",
+      "year": 2011,
+      "month": 7,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "201107",
+      "year": 2011,
+      "month": 7,
+      "fuel": "BatteryElectric",
+      "value": 134
+    },
+    {
+      "ym": "201107",
+      "year": 2011,
+      "month": 7,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201107",
+      "year": 2011,
+      "month": 7,
+      "fuel": "Others",
+      "value": 980
+    },
+    {
+      "ym": "201108",
+      "year": 2011,
+      "month": 8,
+      "fuel": "Diesel",
+      "value": 111123
+    },
+    {
+      "ym": "201108",
+      "year": 2011,
+      "month": 8,
+      "fuel": "Petrol",
+      "value": 124114
+    },
+    {
+      "ym": "201108",
+      "year": 2011,
+      "month": 8,
+      "fuel": "NonPluginHybrid",
+      "value": 1182
+    },
+    {
+      "ym": "201108",
+      "year": 2011,
+      "month": 8,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "201108",
+      "year": 2011,
+      "month": 8,
+      "fuel": "BatteryElectric",
+      "value": 215
+    },
+    {
+      "ym": "201108",
+      "year": 2011,
+      "month": 8,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201108",
+      "year": 2011,
+      "month": 8,
+      "fuel": "Others",
+      "value": 927
+    },
+    {
+      "ym": "201109",
+      "year": 2011,
+      "month": 9,
+      "fuel": "Diesel",
+      "value": 128719
+    },
+    {
+      "ym": "201109",
+      "year": 2011,
+      "month": 9,
+      "fuel": "Petrol",
+      "value": 149571
+    },
+    {
+      "ym": "201109",
+      "year": 2011,
+      "month": 9,
+      "fuel": "NonPluginHybrid",
+      "value": 1157
+    },
+    {
+      "ym": "201109",
+      "year": 2011,
+      "month": 9,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "201109",
+      "year": 2011,
+      "month": 9,
+      "fuel": "BatteryElectric",
+      "value": 162
+    },
+    {
+      "ym": "201109",
+      "year": 2011,
+      "month": 9,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201109",
+      "year": 2011,
+      "month": 9,
+      "fuel": "Others",
+      "value": 1080
+    },
+    {
+      "ym": "201110",
+      "year": 2011,
+      "month": 10,
+      "fuel": "Diesel",
+      "value": 124154
+    },
+    {
+      "ym": "201110",
+      "year": 2011,
+      "month": 10,
+      "fuel": "Petrol",
+      "value": 132049
+    },
+    {
+      "ym": "201110",
+      "year": 2011,
+      "month": 10,
+      "fuel": "NonPluginHybrid",
+      "value": 877
+    },
+    {
+      "ym": "201110",
+      "year": 2011,
+      "month": 10,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "201110",
+      "year": 2011,
+      "month": 10,
+      "fuel": "BatteryElectric",
+      "value": 125
+    },
+    {
+      "ym": "201110",
+      "year": 2011,
+      "month": 10,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201110",
+      "year": 2011,
+      "month": 10,
+      "fuel": "Others",
+      "value": 1048
+    },
+    {
+      "ym": "201111",
+      "year": 2011,
+      "month": 11,
+      "fuel": "Diesel",
+      "value": 135194
+    },
+    {
+      "ym": "201111",
+      "year": 2011,
+      "month": 11,
+      "fuel": "Petrol",
+      "value": 131175
+    },
+    {
+      "ym": "201111",
+      "year": 2011,
+      "month": 11,
+      "fuel": "NonPluginHybrid",
+      "value": 1267
+    },
+    {
+      "ym": "201111",
+      "year": 2011,
+      "month": 11,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "201111",
+      "year": 2011,
+      "month": 11,
+      "fuel": "BatteryElectric",
+      "value": 83
+    },
+    {
+      "ym": "201111",
+      "year": 2011,
+      "month": 11,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201111",
+      "year": 2011,
+      "month": 11,
+      "fuel": "Others",
+      "value": 1425
+    },
+    {
+      "ym": "201112",
+      "year": 2011,
+      "month": 12,
+      "fuel": "Diesel",
+      "value": 121289
+    },
+    {
+      "ym": "201112",
+      "year": 2011,
+      "month": 12,
+      "fuel": "Petrol",
+      "value": 120751
+    },
+    {
+      "ym": "201112",
+      "year": 2011,
+      "month": 12,
+      "fuel": "NonPluginHybrid",
+      "value": 1264
+    },
+    {
+      "ym": "201112",
+      "year": 2011,
+      "month": 12,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "201112",
+      "year": 2011,
+      "month": 12,
+      "fuel": "BatteryElectric",
+      "value": 160
+    },
+    {
+      "ym": "201112",
+      "year": 2011,
+      "month": 12,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201112",
+      "year": 2011,
+      "month": 12,
+      "fuel": "Others",
+      "value": 1037
+    },
+    {
+      "ym": "201201",
+      "year": 2012,
+      "month": 1,
+      "fuel": "Diesel",
+      "value": 107763
+    },
+    {
+      "ym": "201201",
+      "year": 2012,
+      "month": 1,
+      "fuel": "Petrol",
+      "value": 100433
+    },
+    {
+      "ym": "201201",
+      "year": 2012,
+      "month": 1,
+      "fuel": "NonPluginHybrid",
+      "value": 857
+    },
+    {
+      "ym": "201201",
+      "year": 2012,
+      "month": 1,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "201201",
+      "year": 2012,
+      "month": 1,
+      "fuel": "BatteryElectric",
+      "value": 209
+    },
+    {
+      "ym": "201201",
+      "year": 2012,
+      "month": 1,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201201",
+      "year": 2012,
+      "month": 1,
+      "fuel": "Others",
+      "value": 933
+    },
+    {
+      "ym": "201202",
+      "year": 2012,
+      "month": 2,
+      "fuel": "Diesel",
+      "value": 108783
+    },
+    {
+      "ym": "201202",
+      "year": 2012,
+      "month": 2,
+      "fuel": "Petrol",
+      "value": 113515
+    },
+    {
+      "ym": "201202",
+      "year": 2012,
+      "month": 2,
+      "fuel": "NonPluginHybrid",
+      "value": 992
+    },
+    {
+      "ym": "201202",
+      "year": 2012,
+      "month": 2,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "201202",
+      "year": 2012,
+      "month": 2,
+      "fuel": "BatteryElectric",
+      "value": 175
+    },
+    {
+      "ym": "201202",
+      "year": 2012,
+      "month": 2,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201202",
+      "year": 2012,
+      "month": 2,
+      "fuel": "Others",
+      "value": 853
+    },
+    {
+      "ym": "201203",
+      "year": 2012,
+      "month": 3,
+      "fuel": "Diesel",
+      "value": 153758
+    },
+    {
+      "ym": "201203",
+      "year": 2012,
+      "month": 3,
+      "fuel": "Petrol",
+      "value": 181578
+    },
+    {
+      "ym": "201203",
+      "year": 2012,
+      "month": 3,
+      "fuel": "NonPluginHybrid",
+      "value": 2171
+    },
+    {
+      "ym": "201203",
+      "year": 2012,
+      "month": 3,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "201203",
+      "year": 2012,
+      "month": 3,
+      "fuel": "BatteryElectric",
+      "value": 310
+    },
+    {
+      "ym": "201203",
+      "year": 2012,
+      "month": 3,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201203",
+      "year": 2012,
+      "month": 3,
+      "fuel": "Others",
+      "value": 1306
+    },
+    {
+      "ym": "201204",
+      "year": 2012,
+      "month": 4,
+      "fuel": "Diesel",
+      "value": 131736
+    },
+    {
+      "ym": "201204",
+      "year": 2012,
+      "month": 4,
+      "fuel": "Petrol",
+      "value": 139674
+    },
+    {
+      "ym": "201204",
+      "year": 2012,
+      "month": 4,
+      "fuel": "NonPluginHybrid",
+      "value": 1238
+    },
+    {
+      "ym": "201204",
+      "year": 2012,
+      "month": 4,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "201204",
+      "year": 2012,
+      "month": 4,
+      "fuel": "BatteryElectric",
+      "value": 248
+    },
+    {
+      "ym": "201204",
+      "year": 2012,
+      "month": 4,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201204",
+      "year": 2012,
+      "month": 4,
+      "fuel": "Others",
+      "value": 1170
+    },
+    {
+      "ym": "201205",
+      "year": 2012,
+      "month": 5,
+      "fuel": "Diesel",
+      "value": 141272
+    },
+    {
+      "ym": "201205",
+      "year": 2012,
+      "month": 5,
+      "fuel": "Petrol",
+      "value": 145632
+    },
+    {
+      "ym": "201205",
+      "year": 2012,
+      "month": 5,
+      "fuel": "NonPluginHybrid",
+      "value": 1463
+    },
+    {
+      "ym": "201205",
+      "year": 2012,
+      "month": 5,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "201205",
+      "year": 2012,
+      "month": 5,
+      "fuel": "BatteryElectric",
+      "value": 219
+    },
+    {
+      "ym": "201205",
+      "year": 2012,
+      "month": 5,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201205",
+      "year": 2012,
+      "month": 5,
+      "fuel": "Others",
+      "value": 1391
+    },
+    {
+      "ym": "201206",
+      "year": 2012,
+      "month": 6,
+      "fuel": "Diesel",
+      "value": 139976
+    },
+    {
+      "ym": "201206",
+      "year": 2012,
+      "month": 6,
+      "fuel": "Petrol",
+      "value": 152032
+    },
+    {
+      "ym": "201206",
+      "year": 2012,
+      "month": 6,
+      "fuel": "NonPluginHybrid",
+      "value": 2511
+    },
+    {
+      "ym": "201206",
+      "year": 2012,
+      "month": 6,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "201206",
+      "year": 2012,
+      "month": 6,
+      "fuel": "BatteryElectric",
+      "value": 258
+    },
+    {
+      "ym": "201206",
+      "year": 2012,
+      "month": 6,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201206",
+      "year": 2012,
+      "month": 6,
+      "fuel": "Others",
+      "value": 1945
+    },
+    {
+      "ym": "201207",
+      "year": 2012,
+      "month": 7,
+      "fuel": "Diesel",
+      "value": 121594
+    },
+    {
+      "ym": "201207",
+      "year": 2012,
+      "month": 7,
+      "fuel": "Petrol",
+      "value": 121898
+    },
+    {
+      "ym": "201207",
+      "year": 2012,
+      "month": 7,
+      "fuel": "NonPluginHybrid",
+      "value": 2141
+    },
+    {
+      "ym": "201207",
+      "year": 2012,
+      "month": 7,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "201207",
+      "year": 2012,
+      "month": 7,
+      "fuel": "BatteryElectric",
+      "value": 178
+    },
+    {
+      "ym": "201207",
+      "year": 2012,
+      "month": 7,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201207",
+      "year": 2012,
+      "month": 7,
+      "fuel": "Others",
+      "value": 2049
+    },
+    {
+      "ym": "201208",
+      "year": 2012,
+      "month": 8,
+      "fuel": "Diesel",
+      "value": 107830
+    },
+    {
+      "ym": "201208",
+      "year": 2012,
+      "month": 8,
+      "fuel": "Petrol",
+      "value": 114738
+    },
+    {
+      "ym": "201208",
+      "year": 2012,
+      "month": 8,
+      "fuel": "NonPluginHybrid",
+      "value": 1997
+    },
+    {
+      "ym": "201208",
+      "year": 2012,
+      "month": 8,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "201208",
+      "year": 2012,
+      "month": 8,
+      "fuel": "BatteryElectric",
+      "value": 247
+    },
+    {
+      "ym": "201208",
+      "year": 2012,
+      "month": 8,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201208",
+      "year": 2012,
+      "month": 8,
+      "fuel": "Others",
+      "value": 1643
+    },
+    {
+      "ym": "201209",
+      "year": 2012,
+      "month": 9,
+      "fuel": "Diesel",
+      "value": 119444
+    },
+    {
+      "ym": "201209",
+      "year": 2012,
+      "month": 9,
+      "fuel": "Petrol",
+      "value": 126756
+    },
+    {
+      "ym": "201209",
+      "year": 2012,
+      "month": 9,
+      "fuel": "NonPluginHybrid",
+      "value": 2401
+    },
+    {
+      "ym": "201209",
+      "year": 2012,
+      "month": 9,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "201209",
+      "year": 2012,
+      "month": 9,
+      "fuel": "BatteryElectric",
+      "value": 179
+    },
+    {
+      "ym": "201209",
+      "year": 2012,
+      "month": 9,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201209",
+      "year": 2012,
+      "month": 9,
+      "fuel": "Others",
+      "value": 1302
+    },
+    {
+      "ym": "201210",
+      "year": 2012,
+      "month": 10,
+      "fuel": "Diesel",
+      "value": 126341
+    },
+    {
+      "ym": "201210",
+      "year": 2012,
+      "month": 10,
+      "fuel": "Petrol",
+      "value": 128903
+    },
+    {
+      "ym": "201210",
+      "year": 2012,
+      "month": 10,
+      "fuel": "NonPluginHybrid",
+      "value": 2358
+    },
+    {
+      "ym": "201210",
+      "year": 2012,
+      "month": 10,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "201210",
+      "year": 2012,
+      "month": 10,
+      "fuel": "BatteryElectric",
+      "value": 364
+    },
+    {
+      "ym": "201210",
+      "year": 2012,
+      "month": 10,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201210",
+      "year": 2012,
+      "month": 10,
+      "fuel": "Others",
+      "value": 1563
+    },
+    {
+      "ym": "201211",
+      "year": 2012,
+      "month": 11,
+      "fuel": "Diesel",
+      "value": 127436
+    },
+    {
+      "ym": "201211",
+      "year": 2012,
+      "month": 11,
+      "fuel": "Petrol",
+      "value": 128871
+    },
+    {
+      "ym": "201211",
+      "year": 2012,
+      "month": 11,
+      "fuel": "NonPluginHybrid",
+      "value": 1880
+    },
+    {
+      "ym": "201211",
+      "year": 2012,
+      "month": 11,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "201211",
+      "year": 2012,
+      "month": 11,
+      "fuel": "BatteryElectric",
+      "value": 308
+    },
+    {
+      "ym": "201211",
+      "year": 2012,
+      "month": 11,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201211",
+      "year": 2012,
+      "month": 11,
+      "fuel": "Others",
+      "value": 1351
+    },
+    {
+      "ym": "201212",
+      "year": 2012,
+      "month": 12,
+      "fuel": "Diesel",
+      "value": 100186
+    },
+    {
+      "ym": "201212",
+      "year": 2012,
+      "month": 12,
+      "fuel": "Petrol",
+      "value": 101211
+    },
+    {
+      "ym": "201212",
+      "year": 2012,
+      "month": 12,
+      "fuel": "NonPluginHybrid",
+      "value": 1429
+    },
+    {
+      "ym": "201212",
+      "year": 2012,
+      "month": 12,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "201212",
+      "year": 2012,
+      "month": 12,
+      "fuel": "BatteryElectric",
+      "value": 261
+    },
+    {
+      "ym": "201212",
+      "year": 2012,
+      "month": 12,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201212",
+      "year": 2012,
+      "month": 12,
+      "fuel": "Others",
+      "value": 1244
+    },
+    {
+      "ym": "201301",
+      "year": 2013,
+      "month": 1,
+      "fuel": "Diesel",
+      "value": 96481
+    },
+    {
+      "ym": "201301",
+      "year": 2013,
+      "month": 1,
+      "fuel": "Petrol",
+      "value": 92531
+    },
+    {
+      "ym": "201301",
+      "year": 2013,
+      "month": 1,
+      "fuel": "NonPluginHybrid",
+      "value": 1768
+    },
+    {
+      "ym": "201301",
+      "year": 2013,
+      "month": 1,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "201301",
+      "year": 2013,
+      "month": 1,
+      "fuel": "BatteryElectric",
+      "value": 362
+    },
+    {
+      "ym": "201301",
+      "year": 2013,
+      "month": 1,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201301",
+      "year": 2013,
+      "month": 1,
+      "fuel": "Others",
+      "value": 948
+    },
+    {
+      "ym": "201302",
+      "year": 2013,
+      "month": 2,
+      "fuel": "Diesel",
+      "value": 97209
+    },
+    {
+      "ym": "201302",
+      "year": 2013,
+      "month": 2,
+      "fuel": "Petrol",
+      "value": 100045
+    },
+    {
+      "ym": "201302",
+      "year": 2013,
+      "month": 2,
+      "fuel": "NonPluginHybrid",
+      "value": 1916
+    },
+    {
+      "ym": "201302",
+      "year": 2013,
+      "month": 2,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "201302",
+      "year": 2013,
+      "month": 2,
+      "fuel": "BatteryElectric",
+      "value": 479
+    },
+    {
+      "ym": "201302",
+      "year": 2013,
+      "month": 2,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201302",
+      "year": 2013,
+      "month": 2,
+      "fuel": "Others",
+      "value": 1034
+    },
+    {
+      "ym": "201303",
+      "year": 2013,
+      "month": 3,
+      "fuel": "Diesel",
+      "value": 130271
+    },
+    {
+      "ym": "201303",
+      "year": 2013,
+      "month": 3,
+      "fuel": "Petrol",
+      "value": 147036
+    },
+    {
+      "ym": "201303",
+      "year": 2013,
+      "month": 3,
+      "fuel": "NonPluginHybrid",
+      "value": 2348
+    },
+    {
+      "ym": "201303",
+      "year": 2013,
+      "month": 3,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "201303",
+      "year": 2013,
+      "month": 3,
+      "fuel": "BatteryElectric",
+      "value": 191
+    },
+    {
+      "ym": "201303",
+      "year": 2013,
+      "month": 3,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201303",
+      "year": 2013,
+      "month": 3,
+      "fuel": "Others",
+      "value": 1338
+    },
+    {
+      "ym": "201304",
+      "year": 2013,
+      "month": 4,
+      "fuel": "Diesel",
+      "value": 131547
+    },
+    {
+      "ym": "201304",
+      "year": 2013,
+      "month": 4,
+      "fuel": "Petrol",
+      "value": 148974
+    },
+    {
+      "ym": "201304",
+      "year": 2013,
+      "month": 4,
+      "fuel": "NonPluginHybrid",
+      "value": 2065
+    },
+    {
+      "ym": "201304",
+      "year": 2013,
+      "month": 4,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "201304",
+      "year": 2013,
+      "month": 4,
+      "fuel": "BatteryElectric",
+      "value": 476
+    },
+    {
+      "ym": "201304",
+      "year": 2013,
+      "month": 4,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201304",
+      "year": 2013,
+      "month": 4,
+      "fuel": "Others",
+      "value": 1382
+    },
+    {
+      "ym": "201305",
+      "year": 2013,
+      "month": 5,
+      "fuel": "Diesel",
+      "value": 124892
+    },
+    {
+      "ym": "201305",
+      "year": 2013,
+      "month": 5,
+      "fuel": "Petrol",
+      "value": 132584
+    },
+    {
+      "ym": "201305",
+      "year": 2013,
+      "month": 5,
+      "fuel": "NonPluginHybrid",
+      "value": 2140
+    },
+    {
+      "ym": "201305",
+      "year": 2013,
+      "month": 5,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "201305",
+      "year": 2013,
+      "month": 5,
+      "fuel": "BatteryElectric",
+      "value": 392
+    },
+    {
+      "ym": "201305",
+      "year": 2013,
+      "month": 5,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201305",
+      "year": 2013,
+      "month": 5,
+      "fuel": "Others",
+      "value": 1308
+    },
+    {
+      "ym": "201306",
+      "year": 2013,
+      "month": 6,
+      "fuel": "Diesel",
+      "value": 130748
+    },
+    {
+      "ym": "201306",
+      "year": 2013,
+      "month": 6,
+      "fuel": "Petrol",
+      "value": 148100
+    },
+    {
+      "ym": "201306",
+      "year": 2013,
+      "month": 6,
+      "fuel": "NonPluginHybrid",
+      "value": 2184
+    },
+    {
+      "ym": "201306",
+      "year": 2013,
+      "month": 6,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "201306",
+      "year": 2013,
+      "month": 6,
+      "fuel": "BatteryElectric",
+      "value": 489
+    },
+    {
+      "ym": "201306",
+      "year": 2013,
+      "month": 6,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201306",
+      "year": 2013,
+      "month": 6,
+      "fuel": "Others",
+      "value": 1392
+    },
+    {
+      "ym": "201307",
+      "year": 2013,
+      "month": 7,
+      "fuel": "Diesel",
+      "value": 119045
+    },
+    {
+      "ym": "201307",
+      "year": 2013,
+      "month": 7,
+      "fuel": "Petrol",
+      "value": 130018
+    },
+    {
+      "ym": "201307",
+      "year": 2013,
+      "month": 7,
+      "fuel": "NonPluginHybrid",
+      "value": 2195
+    },
+    {
+      "ym": "201307",
+      "year": 2013,
+      "month": 7,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "201307",
+      "year": 2013,
+      "month": 7,
+      "fuel": "BatteryElectric",
+      "value": 515
+    },
+    {
+      "ym": "201307",
+      "year": 2013,
+      "month": 7,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201307",
+      "year": 2013,
+      "month": 7,
+      "fuel": "Others",
+      "value": 1373
+    },
+    {
+      "ym": "201308",
+      "year": 2013,
+      "month": 8,
+      "fuel": "Diesel",
+      "value": 99733
+    },
+    {
+      "ym": "201308",
+      "year": 2013,
+      "month": 8,
+      "fuel": "Petrol",
+      "value": 110642
+    },
+    {
+      "ym": "201308",
+      "year": 2013,
+      "month": 8,
+      "fuel": "NonPluginHybrid",
+      "value": 2210
+    },
+    {
+      "ym": "201308",
+      "year": 2013,
+      "month": 8,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "201308",
+      "year": 2013,
+      "month": 8,
+      "fuel": "BatteryElectric",
+      "value": 435
+    },
+    {
+      "ym": "201308",
+      "year": 2013,
+      "month": 8,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201308",
+      "year": 2013,
+      "month": 8,
+      "fuel": "Others",
+      "value": 1024
+    },
+    {
+      "ym": "201309",
+      "year": 2013,
+      "month": 9,
+      "fuel": "Diesel",
+      "value": 117120
+    },
+    {
+      "ym": "201309",
+      "year": 2013,
+      "month": 9,
+      "fuel": "Petrol",
+      "value": 126072
+    },
+    {
+      "ym": "201309",
+      "year": 2013,
+      "month": 9,
+      "fuel": "NonPluginHybrid",
+      "value": 2396
+    },
+    {
+      "ym": "201309",
+      "year": 2013,
+      "month": 9,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "201309",
+      "year": 2013,
+      "month": 9,
+      "fuel": "BatteryElectric",
+      "value": 532
+    },
+    {
+      "ym": "201309",
+      "year": 2013,
+      "month": 9,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201309",
+      "year": 2013,
+      "month": 9,
+      "fuel": "Others",
+      "value": 1079
+    },
+    {
+      "ym": "201310",
+      "year": 2013,
+      "month": 10,
+      "fuel": "Diesel",
+      "value": 128542
+    },
+    {
+      "ym": "201310",
+      "year": 2013,
+      "month": 10,
+      "fuel": "Petrol",
+      "value": 131766
+    },
+    {
+      "ym": "201310",
+      "year": 2013,
+      "month": 10,
+      "fuel": "NonPluginHybrid",
+      "value": 2905
+    },
+    {
+      "ym": "201310",
+      "year": 2013,
+      "month": 10,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "201310",
+      "year": 2013,
+      "month": 10,
+      "fuel": "BatteryElectric",
+      "value": 978
+    },
+    {
+      "ym": "201310",
+      "year": 2013,
+      "month": 10,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201310",
+      "year": 2013,
+      "month": 10,
+      "fuel": "Others",
+      "value": 1250
+    },
+    {
+      "ym": "201311",
+      "year": 2013,
+      "month": 11,
+      "fuel": "Diesel",
+      "value": 124151
+    },
+    {
+      "ym": "201311",
+      "year": 2013,
+      "month": 11,
+      "fuel": "Petrol",
+      "value": 126426
+    },
+    {
+      "ym": "201311",
+      "year": 2013,
+      "month": 11,
+      "fuel": "NonPluginHybrid",
+      "value": 2159
+    },
+    {
+      "ym": "201311",
+      "year": 2013,
+      "month": 11,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "201311",
+      "year": 2013,
+      "month": 11,
+      "fuel": "BatteryElectric",
+      "value": 757
+    },
+    {
+      "ym": "201311",
+      "year": 2013,
+      "month": 11,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201311",
+      "year": 2013,
+      "month": 11,
+      "fuel": "Others",
+      "value": 1158
+    },
+    {
+      "ym": "201312",
+      "year": 2013,
+      "month": 12,
+      "fuel": "Diesel",
+      "value": 103374
+    },
+    {
+      "ym": "201312",
+      "year": 2013,
+      "month": 12,
+      "fuel": "Petrol",
+      "value": 108590
+    },
+    {
+      "ym": "201312",
+      "year": 2013,
+      "month": 12,
+      "fuel": "NonPluginHybrid",
+      "value": 2062
+    },
+    {
+      "ym": "201312",
+      "year": 2013,
+      "month": 12,
+      "fuel": "PluginHybrid",
+      "value": 0
+    },
+    {
+      "ym": "201312",
+      "year": 2013,
+      "month": 12,
+      "fuel": "BatteryElectric",
+      "value": 445
+    },
+    {
+      "ym": "201312",
+      "year": 2013,
+      "month": 12,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201312",
+      "year": 2013,
+      "month": 12,
+      "fuel": "Others",
+      "value": 849
+    },
+    {
+      "ym": "201401",
+      "year": 2014,
+      "month": 1,
+      "fuel": "Diesel",
+      "value": 103272
+    },
+    {
+      "ym": "201401",
+      "year": 2014,
+      "month": 1,
+      "fuel": "Petrol",
+      "value": 99374
+    },
+    {
+      "ym": "201401",
+      "year": 2014,
+      "month": 1,
+      "fuel": "NonPluginHybrid",
+      "value": 1740
+    },
+    {
+      "ym": "201401",
+      "year": 2014,
+      "month": 1,
+      "fuel": "PluginHybrid",
+      "value": 140
+    },
+    {
+      "ym": "201401",
+      "year": 2014,
+      "month": 1,
+      "fuel": "BatteryElectric",
+      "value": 541
+    },
+    {
+      "ym": "201401",
+      "year": 2014,
+      "month": 1,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201401",
+      "year": 2014,
+      "month": 1,
+      "fuel": "Others",
+      "value": 929
+    },
+    {
+      "ym": "201402",
+      "year": 2014,
+      "month": 2,
+      "fuel": "Diesel",
+      "value": 101459
+    },
+    {
+      "ym": "201402",
+      "year": 2014,
+      "month": 2,
+      "fuel": "Petrol",
+      "value": 104679
+    },
+    {
+      "ym": "201402",
+      "year": 2014,
+      "month": 2,
+      "fuel": "NonPluginHybrid",
+      "value": 1748
+    },
+    {
+      "ym": "201402",
+      "year": 2014,
+      "month": 2,
+      "fuel": "PluginHybrid",
+      "value": 125
+    },
+    {
+      "ym": "201402",
+      "year": 2014,
+      "month": 2,
+      "fuel": "BatteryElectric",
+      "value": 481
+    },
+    {
+      "ym": "201402",
+      "year": 2014,
+      "month": 2,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201402",
+      "year": 2014,
+      "month": 2,
+      "fuel": "Others",
+      "value": 857
+    },
+    {
+      "ym": "201403",
+      "year": 2014,
+      "month": 3,
+      "fuel": "Diesel",
+      "value": 137719
+    },
+    {
+      "ym": "201403",
+      "year": 2014,
+      "month": 3,
+      "fuel": "Petrol",
+      "value": 153944
+    },
+    {
+      "ym": "201403",
+      "year": 2014,
+      "month": 3,
+      "fuel": "NonPluginHybrid",
+      "value": 2355
+    },
+    {
+      "ym": "201403",
+      "year": 2014,
+      "month": 3,
+      "fuel": "PluginHybrid",
+      "value": 156
+    },
+    {
+      "ym": "201403",
+      "year": 2014,
+      "month": 3,
+      "fuel": "BatteryElectric",
+      "value": 823
+    },
+    {
+      "ym": "201403",
+      "year": 2014,
+      "month": 3,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201403",
+      "year": 2014,
+      "month": 3,
+      "fuel": "Others",
+      "value": 1411
+    },
+    {
+      "ym": "201404",
+      "year": 2014,
+      "month": 4,
+      "fuel": "Diesel",
+      "value": 131454
+    },
+    {
+      "ym": "201404",
+      "year": 2014,
+      "month": 4,
+      "fuel": "Petrol",
+      "value": 138531
+    },
+    {
+      "ym": "201404",
+      "year": 2014,
+      "month": 4,
+      "fuel": "NonPluginHybrid",
+      "value": 2007
+    },
+    {
+      "ym": "201404",
+      "year": 2014,
+      "month": 4,
+      "fuel": "PluginHybrid",
+      "value": 302
+    },
+    {
+      "ym": "201404",
+      "year": 2014,
+      "month": 4,
+      "fuel": "BatteryElectric",
+      "value": 599
+    },
+    {
+      "ym": "201404",
+      "year": 2014,
+      "month": 4,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201404",
+      "year": 2014,
+      "month": 4,
+      "fuel": "Others",
+      "value": 1204
+    },
+    {
+      "ym": "201405",
+      "year": 2014,
+      "month": 5,
+      "fuel": "Diesel",
+      "value": 134618
+    },
+    {
+      "ym": "201405",
+      "year": 2014,
+      "month": 5,
+      "fuel": "Petrol",
+      "value": 135206
+    },
+    {
+      "ym": "201405",
+      "year": 2014,
+      "month": 5,
+      "fuel": "NonPluginHybrid",
+      "value": 2152
+    },
+    {
+      "ym": "201405",
+      "year": 2014,
+      "month": 5,
+      "fuel": "PluginHybrid",
+      "value": 535
+    },
+    {
+      "ym": "201405",
+      "year": 2014,
+      "month": 5,
+      "fuel": "BatteryElectric",
+      "value": 934
+    },
+    {
+      "ym": "201405",
+      "year": 2014,
+      "month": 5,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201405",
+      "year": 2014,
+      "month": 5,
+      "fuel": "Others",
+      "value": 1359
+    },
+    {
+      "ym": "201406",
+      "year": 2014,
+      "month": 6,
+      "fuel": "Diesel",
+      "value": 130083
+    },
+    {
+      "ym": "201406",
+      "year": 2014,
+      "month": 6,
+      "fuel": "Petrol",
+      "value": 142874
+    },
+    {
+      "ym": "201406",
+      "year": 2014,
+      "month": 6,
+      "fuel": "NonPluginHybrid",
+      "value": 2238
+    },
+    {
+      "ym": "201406",
+      "year": 2014,
+      "month": 6,
+      "fuel": "PluginHybrid",
+      "value": 317
+    },
+    {
+      "ym": "201406",
+      "year": 2014,
+      "month": 6,
+      "fuel": "BatteryElectric",
+      "value": 810
+    },
+    {
+      "ym": "201406",
+      "year": 2014,
+      "month": 6,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201406",
+      "year": 2014,
+      "month": 6,
+      "fuel": "Others",
+      "value": 1292
+    },
+    {
+      "ym": "201407",
+      "year": 2014,
+      "month": 7,
+      "fuel": "Diesel",
+      "value": 132323
+    },
+    {
+      "ym": "201407",
+      "year": 2014,
+      "month": 7,
+      "fuel": "Petrol",
+      "value": 133713
+    },
+    {
+      "ym": "201407",
+      "year": 2014,
+      "month": 7,
+      "fuel": "NonPluginHybrid",
+      "value": 1736
+    },
+    {
+      "ym": "201407",
+      "year": 2014,
+      "month": 7,
+      "fuel": "PluginHybrid",
+      "value": 460
+    },
+    {
+      "ym": "201407",
+      "year": 2014,
+      "month": 7,
+      "fuel": "BatteryElectric",
+      "value": 597
+    },
+    {
+      "ym": "201407",
+      "year": 2014,
+      "month": 7,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201407",
+      "year": 2014,
+      "month": 7,
+      "fuel": "Others",
+      "value": 1420
+    },
+    {
+      "ym": "201408",
+      "year": 2014,
+      "month": 8,
+      "fuel": "Diesel",
+      "value": 98228
+    },
+    {
+      "ym": "201408",
+      "year": 2014,
+      "month": 8,
+      "fuel": "Petrol",
+      "value": 110735
+    },
+    {
+      "ym": "201408",
+      "year": 2014,
+      "month": 8,
+      "fuel": "NonPluginHybrid",
+      "value": 1769
+    },
+    {
+      "ym": "201408",
+      "year": 2014,
+      "month": 8,
+      "fuel": "PluginHybrid",
+      "value": 620
+    },
+    {
+      "ym": "201408",
+      "year": 2014,
+      "month": 8,
+      "fuel": "BatteryElectric",
+      "value": 515
+    },
+    {
+      "ym": "201408",
+      "year": 2014,
+      "month": 8,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201408",
+      "year": 2014,
+      "month": 8,
+      "fuel": "Others",
+      "value": 1225
+    },
+    {
+      "ym": "201409",
+      "year": 2014,
+      "month": 9,
+      "fuel": "Diesel",
+      "value": 118444
+    },
+    {
+      "ym": "201409",
+      "year": 2014,
+      "month": 9,
+      "fuel": "Petrol",
+      "value": 137480
+    },
+    {
+      "ym": "201409",
+      "year": 2014,
+      "month": 9,
+      "fuel": "NonPluginHybrid",
+      "value": 1874
+    },
+    {
+      "ym": "201409",
+      "year": 2014,
+      "month": 9,
+      "fuel": "PluginHybrid",
+      "value": 398
+    },
+    {
+      "ym": "201409",
+      "year": 2014,
+      "month": 9,
+      "fuel": "BatteryElectric",
+      "value": 747
+    },
+    {
+      "ym": "201409",
+      "year": 2014,
+      "month": 9,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201409",
+      "year": 2014,
+      "month": 9,
+      "fuel": "Others",
+      "value": 1119
+    },
+    {
+      "ym": "201410",
+      "year": 2014,
+      "month": 10,
+      "fuel": "Diesel",
+      "value": 130677
+    },
+    {
+      "ym": "201410",
+      "year": 2014,
+      "month": 10,
+      "fuel": "Petrol",
+      "value": 140123
+    },
+    {
+      "ym": "201410",
+      "year": 2014,
+      "month": 10,
+      "fuel": "NonPluginHybrid",
+      "value": 1962
+    },
+    {
+      "ym": "201410",
+      "year": 2014,
+      "month": 10,
+      "fuel": "PluginHybrid",
+      "value": 402
+    },
+    {
+      "ym": "201410",
+      "year": 2014,
+      "month": 10,
+      "fuel": "BatteryElectric",
+      "value": 841
+    },
+    {
+      "ym": "201410",
+      "year": 2014,
+      "month": 10,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201410",
+      "year": 2014,
+      "month": 10,
+      "fuel": "Others",
+      "value": 1315
+    },
+    {
+      "ym": "201411",
+      "year": 2014,
+      "month": 11,
+      "fuel": "Diesel",
+      "value": 122674
+    },
+    {
+      "ym": "201411",
+      "year": 2014,
+      "month": 11,
+      "fuel": "Petrol",
+      "value": 123256
+    },
+    {
+      "ym": "201411",
+      "year": 2014,
+      "month": 11,
+      "fuel": "NonPluginHybrid",
+      "value": 1759
+    },
+    {
+      "ym": "201411",
+      "year": 2014,
+      "month": 11,
+      "fuel": "PluginHybrid",
+      "value": 514
+    },
+    {
+      "ym": "201411",
+      "year": 2014,
+      "month": 11,
+      "fuel": "BatteryElectric",
+      "value": 630
+    },
+    {
+      "ym": "201411",
+      "year": 2014,
+      "month": 11,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201411",
+      "year": 2014,
+      "month": 11,
+      "fuel": "Others",
+      "value": 1249
+    },
+    {
+      "ym": "201412",
+      "year": 2014,
+      "month": 12,
+      "fuel": "Diesel",
+      "value": 111614
+    },
+    {
+      "ym": "201412",
+      "year": 2014,
+      "month": 12,
+      "fuel": "Petrol",
+      "value": 113811
+    },
+    {
+      "ym": "201412",
+      "year": 2014,
+      "month": 12,
+      "fuel": "NonPluginHybrid",
+      "value": 1568
+    },
+    {
+      "ym": "201412",
+      "year": 2014,
+      "month": 12,
+      "fuel": "PluginHybrid",
+      "value": 558
+    },
+    {
+      "ym": "201412",
+      "year": 2014,
+      "month": 12,
+      "fuel": "BatteryElectric",
+      "value": 1004
+    },
+    {
+      "ym": "201412",
+      "year": 2014,
+      "month": 12,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201412",
+      "year": 2014,
+      "month": 12,
+      "fuel": "Others",
+      "value": 1145
+    },
+    {
+      "ym": "201501",
+      "year": 2015,
+      "month": 1,
+      "fuel": "Diesel",
+      "value": 106916
+    },
+    {
+      "ym": "201501",
+      "year": 2015,
+      "month": 1,
+      "fuel": "Petrol",
+      "value": 100816
+    },
+    {
+      "ym": "201501",
+      "year": 2015,
+      "month": 1,
+      "fuel": "NonPluginHybrid",
+      "value": 1300
+    },
+    {
+      "ym": "201501",
+      "year": 2015,
+      "month": 1,
+      "fuel": "PluginHybrid",
+      "value": 593
+    },
+    {
+      "ym": "201501",
+      "year": 2015,
+      "month": 1,
+      "fuel": "BatteryElectric",
+      "value": 659
+    },
+    {
+      "ym": "201501",
+      "year": 2015,
+      "month": 1,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201501",
+      "year": 2015,
+      "month": 1,
+      "fuel": "Others",
+      "value": 1053
+    },
+    {
+      "ym": "201502",
+      "year": 2015,
+      "month": 2,
+      "fuel": "Diesel",
+      "value": 108515
+    },
+    {
+      "ym": "201502",
+      "year": 2015,
+      "month": 2,
+      "fuel": "Petrol",
+      "value": 111302
+    },
+    {
+      "ym": "201502",
+      "year": 2015,
+      "month": 2,
+      "fuel": "NonPluginHybrid",
+      "value": 1375
+    },
+    {
+      "ym": "201502",
+      "year": 2015,
+      "month": 2,
+      "fuel": "PluginHybrid",
+      "value": 686
+    },
+    {
+      "ym": "201502",
+      "year": 2015,
+      "month": 2,
+      "fuel": "BatteryElectric",
+      "value": 436
+    },
+    {
+      "ym": "201502",
+      "year": 2015,
+      "month": 2,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201502",
+      "year": 2015,
+      "month": 2,
+      "fuel": "Others",
+      "value": 940
+    },
+    {
+      "ym": "201503",
+      "year": 2015,
+      "month": 3,
+      "fuel": "Diesel",
+      "value": 151393
+    },
+    {
+      "ym": "201503",
+      "year": 2015,
+      "month": 3,
+      "fuel": "Petrol",
+      "value": 166064
+    },
+    {
+      "ym": "201503",
+      "year": 2015,
+      "month": 3,
+      "fuel": "NonPluginHybrid",
+      "value": 2265
+    },
+    {
+      "ym": "201503",
+      "year": 2015,
+      "month": 3,
+      "fuel": "PluginHybrid",
+      "value": 886
+    },
+    {
+      "ym": "201503",
+      "year": 2015,
+      "month": 3,
+      "fuel": "BatteryElectric",
+      "value": 1278
+    },
+    {
+      "ym": "201503",
+      "year": 2015,
+      "month": 3,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201503",
+      "year": 2015,
+      "month": 3,
+      "fuel": "Others",
+      "value": 1153
+    },
+    {
+      "ym": "201504",
+      "year": 2015,
+      "month": 4,
+      "fuel": "Diesel",
+      "value": 140505
+    },
+    {
+      "ym": "201504",
+      "year": 2015,
+      "month": 4,
+      "fuel": "Petrol",
+      "value": 146309
+    },
+    {
+      "ym": "201504",
+      "year": 2015,
+      "month": 4,
+      "fuel": "NonPluginHybrid",
+      "value": 1885
+    },
+    {
+      "ym": "201504",
+      "year": 2015,
+      "month": 4,
+      "fuel": "PluginHybrid",
+      "value": 1006
+    },
+    {
+      "ym": "201504",
+      "year": 2015,
+      "month": 4,
+      "fuel": "BatteryElectric",
+      "value": 684
+    },
+    {
+      "ym": "201504",
+      "year": 2015,
+      "month": 4,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201504",
+      "year": 2015,
+      "month": 4,
+      "fuel": "Others",
+      "value": 1006
+    },
+    {
+      "ym": "201505",
+      "year": 2015,
+      "month": 5,
+      "fuel": "Diesel",
+      "value": 122558
+    },
+    {
+      "ym": "201505",
+      "year": 2015,
+      "month": 5,
+      "fuel": "Petrol",
+      "value": 129260
+    },
+    {
+      "ym": "201505",
+      "year": 2015,
+      "month": 5,
+      "fuel": "NonPluginHybrid",
+      "value": 2019
+    },
+    {
+      "ym": "201505",
+      "year": 2015,
+      "month": 5,
+      "fuel": "PluginHybrid",
+      "value": 1054
+    },
+    {
+      "ym": "201505",
+      "year": 2015,
+      "month": 5,
+      "fuel": "BatteryElectric",
+      "value": 574
+    },
+    {
+      "ym": "201505",
+      "year": 2015,
+      "month": 5,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201505",
+      "year": 2015,
+      "month": 5,
+      "fuel": "Others",
+      "value": 920
+    },
+    {
+      "ym": "201506",
+      "year": 2015,
+      "month": 6,
+      "fuel": "Diesel",
+      "value": 148721
+    },
+    {
+      "ym": "201506",
+      "year": 2015,
+      "month": 6,
+      "fuel": "Petrol",
+      "value": 159779
+    },
+    {
+      "ym": "201506",
+      "year": 2015,
+      "month": 6,
+      "fuel": "NonPluginHybrid",
+      "value": 2190
+    },
+    {
+      "ym": "201506",
+      "year": 2015,
+      "month": 6,
+      "fuel": "PluginHybrid",
+      "value": 754
+    },
+    {
+      "ym": "201506",
+      "year": 2015,
+      "month": 6,
+      "fuel": "BatteryElectric",
+      "value": 1032
+    },
+    {
+      "ym": "201506",
+      "year": 2015,
+      "month": 6,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201506",
+      "year": 2015,
+      "month": 6,
+      "fuel": "Others",
+      "value": 1063
+    },
+    {
+      "ym": "201507",
+      "year": 2015,
+      "month": 7,
+      "fuel": "Diesel",
+      "value": 141838
+    },
+    {
+      "ym": "201507",
+      "year": 2015,
+      "month": 7,
+      "fuel": "Petrol",
+      "value": 143678
+    },
+    {
+      "ym": "201507",
+      "year": 2015,
+      "month": 7,
+      "fuel": "NonPluginHybrid",
+      "value": 1915
+    },
+    {
+      "ym": "201507",
+      "year": 2015,
+      "month": 7,
+      "fuel": "PluginHybrid",
+      "value": 944
+    },
+    {
+      "ym": "201507",
+      "year": 2015,
+      "month": 7,
+      "fuel": "BatteryElectric",
+      "value": 962
+    },
+    {
+      "ym": "201507",
+      "year": 2015,
+      "month": 7,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201507",
+      "year": 2015,
+      "month": 7,
+      "fuel": "Others",
+      "value": 859
+    },
+    {
+      "ym": "201508",
+      "year": 2015,
+      "month": 8,
+      "fuel": "Diesel",
+      "value": 105348
+    },
+    {
+      "ym": "201508",
+      "year": 2015,
+      "month": 8,
+      "fuel": "Petrol",
+      "value": 117304
+    },
+    {
+      "ym": "201508",
+      "year": 2015,
+      "month": 8,
+      "fuel": "NonPluginHybrid",
+      "value": 1558
+    },
+    {
+      "ym": "201508",
+      "year": 2015,
+      "month": 8,
+      "fuel": "PluginHybrid",
+      "value": 570
+    },
+    {
+      "ym": "201508",
+      "year": 2015,
+      "month": 8,
+      "fuel": "BatteryElectric",
+      "value": 831
+    },
+    {
+      "ym": "201508",
+      "year": 2015,
+      "month": 8,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201508",
+      "year": 2015,
+      "month": 8,
+      "fuel": "Others",
+      "value": 703
+    },
+    {
+      "ym": "201509",
+      "year": 2015,
+      "month": 9,
+      "fuel": "Diesel",
+      "value": 127620
+    },
+    {
+      "ym": "201509",
+      "year": 2015,
+      "month": 9,
+      "fuel": "Petrol",
+      "value": 140384
+    },
+    {
+      "ym": "201509",
+      "year": 2015,
+      "month": 9,
+      "fuel": "NonPluginHybrid",
+      "value": 1902
+    },
+    {
+      "ym": "201509",
+      "year": 2015,
+      "month": 9,
+      "fuel": "PluginHybrid",
+      "value": 1038
+    },
+    {
+      "ym": "201509",
+      "year": 2015,
+      "month": 9,
+      "fuel": "BatteryElectric",
+      "value": 929
+    },
+    {
+      "ym": "201509",
+      "year": 2015,
+      "month": 9,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201509",
+      "year": 2015,
+      "month": 9,
+      "fuel": "Others",
+      "value": 606
+    },
+    {
+      "ym": "201510",
+      "year": 2015,
+      "month": 10,
+      "fuel": "Diesel",
+      "value": 132844
+    },
+    {
+      "ym": "201510",
+      "year": 2015,
+      "month": 10,
+      "fuel": "Petrol",
+      "value": 140216
+    },
+    {
+      "ym": "201510",
+      "year": 2015,
+      "month": 10,
+      "fuel": "NonPluginHybrid",
+      "value": 1961
+    },
+    {
+      "ym": "201510",
+      "year": 2015,
+      "month": 10,
+      "fuel": "PluginHybrid",
+      "value": 1031
+    },
+    {
+      "ym": "201510",
+      "year": 2015,
+      "month": 10,
+      "fuel": "BatteryElectric",
+      "value": 1686
+    },
+    {
+      "ym": "201510",
+      "year": 2015,
+      "month": 10,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201510",
+      "year": 2015,
+      "month": 10,
+      "fuel": "Others",
+      "value": 634
+    },
+    {
+      "ym": "201511",
+      "year": 2015,
+      "month": 11,
+      "fuel": "Diesel",
+      "value": 135299
+    },
+    {
+      "ym": "201511",
+      "year": 2015,
+      "month": 11,
+      "fuel": "Petrol",
+      "value": 131361
+    },
+    {
+      "ym": "201511",
+      "year": 2015,
+      "month": 11,
+      "fuel": "NonPluginHybrid",
+      "value": 2402
+    },
+    {
+      "ym": "201511",
+      "year": 2015,
+      "month": 11,
+      "fuel": "PluginHybrid",
+      "value": 1283
+    },
+    {
+      "ym": "201511",
+      "year": 2015,
+      "month": 11,
+      "fuel": "BatteryElectric",
+      "value": 1372
+    },
+    {
+      "ym": "201511",
+      "year": 2015,
+      "month": 11,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201511",
+      "year": 2015,
+      "month": 11,
+      "fuel": "Others",
+      "value": 660
+    },
+    {
+      "ym": "201512",
+      "year": 2015,
+      "month": 12,
+      "fuel": "Diesel",
+      "value": 116894
+    },
+    {
+      "ym": "201512",
+      "year": 2015,
+      "month": 12,
+      "fuel": "Petrol",
+      "value": 124916
+    },
+    {
+      "ym": "201512",
+      "year": 2015,
+      "month": 12,
+      "fuel": "NonPluginHybrid",
+      "value": 1757
+    },
+    {
+      "ym": "201512",
+      "year": 2015,
+      "month": 12,
+      "fuel": "PluginHybrid",
+      "value": 1256
+    },
+    {
+      "ym": "201512",
+      "year": 2015,
+      "month": 12,
+      "fuel": "BatteryElectric",
+      "value": 1920
+    },
+    {
+      "ym": "201512",
+      "year": 2015,
+      "month": 12,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201512",
+      "year": 2015,
+      "month": 12,
+      "fuel": "Others",
+      "value": 612
+    },
+    {
+      "ym": "201601",
+      "year": 2016,
+      "month": 1,
+      "fuel": "Diesel",
+      "value": 106369
+    },
+    {
+      "ym": "201601",
+      "year": 2016,
+      "month": 1,
+      "fuel": "Petrol",
+      "value": 108278
+    },
+    {
+      "ym": "201601",
+      "year": 2016,
+      "month": 1,
+      "fuel": "NonPluginHybrid",
+      "value": 1838
+    },
+    {
+      "ym": "201601",
+      "year": 2016,
+      "month": 1,
+      "fuel": "PluginHybrid",
+      "value": 976
+    },
+    {
+      "ym": "201601",
+      "year": 2016,
+      "month": 1,
+      "fuel": "BatteryElectric",
+      "value": 477
+    },
+    {
+      "ym": "201601",
+      "year": 2016,
+      "month": 1,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201601",
+      "year": 2016,
+      "month": 1,
+      "fuel": "Others",
+      "value": 427
+    },
+    {
+      "ym": "201602",
+      "year": 2016,
+      "month": 2,
+      "fuel": "Diesel",
+      "value": 118113
+    },
+    {
+      "ym": "201602",
+      "year": 2016,
+      "month": 2,
+      "fuel": "Petrol",
+      "value": 127238
+    },
+    {
+      "ym": "201602",
+      "year": 2016,
+      "month": 2,
+      "fuel": "NonPluginHybrid",
+      "value": 2293
+    },
+    {
+      "ym": "201602",
+      "year": 2016,
+      "month": 2,
+      "fuel": "PluginHybrid",
+      "value": 1237
+    },
+    {
+      "ym": "201602",
+      "year": 2016,
+      "month": 2,
+      "fuel": "BatteryElectric",
+      "value": 751
+    },
+    {
+      "ym": "201602",
+      "year": 2016,
+      "month": 2,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201602",
+      "year": 2016,
+      "month": 2,
+      "fuel": "Others",
+      "value": 514
+    },
+    {
+      "ym": "201603",
+      "year": 2016,
+      "month": 3,
+      "fuel": "Diesel",
+      "value": 150265
+    },
+    {
+      "ym": "201603",
+      "year": 2016,
+      "month": 3,
+      "fuel": "Petrol",
+      "value": 166922
+    },
+    {
+      "ym": "201603",
+      "year": 2016,
+      "month": 3,
+      "fuel": "NonPluginHybrid",
+      "value": 2755
+    },
+    {
+      "ym": "201603",
+      "year": 2016,
+      "month": 3,
+      "fuel": "PluginHybrid",
+      "value": 1290
+    },
+    {
+      "ym": "201603",
+      "year": 2016,
+      "month": 3,
+      "fuel": "BatteryElectric",
+      "value": 1104
+    },
+    {
+      "ym": "201603",
+      "year": 2016,
+      "month": 3,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201603",
+      "year": 2016,
+      "month": 3,
+      "fuel": "Others",
+      "value": 577
+    },
+    {
+      "ym": "201604",
+      "year": 2016,
+      "month": 4,
+      "fuel": "Diesel",
+      "value": 148585
+    },
+    {
+      "ym": "201604",
+      "year": 2016,
+      "month": 4,
+      "fuel": "Petrol",
+      "value": 162405
+    },
+    {
+      "ym": "201604",
+      "year": 2016,
+      "month": 4,
+      "fuel": "NonPluginHybrid",
+      "value": 2762
+    },
+    {
+      "ym": "201604",
+      "year": 2016,
+      "month": 4,
+      "fuel": "PluginHybrid",
+      "value": 964
+    },
+    {
+      "ym": "201604",
+      "year": 2016,
+      "month": 4,
+      "fuel": "BatteryElectric",
+      "value": 604
+    },
+    {
+      "ym": "201604",
+      "year": 2016,
+      "month": 4,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201604",
+      "year": 2016,
+      "month": 4,
+      "fuel": "Others",
+      "value": 601
+    },
+    {
+      "ym": "201605",
+      "year": 2016,
+      "month": 5,
+      "fuel": "Diesel",
+      "value": 132759
+    },
+    {
+      "ym": "201605",
+      "year": 2016,
+      "month": 5,
+      "fuel": "Petrol",
+      "value": 150131
+    },
+    {
+      "ym": "201605",
+      "year": 2016,
+      "month": 5,
+      "fuel": "NonPluginHybrid",
+      "value": 2132
+    },
+    {
+      "ym": "201605",
+      "year": 2016,
+      "month": 5,
+      "fuel": "PluginHybrid",
+      "value": 792
+    },
+    {
+      "ym": "201605",
+      "year": 2016,
+      "month": 5,
+      "fuel": "BatteryElectric",
+      "value": 588
+    },
+    {
+      "ym": "201605",
+      "year": 2016,
+      "month": 5,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201605",
+      "year": 2016,
+      "month": 5,
+      "fuel": "Others",
+      "value": 529
+    },
+    {
+      "ym": "201606",
+      "year": 2016,
+      "month": 6,
+      "fuel": "Diesel",
+      "value": 156350
+    },
+    {
+      "ym": "201606",
+      "year": 2016,
+      "month": 6,
+      "fuel": "Petrol",
+      "value": 178090
+    },
+    {
+      "ym": "201606",
+      "year": 2016,
+      "month": 6,
+      "fuel": "NonPluginHybrid",
+      "value": 2731
+    },
+    {
+      "ym": "201606",
+      "year": 2016,
+      "month": 6,
+      "fuel": "PluginHybrid",
+      "value": 865
+    },
+    {
+      "ym": "201606",
+      "year": 2016,
+      "month": 6,
+      "fuel": "BatteryElectric",
+      "value": 833
+    },
+    {
+      "ym": "201606",
+      "year": 2016,
+      "month": 6,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201606",
+      "year": 2016,
+      "month": 6,
+      "fuel": "Others",
+      "value": 694
+    },
+    {
+      "ym": "201607",
+      "year": 2016,
+      "month": 7,
+      "fuel": "Diesel",
+      "value": 131473
+    },
+    {
+      "ym": "201607",
+      "year": 2016,
+      "month": 7,
+      "fuel": "Petrol",
+      "value": 142473
+    },
+    {
+      "ym": "201607",
+      "year": 2016,
+      "month": 7,
+      "fuel": "NonPluginHybrid",
+      "value": 2609
+    },
+    {
+      "ym": "201607",
+      "year": 2016,
+      "month": 7,
+      "fuel": "PluginHybrid",
+      "value": 1016
+    },
+    {
+      "ym": "201607",
+      "year": 2016,
+      "month": 7,
+      "fuel": "BatteryElectric",
+      "value": 785
+    },
+    {
+      "ym": "201607",
+      "year": 2016,
+      "month": 7,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201607",
+      "year": 2016,
+      "month": 7,
+      "fuel": "Others",
+      "value": 510
+    },
+    {
+      "ym": "201608",
+      "year": 2016,
+      "month": 8,
+      "fuel": "Diesel",
+      "value": 110949
+    },
+    {
+      "ym": "201608",
+      "year": 2016,
+      "month": 8,
+      "fuel": "Petrol",
+      "value": 128866
+    },
+    {
+      "ym": "201608",
+      "year": 2016,
+      "month": 8,
+      "fuel": "NonPluginHybrid",
+      "value": 3091
+    },
+    {
+      "ym": "201608",
+      "year": 2016,
+      "month": 8,
+      "fuel": "PluginHybrid",
+      "value": 836
+    },
+    {
+      "ym": "201608",
+      "year": 2016,
+      "month": 8,
+      "fuel": "BatteryElectric",
+      "value": 895
+    },
+    {
+      "ym": "201608",
+      "year": 2016,
+      "month": 8,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201608",
+      "year": 2016,
+      "month": 8,
+      "fuel": "Others",
+      "value": 439
+    },
+    {
+      "ym": "201609",
+      "year": 2016,
+      "month": 9,
+      "fuel": "Diesel",
+      "value": 132863
+    },
+    {
+      "ym": "201609",
+      "year": 2016,
+      "month": 9,
+      "fuel": "Petrol",
+      "value": 158166
+    },
+    {
+      "ym": "201609",
+      "year": 2016,
+      "month": 9,
+      "fuel": "NonPluginHybrid",
+      "value": 3497
+    },
+    {
+      "ym": "201609",
+      "year": 2016,
+      "month": 9,
+      "fuel": "PluginHybrid",
+      "value": 1420
+    },
+    {
+      "ym": "201609",
+      "year": 2016,
+      "month": 9,
+      "fuel": "BatteryElectric",
+      "value": 1641
+    },
+    {
+      "ym": "201609",
+      "year": 2016,
+      "month": 9,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201609",
+      "year": 2016,
+      "month": 9,
+      "fuel": "Others",
+      "value": 415
+    },
+    {
+      "ym": "201610",
+      "year": 2016,
+      "month": 10,
+      "fuel": "Diesel",
+      "value": 116135
+    },
+    {
+      "ym": "201610",
+      "year": 2016,
+      "month": 10,
+      "fuel": "Petrol",
+      "value": 139859
+    },
+    {
+      "ym": "201610",
+      "year": 2016,
+      "month": 10,
+      "fuel": "NonPluginHybrid",
+      "value": 3562
+    },
+    {
+      "ym": "201610",
+      "year": 2016,
+      "month": 10,
+      "fuel": "PluginHybrid",
+      "value": 1449
+    },
+    {
+      "ym": "201610",
+      "year": 2016,
+      "month": 10,
+      "fuel": "BatteryElectric",
+      "value": 1167
+    },
+    {
+      "ym": "201610",
+      "year": 2016,
+      "month": 10,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201610",
+      "year": 2016,
+      "month": 10,
+      "fuel": "Others",
+      "value": 552
+    },
+    {
+      "ym": "201611",
+      "year": 2016,
+      "month": 11,
+      "fuel": "Diesel",
+      "value": 124058
+    },
+    {
+      "ym": "201611",
+      "year": 2016,
+      "month": 11,
+      "fuel": "Petrol",
+      "value": 145887
+    },
+    {
+      "ym": "201611",
+      "year": 2016,
+      "month": 11,
+      "fuel": "NonPluginHybrid",
+      "value": 3411
+    },
+    {
+      "ym": "201611",
+      "year": 2016,
+      "month": 11,
+      "fuel": "PluginHybrid",
+      "value": 1418
+    },
+    {
+      "ym": "201611",
+      "year": 2016,
+      "month": 11,
+      "fuel": "BatteryElectric",
+      "value": 1231
+    },
+    {
+      "ym": "201611",
+      "year": 2016,
+      "month": 11,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201611",
+      "year": 2016,
+      "month": 11,
+      "fuel": "Others",
+      "value": 562
+    },
+    {
+      "ym": "201612",
+      "year": 2016,
+      "month": 12,
+      "fuel": "Diesel",
+      "value": 111678
+    },
+    {
+      "ym": "201612",
+      "year": 2016,
+      "month": 12,
+      "fuel": "Petrol",
+      "value": 137992
+    },
+    {
+      "ym": "201612",
+      "year": 2016,
+      "month": 12,
+      "fuel": "NonPluginHybrid",
+      "value": 3571
+    },
+    {
+      "ym": "201612",
+      "year": 2016,
+      "month": 12,
+      "fuel": "PluginHybrid",
+      "value": 1481
+    },
+    {
+      "ym": "201612",
+      "year": 2016,
+      "month": 12,
+      "fuel": "BatteryElectric",
+      "value": 1334
+    },
+    {
+      "ym": "201612",
+      "year": 2016,
+      "month": 12,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201612",
+      "year": 2016,
+      "month": 12,
+      "fuel": "Others",
+      "value": 477
+    },
+    {
+      "ym": "201701",
+      "year": 2017,
+      "month": 1,
+      "fuel": "Diesel",
+      "value": 108890
+    },
+    {
+      "ym": "201701",
+      "year": 2017,
+      "month": 1,
+      "fuel": "Petrol",
+      "value": 126012
+    },
+    {
+      "ym": "201701",
+      "year": 2017,
+      "month": 1,
+      "fuel": "NonPluginHybrid",
+      "value": 3142
+    },
+    {
+      "ym": "201701",
+      "year": 2017,
+      "month": 1,
+      "fuel": "PluginHybrid",
+      "value": 1533
+    },
+    {
+      "ym": "201701",
+      "year": 2017,
+      "month": 1,
+      "fuel": "BatteryElectric",
+      "value": 1323
+    },
+    {
+      "ym": "201701",
+      "year": 2017,
+      "month": 1,
+      "fuel": "Hydrogen",
+      "value": 1
+    },
+    {
+      "ym": "201701",
+      "year": 2017,
+      "month": 1,
+      "fuel": "Others",
+      "value": 498
+    },
+    {
+      "ym": "201702",
+      "year": 2017,
+      "month": 2,
+      "fuel": "Diesel",
+      "value": 105657
+    },
+    {
+      "ym": "201702",
+      "year": 2017,
+      "month": 2,
+      "fuel": "Petrol",
+      "value": 130806
+    },
+    {
+      "ym": "201702",
+      "year": 2017,
+      "month": 2,
+      "fuel": "NonPluginHybrid",
+      "value": 3639
+    },
+    {
+      "ym": "201702",
+      "year": 2017,
+      "month": 2,
+      "fuel": "PluginHybrid",
+      "value": 1443
+    },
+    {
+      "ym": "201702",
+      "year": 2017,
+      "month": 2,
+      "fuel": "BatteryElectric",
+      "value": 1546
+    },
+    {
+      "ym": "201702",
+      "year": 2017,
+      "month": 2,
+      "fuel": "Hydrogen",
+      "value": 1
+    },
+    {
+      "ym": "201702",
+      "year": 2017,
+      "month": 2,
+      "fuel": "Others",
+      "value": 510
+    },
+    {
+      "ym": "201703",
+      "year": 2017,
+      "month": 3,
+      "fuel": "Diesel",
+      "value": 146081
+    },
+    {
+      "ym": "201703",
+      "year": 2017,
+      "month": 3,
+      "fuel": "Petrol",
+      "value": 203379
+    },
+    {
+      "ym": "201703",
+      "year": 2017,
+      "month": 3,
+      "fuel": "NonPluginHybrid",
+      "value": 5191
+    },
+    {
+      "ym": "201703",
+      "year": 2017,
+      "month": 3,
+      "fuel": "PluginHybrid",
+      "value": 2288
+    },
+    {
+      "ym": "201703",
+      "year": 2017,
+      "month": 3,
+      "fuel": "BatteryElectric",
+      "value": 2191
+    },
+    {
+      "ym": "201703",
+      "year": 2017,
+      "month": 3,
+      "fuel": "Hydrogen",
+      "value": 2
+    },
+    {
+      "ym": "201703",
+      "year": 2017,
+      "month": 3,
+      "fuel": "Others",
+      "value": 551
+    },
+    {
+      "ym": "201704",
+      "year": 2017,
+      "month": 4,
+      "fuel": "Diesel",
+      "value": 119975
+    },
+    {
+      "ym": "201704",
+      "year": 2017,
+      "month": 4,
+      "fuel": "Petrol",
+      "value": 162383
+    },
+    {
+      "ym": "201704",
+      "year": 2017,
+      "month": 4,
+      "fuel": "NonPluginHybrid",
+      "value": 4222
+    },
+    {
+      "ym": "201704",
+      "year": 2017,
+      "month": 4,
+      "fuel": "PluginHybrid",
+      "value": 2174
+    },
+    {
+      "ym": "201704",
+      "year": 2017,
+      "month": 4,
+      "fuel": "BatteryElectric",
+      "value": 1413
+    },
+    {
+      "ym": "201704",
+      "year": 2017,
+      "month": 4,
+      "fuel": "Hydrogen",
+      "value": 0
+    },
+    {
+      "ym": "201704",
+      "year": 2017,
+      "month": 4,
+      "fuel": "Others",
+      "value": 530
+    },
+    {
+      "ym": "201705",
+      "year": 2017,
+      "month": 5,
+      "fuel": "Diesel",
+      "value": 130937
+    },
+    {
+      "ym": "201705",
+      "year": 2017,
+      "month": 5,
+      "fuel": "Petrol",
+      "value": 184076
+    },
+    {
+      "ym": "201705",
+      "year": 2017,
+      "month": 5,
+      "fuel": "NonPluginHybrid",
+      "value": 4520
+    },
+    {
+      "ym": "201705",
+      "year": 2017,
+      "month": 5,
+      "fuel": "PluginHybrid",
+      "value": 2323
+    },
+    {
+      "ym": "201705",
+      "year": 2017,
+      "month": 5,
+      "fuel": "BatteryElectric",
+      "value": 1520
+    },
+    {
+      "ym": "201705",
+      "year": 2017,
+      "month": 5,
+      "fuel": "Hydrogen",
+      "value": 3
+    },
+    {
+      "ym": "201705",
+      "year": 2017,
+      "month": 5,
+      "fuel": "Others",
+      "value": 573
+    },
+    {
+      "ym": "201706",
+      "year": 2017,
+      "month": 6,
+      "fuel": "Diesel",
+      "value": 127217
+    },
+    {
+      "ym": "201706",
+      "year": 2017,
+      "month": 6,
+      "fuel": "Petrol",
+      "value": 190701
+    },
+    {
+      "ym": "201706",
+      "year": 2017,
+      "month": 6,
+      "fuel": "NonPluginHybrid",
+      "value": 4542
+    },
+    {
+      "ym": "201706",
+      "year": 2017,
+      "month": 6,
+      "fuel": "PluginHybrid",
+      "value": 2503
+    },
+    {
+      "ym": "201706",
+      "year": 2017,
+      "month": 6,
+      "fuel": "BatteryElectric",
+      "value": 2196
+    },
+    {
+      "ym": "201706",
+      "year": 2017,
+      "month": 6,
+      "fuel": "Hydrogen",
+      "value": 3
+    },
+    {
+      "ym": "201706",
+      "year": 2017,
+      "month": 6,
+      "fuel": "Others",
+      "value": 531
+    },
+    {
+      "ym": "201707",
+      "year": 2017,
+      "month": 7,
+      "fuel": "Diesel",
+      "value": 114776
+    },
+    {
+      "ym": "201707",
+      "year": 2017,
+      "month": 7,
+      "fuel": "Petrol",
+      "value": 158440
+    },
+    {
+      "ym": "201707",
+      "year": 2017,
+      "month": 7,
+      "fuel": "NonPluginHybrid",
+      "value": 4966
+    },
+    {
+      "ym": "201707",
+      "year": 2017,
+      "month": 7,
+      "fuel": "PluginHybrid",
+      "value": 2417
+    },
+    {
+      "ym": "201707",
+      "year": 2017,
+      "month": 7,
+      "fuel": "BatteryElectric",
+      "value": 1820
+    },
+    {
+      "ym": "201707",
+      "year": 2017,
+      "month": 7,
+      "fuel": "Hydrogen",
+      "value": 24
+    },
+    {
+      "ym": "201707",
+      "year": 2017,
+      "month": 7,
+      "fuel": "Others",
+      "value": 637
+    },
+    {
+      "ym": "201708",
+      "year": 2017,
+      "month": 8,
+      "fuel": "Diesel",
+      "value": 95609
+    },
+    {
+      "ym": "201708",
+      "year": 2017,
+      "month": 8,
+      "fuel": "Petrol",
+      "value": 148155
+    },
+    {
+      "ym": "201708",
+      "year": 2017,
+      "month": 8,
+      "fuel": "NonPluginHybrid",
+      "value": 4310
+    },
+    {
+      "ym": "201708",
+      "year": 2017,
+      "month": 8,
+      "fuel": "PluginHybrid",
+      "value": 2617
+    },
+    {
+      "ym": "201708",
+      "year": 2017,
+      "month": 8,
+      "fuel": "BatteryElectric",
+      "value": 2177
+    },
+    {
+      "ym": "201708",
+      "year": 2017,
+      "month": 8,
+      "fuel": "Hydrogen",
+      "value": 9
+    },
+    {
+      "ym": "201708",
+      "year": 2017,
+      "month": 8,
+      "fuel": "Others",
+      "value": 803
+    },
+    {
+      "ym": "201709",
+      "year": 2017,
+      "month": 9,
+      "fuel": "Diesel",
+      "value": 104520
+    },
+    {
+      "ym": "201709",
+      "year": 2017,
+      "month": 9,
+      "fuel": "Petrol",
+      "value": 171943
+    },
+    {
+      "ym": "201709",
+      "year": 2017,
+      "month": 9,
+      "fuel": "NonPluginHybrid",
+      "value": 5556
+    },
+    {
+      "ym": "201709",
+      "year": 2017,
+      "month": 9,
+      "fuel": "PluginHybrid",
+      "value": 3118
+    },
+    {
+      "ym": "201709",
+      "year": 2017,
+      "month": 9,
+      "fuel": "BatteryElectric",
+      "value": 2247
+    },
+    {
+      "ym": "201709",
+      "year": 2017,
+      "month": 9,
+      "fuel": "Hydrogen",
+      "value": 28
+    },
+    {
+      "ym": "201709",
+      "year": 2017,
+      "month": 9,
+      "fuel": "Others",
+      "value": 623
+    },
+    {
+      "ym": "201710",
+      "year": 2017,
+      "month": 10,
+      "fuel": "Diesel",
+      "value": 95355
+    },
+    {
+      "ym": "201710",
+      "year": 2017,
+      "month": 10,
+      "fuel": "Petrol",
+      "value": 166193
+    },
+    {
+      "ym": "201710",
+      "year": 2017,
+      "month": 10,
+      "fuel": "NonPluginHybrid",
+      "value": 5524
+    },
+    {
+      "ym": "201710",
+      "year": 2017,
+      "month": 10,
+      "fuel": "PluginHybrid",
+      "value": 2885
+    },
+    {
+      "ym": "201710",
+      "year": 2017,
+      "month": 10,
+      "fuel": "BatteryElectric",
+      "value": 2180
+    },
+    {
+      "ym": "201710",
+      "year": 2017,
+      "month": 10,
+      "fuel": "Hydrogen",
+      "value": 3
+    },
+    {
+      "ym": "201710",
+      "year": 2017,
+      "month": 10,
+      "fuel": "Others",
+      "value": 715
+    },
+    {
+      "ym": "201711",
+      "year": 2017,
+      "month": 11,
+      "fuel": "Diesel",
+      "value": 102972
+    },
+    {
+      "ym": "201711",
+      "year": 2017,
+      "month": 11,
+      "fuel": "Petrol",
+      "value": 186772
+    },
+    {
+      "ym": "201711",
+      "year": 2017,
+      "month": 11,
+      "fuel": "NonPluginHybrid",
+      "value": 5402
+    },
+    {
+      "ym": "201711",
+      "year": 2017,
+      "month": 11,
+      "fuel": "PluginHybrid",
+      "value": 3259
+    },
+    {
+      "ym": "201711",
+      "year": 2017,
+      "month": 11,
+      "fuel": "BatteryElectric",
+      "value": 3031
+    },
+    {
+      "ym": "201711",
+      "year": 2017,
+      "month": 11,
+      "fuel": "Hydrogen",
+      "value": 21
+    },
+    {
+      "ym": "201711",
+      "year": 2017,
+      "month": 11,
+      "fuel": "Others",
+      "value": 1179
+    },
+    {
+      "ym": "201712",
+      "year": 2017,
+      "month": 12,
+      "fuel": "Diesel",
+      "value": 84787
+    },
+    {
+      "ym": "201712",
+      "year": 2017,
+      "month": 12,
+      "fuel": "Petrol",
+      "value": 157628
+    },
+    {
+      "ym": "201712",
+      "year": 2017,
+      "month": 12,
+      "fuel": "NonPluginHybrid",
+      "value": 4223
+    },
+    {
+      "ym": "201712",
+      "year": 2017,
+      "month": 12,
+      "fuel": "PluginHybrid",
+      "value": 2876
+    },
+    {
+      "ym": "201712",
+      "year": 2017,
+      "month": 12,
+      "fuel": "BatteryElectric",
+      "value": 3412
+    },
+    {
+      "ym": "201712",
+      "year": 2017,
+      "month": 12,
+      "fuel": "Hydrogen",
+      "value": 27
+    },
+    {
+      "ym": "201712",
+      "year": 2017,
+      "month": 12,
+      "fuel": "Others",
+      "value": 997
+    },
+    {
+      "ym": "201801",
+      "year": 2018,
+      "month": 1,
+      "fuel": "Diesel",
+      "value": 89760
+    },
+    {
+      "ym": "201801",
+      "year": 2018,
+      "month": 1,
+      "fuel": "Petrol",
+      "value": 166504
+    },
+    {
+      "ym": "201801",
+      "year": 2018,
+      "month": 1,
+      "fuel": "NonPluginHybrid",
+      "value": 6248
+    },
+    {
+      "ym": "201801",
+      "year": 2018,
+      "month": 1,
+      "fuel": "PluginHybrid",
+      "value": 2870
+    },
+    {
+      "ym": "201801",
+      "year": 2018,
+      "month": 1,
+      "fuel": "BatteryElectric",
+      "value": 2764
+    },
+    {
+      "ym": "201801",
+      "year": 2018,
+      "month": 1,
+      "fuel": "Hydrogen",
+      "value": 15
+    },
+    {
+      "ym": "201801",
+      "year": 2018,
+      "month": 1,
+      "fuel": "Others",
+      "value": 1268
+    },
+    {
+      "ym": "201802",
+      "year": 2018,
+      "month": 2,
+      "fuel": "Diesel",
+      "value": 85077
+    },
+    {
+      "ym": "201802",
+      "year": 2018,
+      "month": 2,
+      "fuel": "Petrol",
+      "value": 164631
+    },
+    {
+      "ym": "201802",
+      "year": 2018,
+      "month": 2,
+      "fuel": "NonPluginHybrid",
+      "value": 5730
+    },
+    {
+      "ym": "201802",
+      "year": 2018,
+      "month": 2,
+      "fuel": "PluginHybrid",
+      "value": 2559
+    },
+    {
+      "ym": "201802",
+      "year": 2018,
+      "month": 2,
+      "fuel": "BatteryElectric",
+      "value": 2546
+    },
+    {
+      "ym": "201802",
+      "year": 2018,
+      "month": 2,
+      "fuel": "Hydrogen",
+      "value": 3
+    },
+    {
+      "ym": "201802",
+      "year": 2018,
+      "month": 2,
+      "fuel": "Others",
+      "value": 1203
+    },
+    {
+      "ym": "201803",
+      "year": 2018,
+      "month": 3,
+      "fuel": "Diesel",
+      "value": 108929
+    },
+    {
+      "ym": "201803",
+      "year": 2018,
+      "month": 3,
+      "fuel": "Petrol",
+      "value": 222332
+    },
+    {
+      "ym": "201803",
+      "year": 2018,
+      "month": 3,
+      "fuel": "NonPluginHybrid",
+      "value": 7856
+    },
+    {
+      "ym": "201803",
+      "year": 2018,
+      "month": 3,
+      "fuel": "PluginHybrid",
+      "value": 3018
+    },
+    {
+      "ym": "201803",
+      "year": 2018,
+      "month": 3,
+      "fuel": "BatteryElectric",
+      "value": 3792
+    },
+    {
+      "ym": "201803",
+      "year": 2018,
+      "month": 3,
+      "fuel": "Hydrogen",
+      "value": 6
+    },
+    {
+      "ym": "201803",
+      "year": 2018,
+      "month": 3,
+      "fuel": "Others",
+      "value": 1500
+    },
+    {
+      "ym": "201804",
+      "year": 2018,
+      "month": 4,
+      "fuel": "Diesel",
+      "value": 105014
+    },
+    {
+      "ym": "201804",
+      "year": 2018,
+      "month": 4,
+      "fuel": "Petrol",
+      "value": 193447
+    },
+    {
+      "ym": "201804",
+      "year": 2018,
+      "month": 4,
+      "fuel": "NonPluginHybrid",
+      "value": 8226
+    },
+    {
+      "ym": "201804",
+      "year": 2018,
+      "month": 4,
+      "fuel": "PluginHybrid",
+      "value": 2632
+    },
+    {
+      "ym": "201804",
+      "year": 2018,
+      "month": 4,
+      "fuel": "BatteryElectric",
+      "value": 3171
+    },
+    {
+      "ym": "201804",
+      "year": 2018,
+      "month": 4,
+      "fuel": "Hydrogen",
+      "value": 11
+    },
+    {
+      "ym": "201804",
+      "year": 2018,
+      "month": 4,
+      "fuel": "Others",
+      "value": 1554
+    },
+    {
+      "ym": "201805",
+      "year": 2018,
+      "month": 5,
+      "fuel": "Diesel",
+      "value": 95377
+    },
+    {
+      "ym": "201805",
+      "year": 2018,
+      "month": 5,
+      "fuel": "Petrol",
+      "value": 195098
+    },
+    {
+      "ym": "201805",
+      "year": 2018,
+      "month": 5,
+      "fuel": "NonPluginHybrid",
+      "value": 7834
+    },
+    {
+      "ym": "201805",
+      "year": 2018,
+      "month": 5,
+      "fuel": "PluginHybrid",
+      "value": 2464
+    },
+    {
+      "ym": "201805",
+      "year": 2018,
+      "month": 5,
+      "fuel": "BatteryElectric",
+      "value": 2310
+    },
+    {
+      "ym": "201805",
+      "year": 2018,
+      "month": 5,
+      "fuel": "Hydrogen",
+      "value": 13
+    },
+    {
+      "ym": "201805",
+      "year": 2018,
+      "month": 5,
+      "fuel": "Others",
+      "value": 1961
+    },
+    {
+      "ym": "201806",
+      "year": 2018,
+      "month": 6,
+      "fuel": "Diesel",
+      "value": 106618
+    },
+    {
+      "ym": "201806",
+      "year": 2018,
+      "month": 6,
+      "fuel": "Petrol",
+      "value": 218327
+    },
+    {
+      "ym": "201806",
+      "year": 2018,
+      "month": 6,
+      "fuel": "NonPluginHybrid",
+      "value": 8326
+    },
+    {
+      "ym": "201806",
+      "year": 2018,
+      "month": 6,
+      "fuel": "PluginHybrid",
+      "value": 3139
+    },
+    {
+      "ym": "201806",
+      "year": 2018,
+      "month": 6,
+      "fuel": "BatteryElectric",
+      "value": 2651
+    },
+    {
+      "ym": "201806",
+      "year": 2018,
+      "month": 6,
+      "fuel": "Hydrogen",
+      "value": 15
+    },
+    {
+      "ym": "201806",
+      "year": 2018,
+      "month": 6,
+      "fuel": "Others",
+      "value": 2232
+    },
+    {
+      "ym": "201807",
+      "year": 2018,
+      "month": 7,
+      "fuel": "Diesel",
+      "value": 102761
+    },
+    {
+      "ym": "201807",
+      "year": 2018,
+      "month": 7,
+      "fuel": "Petrol",
+      "value": 197268
+    },
+    {
+      "ym": "201807",
+      "year": 2018,
+      "month": 7,
+      "fuel": "NonPluginHybrid",
+      "value": 10468
+    },
+    {
+      "ym": "201807",
+      "year": 2018,
+      "month": 7,
+      "fuel": "PluginHybrid",
+      "value": 3091
+    },
+    {
+      "ym": "201807",
+      "year": 2018,
+      "month": 7,
+      "fuel": "BatteryElectric",
+      "value": 2526
+    },
+    {
+      "ym": "201807",
+      "year": 2018,
+      "month": 7,
+      "fuel": "Hydrogen",
+      "value": 10
+    },
+    {
+      "ym": "201807",
+      "year": 2018,
+      "month": 7,
+      "fuel": "Others",
+      "value": 1724
+    },
+    {
+      "ym": "201808",
+      "year": 2018,
+      "month": 8,
+      "fuel": "Diesel",
+      "value": 103063
+    },
+    {
+      "ym": "201808",
+      "year": 2018,
+      "month": 8,
+      "fuel": "Petrol",
+      "value": 196425
+    },
+    {
+      "ym": "201808",
+      "year": 2018,
+      "month": 8,
+      "fuel": "NonPluginHybrid",
+      "value": 9370
+    },
+    {
+      "ym": "201808",
+      "year": 2018,
+      "month": 8,
+      "fuel": "PluginHybrid",
+      "value": 3431
+    },
+    {
+      "ym": "201808",
+      "year": 2018,
+      "month": 8,
+      "fuel": "BatteryElectric",
+      "value": 2457
+    },
+    {
+      "ym": "201808",
+      "year": 2018,
+      "month": 8,
+      "fuel": "Hydrogen",
+      "value": 13
+    },
+    {
+      "ym": "201808",
+      "year": 2018,
+      "month": 8,
+      "fuel": "Others",
+      "value": 1646
+    },
+    {
+      "ym": "201809",
+      "year": 2018,
+      "month": 9,
+      "fuel": "Diesel",
+      "value": 58717
+    },
+    {
+      "ym": "201809",
+      "year": 2018,
+      "month": 9,
+      "fuel": "Petrol",
+      "value": 128683
+    },
+    {
+      "ym": "201809",
+      "year": 2018,
+      "month": 9,
+      "fuel": "NonPluginHybrid",
+      "value": 7687
+    },
+    {
+      "ym": "201809",
+      "year": 2018,
+      "month": 9,
+      "fuel": "PluginHybrid",
+      "value": 2362
+    },
+    {
+      "ym": "201809",
+      "year": 2018,
+      "month": 9,
+      "fuel": "BatteryElectric",
+      "value": 2357
+    },
+    {
+      "ym": "201809",
+      "year": 2018,
+      "month": 9,
+      "fuel": "Hydrogen",
+      "value": 17
+    },
+    {
+      "ym": "201809",
+      "year": 2018,
+      "month": 9,
+      "fuel": "Others",
+      "value": 311
+    },
+    {
+      "ym": "201810",
+      "year": 2018,
+      "month": 10,
+      "fuel": "Diesel",
+      "value": 80313
+    },
+    {
+      "ym": "201810",
+      "year": 2018,
+      "month": 10,
+      "fuel": "Petrol",
+      "value": 157304
+    },
+    {
+      "ym": "201810",
+      "year": 2018,
+      "month": 10,
+      "fuel": "NonPluginHybrid",
+      "value": 9061
+    },
+    {
+      "ym": "201810",
+      "year": 2018,
+      "month": 10,
+      "fuel": "PluginHybrid",
+      "value": 1992
+    },
+    {
+      "ym": "201810",
+      "year": 2018,
+      "month": 10,
+      "fuel": "BatteryElectric",
+      "value": 3390
+    },
+    {
+      "ym": "201810",
+      "year": 2018,
+      "month": 10,
+      "fuel": "Hydrogen",
+      "value": 18
+    },
+    {
+      "ym": "201810",
+      "year": 2018,
+      "month": 10,
+      "fuel": "Others",
+      "value": 550
+    },
+    {
+      "ym": "201811",
+      "year": 2018,
+      "month": 11,
+      "fuel": "Diesel",
+      "value": 92642
+    },
+    {
+      "ym": "201811",
+      "year": 2018,
+      "month": 11,
+      "fuel": "Petrol",
+      "value": 163420
+    },
+    {
+      "ym": "201811",
+      "year": 2018,
+      "month": 11,
+      "fuel": "NonPluginHybrid",
+      "value": 9668
+    },
+    {
+      "ym": "201811",
+      "year": 2018,
+      "month": 11,
+      "fuel": "PluginHybrid",
+      "value": 1990
+    },
+    {
+      "ym": "201811",
+      "year": 2018,
+      "month": 11,
+      "fuel": "BatteryElectric",
+      "value": 4262
+    },
+    {
+      "ym": "201811",
+      "year": 2018,
+      "month": 11,
+      "fuel": "Hydrogen",
+      "value": 32
+    },
+    {
+      "ym": "201811",
+      "year": 2018,
+      "month": 11,
+      "fuel": "Others",
+      "value": 660
+    },
+    {
+      "ym": "201812",
+      "year": 2018,
+      "month": 12,
+      "fuel": "Diesel",
+      "value": 82859
+    },
+    {
+      "ym": "201812",
+      "year": 2018,
+      "month": 12,
+      "fuel": "Petrol",
+      "value": 139261
+    },
+    {
+      "ym": "201812",
+      "year": 2018,
+      "month": 12,
+      "fuel": "NonPluginHybrid",
+      "value": 8341
+    },
+    {
+      "ym": "201812",
+      "year": 2018,
+      "month": 12,
+      "fuel": "PluginHybrid",
+      "value": 1875
+    },
+    {
+      "ym": "201812",
+      "year": 2018,
+      "month": 12,
+      "fuel": "BatteryElectric",
+      "value": 3836
+    },
+    {
+      "ym": "201812",
+      "year": 2018,
+      "month": 12,
+      "fuel": "Hydrogen",
+      "value": 18
+    },
+    {
+      "ym": "201812",
+      "year": 2018,
+      "month": 12,
+      "fuel": "Others",
+      "value": 868
+    },
+    {
+      "ym": "201901",
+      "year": 2019,
+      "month": 1,
+      "fuel": "Diesel",
+      "value": 91623
+    },
+    {
+      "ym": "201901",
+      "year": 2019,
+      "month": 1,
+      "fuel": "Petrol",
+      "value": 153098
+    },
+    {
+      "ym": "201901",
+      "year": 2019,
+      "month": 1,
+      "fuel": "NonPluginHybrid",
+      "value": 13052
+    },
+    {
+      "ym": "201901",
+      "year": 2019,
+      "month": 1,
+      "fuel": "PluginHybrid",
+      "value": 2115
+    },
+    {
+      "ym": "201901",
+      "year": 2019,
+      "month": 1,
+      "fuel": "BatteryElectric",
+      "value": 4648
+    },
+    {
+      "ym": "201901",
+      "year": 2019,
+      "month": 1,
+      "fuel": "Hydrogen",
+      "value": 21
+    },
+    {
+      "ym": "201901",
+      "year": 2019,
+      "month": 1,
+      "fuel": "Others",
+      "value": 1145
+    },
+    {
+      "ym": "201902",
+      "year": 2019,
+      "month": 2,
+      "fuel": "Diesel",
+      "value": 87620
+    },
+    {
+      "ym": "201902",
+      "year": 2019,
+      "month": 2,
+      "fuel": "Petrol",
+      "value": 160454
+    },
+    {
+      "ym": "201902",
+      "year": 2019,
+      "month": 2,
+      "fuel": "NonPluginHybrid",
+      "value": 12945
+    },
+    {
+      "ym": "201902",
+      "year": 2019,
+      "month": 2,
+      "fuel": "PluginHybrid",
+      "value": 2199
+    },
+    {
+      "ym": "201902",
+      "year": 2019,
+      "month": 2,
+      "fuel": "BatteryElectric",
+      "value": 4637
+    },
+    {
+      "ym": "201902",
+      "year": 2019,
+      "month": 2,
+      "fuel": "Hydrogen",
+      "value": 15
+    },
+    {
+      "ym": "201902",
+      "year": 2019,
+      "month": 2,
+      "fuel": "Others",
+      "value": 997
+    },
+    {
+      "ym": "201903",
+      "year": 2019,
+      "month": 3,
+      "fuel": "Diesel",
+      "value": 111849
+    },
+    {
+      "ym": "201903",
+      "year": 2019,
+      "month": 3,
+      "fuel": "Petrol",
+      "value": 208040
+    },
+    {
+      "ym": "201903",
+      "year": 2019,
+      "month": 3,
+      "fuel": "NonPluginHybrid",
+      "value": 14676
+    },
+    {
+      "ym": "201903",
+      "year": 2019,
+      "month": 3,
+      "fuel": "PluginHybrid",
+      "value": 3047
+    },
+    {
+      "ym": "201903",
+      "year": 2019,
+      "month": 3,
+      "fuel": "BatteryElectric",
+      "value": 6616
+    },
+    {
+      "ym": "201903",
+      "year": 2019,
+      "month": 3,
+      "fuel": "Hydrogen",
+      "value": 28
+    },
+    {
+      "ym": "201903",
+      "year": 2019,
+      "month": 3,
+      "fuel": "Others",
+      "value": 1267
+    },
+    {
+      "ym": "201904",
+      "year": 2019,
+      "month": 4,
+      "fuel": "Diesel",
+      "value": 104079
+    },
+    {
+      "ym": "201904",
+      "year": 2019,
+      "month": 4,
+      "fuel": "Petrol",
+      "value": 183506
+    },
+    {
+      "ym": "201904",
+      "year": 2019,
+      "month": 4,
+      "fuel": "NonPluginHybrid",
+      "value": 13811
+    },
+    {
+      "ym": "201904",
+      "year": 2019,
+      "month": 4,
+      "fuel": "PluginHybrid",
+      "value": 2992
+    },
+    {
+      "ym": "201904",
+      "year": 2019,
+      "month": 4,
+      "fuel": "BatteryElectric",
+      "value": 4768
+    },
+    {
+      "ym": "201904",
+      "year": 2019,
+      "month": 4,
+      "fuel": "Hydrogen",
+      "value": 28
+    },
+    {
+      "ym": "201904",
+      "year": 2019,
+      "month": 4,
+      "fuel": "Others",
+      "value": 1531
+    },
+    {
+      "ym": "201905",
+      "year": 2019,
+      "month": 5,
+      "fuel": "Diesel",
+      "value": 110824
+    },
+    {
+      "ym": "201905",
+      "year": 2019,
+      "month": 5,
+      "fuel": "Petrol",
+      "value": 196492
+    },
+    {
+      "ym": "201905",
+      "year": 2019,
+      "month": 5,
+      "fuel": "NonPluginHybrid",
+      "value": 16037
+    },
+    {
+      "ym": "201905",
+      "year": 2019,
+      "month": 5,
+      "fuel": "PluginHybrid",
+      "value": 3257
+    },
+    {
+      "ym": "201905",
+      "year": 2019,
+      "month": 5,
+      "fuel": "BatteryElectric",
+      "value": 4630
+    },
+    {
+      "ym": "201905",
+      "year": 2019,
+      "month": 5,
+      "fuel": "Hydrogen",
+      "value": 28
+    },
+    {
+      "ym": "201905",
+      "year": 2019,
+      "month": 5,
+      "fuel": "Others",
+      "value": 1694
+    },
+    {
+      "ym": "201906",
+      "year": 2019,
+      "month": 6,
+      "fuel": "Diesel",
+      "value": 102758
+    },
+    {
+      "ym": "201906",
+      "year": 2019,
+      "month": 6,
+      "fuel": "Petrol",
+      "value": 196439
+    },
+    {
+      "ym": "201906",
+      "year": 2019,
+      "month": 6,
+      "fuel": "NonPluginHybrid",
+      "value": 15949
+    },
+    {
+      "ym": "201906",
+      "year": 2019,
+      "month": 6,
+      "fuel": "PluginHybrid",
+      "value": 2863
+    },
+    {
+      "ym": "201906",
+      "year": 2019,
+      "month": 6,
+      "fuel": "BatteryElectric",
+      "value": 5760
+    },
+    {
+      "ym": "201906",
+      "year": 2019,
+      "month": 6,
+      "fuel": "Hydrogen",
+      "value": 32
+    },
+    {
+      "ym": "201906",
+      "year": 2019,
+      "month": 6,
+      "fuel": "Others",
+      "value": 1430
+    },
+    {
+      "ym": "201907",
+      "year": 2019,
+      "month": 7,
+      "fuel": "Diesel",
+      "value": 109945
+    },
+    {
+      "ym": "201907",
+      "year": 2019,
+      "month": 7,
+      "fuel": "Petrol",
+      "value": 193655
+    },
+    {
+      "ym": "201907",
+      "year": 2019,
+      "month": 7,
+      "fuel": "NonPluginHybrid",
+      "value": 18289
+    },
+    {
+      "ym": "201907",
+      "year": 2019,
+      "month": 7,
+      "fuel": "PluginHybrid",
+      "value": 3264
+    },
+    {
+      "ym": "201907",
+      "year": 2019,
+      "month": 7,
+      "fuel": "BatteryElectric",
+      "value": 5963
+    },
+    {
+      "ym": "201907",
+      "year": 2019,
+      "month": 7,
+      "fuel": "Hydrogen",
+      "value": 31
+    },
+    {
+      "ym": "201907",
+      "year": 2019,
+      "month": 7,
+      "fuel": "Others",
+      "value": 1641
+    },
+    {
+      "ym": "201908",
+      "year": 2019,
+      "month": 8,
+      "fuel": "Diesel",
+      "value": 94639
+    },
+    {
+      "ym": "201908",
+      "year": 2019,
+      "month": 8,
+      "fuel": "Petrol",
+      "value": 192550
+    },
+    {
+      "ym": "201908",
+      "year": 2019,
+      "month": 8,
+      "fuel": "NonPluginHybrid",
+      "value": 16732
+    },
+    {
+      "ym": "201908",
+      "year": 2019,
+      "month": 8,
+      "fuel": "PluginHybrid",
+      "value": 3110
+    },
+    {
+      "ym": "201908",
+      "year": 2019,
+      "month": 8,
+      "fuel": "BatteryElectric",
+      "value": 5001
+    },
+    {
+      "ym": "201908",
+      "year": 2019,
+      "month": 8,
+      "fuel": "Hydrogen",
+      "value": 30
+    },
+    {
+      "ym": "201908",
+      "year": 2019,
+      "month": 8,
+      "fuel": "Others",
+      "value": 1686
+    },
+    {
+      "ym": "201909",
+      "year": 2019,
+      "month": 9,
+      "fuel": "Diesel",
+      "value": 72519
+    },
+    {
+      "ym": "201909",
+      "year": 2019,
+      "month": 9,
+      "fuel": "Petrol",
+      "value": 146463
+    },
+    {
+      "ym": "201909",
+      "year": 2019,
+      "month": 9,
+      "fuel": "NonPluginHybrid",
+      "value": 15373
+    },
+    {
+      "ym": "201909",
+      "year": 2019,
+      "month": 9,
+      "fuel": "PluginHybrid",
+      "value": 3560
+    },
+    {
+      "ym": "201909",
+      "year": 2019,
+      "month": 9,
+      "fuel": "BatteryElectric",
+      "value": 5880
+    },
+    {
+      "ym": "201909",
+      "year": 2019,
+      "month": 9,
+      "fuel": "Hydrogen",
+      "value": 19
+    },
+    {
+      "ym": "201909",
+      "year": 2019,
+      "month": 9,
+      "fuel": "Others",
+      "value": 808
+    },
+    {
+      "ym": "201910",
+      "year": 2019,
+      "month": 10,
+      "fuel": "Diesel",
+      "value": 88042
+    },
+    {
+      "ym": "201910",
+      "year": 2019,
+      "month": 10,
+      "fuel": "Petrol",
+      "value": 164322
+    },
+    {
+      "ym": "201910",
+      "year": 2019,
+      "month": 10,
+      "fuel": "NonPluginHybrid",
+      "value": 19435
+    },
+    {
+      "ym": "201910",
+      "year": 2019,
+      "month": 10,
+      "fuel": "PluginHybrid",
+      "value": 6942
+    },
+    {
+      "ym": "201910",
+      "year": 2019,
+      "month": 10,
+      "fuel": "BatteryElectric",
+      "value": 4979
+    },
+    {
+      "ym": "201910",
+      "year": 2019,
+      "month": 10,
+      "fuel": "Hydrogen",
+      "value": 14
+    },
+    {
+      "ym": "201910",
+      "year": 2019,
+      "month": 10,
+      "fuel": "Others",
+      "value": 859
+    },
+    {
+      "ym": "201911",
+      "year": 2019,
+      "month": 11,
+      "fuel": "Diesel",
+      "value": 94413
+    },
+    {
+      "ym": "201911",
+      "year": 2019,
+      "month": 11,
+      "fuel": "Petrol",
+      "value": 173104
+    },
+    {
+      "ym": "201911",
+      "year": 2019,
+      "month": 11,
+      "fuel": "NonPluginHybrid",
+      "value": 19607
+    },
+    {
+      "ym": "201911",
+      "year": 2019,
+      "month": 11,
+      "fuel": "PluginHybrid",
+      "value": 6328
+    },
+    {
+      "ym": "201911",
+      "year": 2019,
+      "month": 11,
+      "fuel": "BatteryElectric",
+      "value": 4651
+    },
+    {
+      "ym": "201911",
+      "year": 2019,
+      "month": 11,
+      "fuel": "Hydrogen",
+      "value": 22
+    },
+    {
+      "ym": "201911",
+      "year": 2019,
+      "month": 11,
+      "fuel": "Others",
+      "value": 1002
+    },
+    {
+      "ym": "201912",
+      "year": 2019,
+      "month": 12,
+      "fuel": "Diesel",
+      "value": 84422
+    },
+    {
+      "ym": "201912",
+      "year": 2019,
+      "month": 12,
+      "fuel": "Petrol",
+      "value": 168768
+    },
+    {
+      "ym": "201912",
+      "year": 2019,
+      "month": 12,
+      "fuel": "NonPluginHybrid",
+      "value": 17995
+    },
+    {
+      "ym": "201912",
+      "year": 2019,
+      "month": 12,
+      "fuel": "PluginHybrid",
+      "value": 5569
+    },
+    {
+      "ym": "201912",
+      "year": 2019,
+      "month": 12,
+      "fuel": "BatteryElectric",
+      "value": 5748
+    },
+    {
+      "ym": "201912",
+      "year": 2019,
+      "month": 12,
+      "fuel": "Hydrogen",
+      "value": 43
+    },
+    {
+      "ym": "201912",
+      "year": 2019,
+      "month": 12,
+      "fuel": "Others",
+      "value": 835
+    },
+    {
+      "ym": "202001",
+      "year": 2020,
+      "month": 1,
+      "fuel": "Diesel",
+      "value": 80257
+    },
+    {
+      "ym": "202001",
+      "year": 2020,
+      "month": 1,
+      "fuel": "Petrol",
+      "value": 126806
+    },
+    {
+      "ym": "202001",
+      "year": 2020,
+      "month": 1,
+      "fuel": "NonPluginHybrid",
+      "value": 22166
+    },
+    {
+      "ym": "202001",
+      "year": 2020,
+      "month": 1,
+      "fuel": "PluginHybrid",
+      "value": 8634
+    },
+    {
+      "ym": "202001",
+      "year": 2020,
+      "month": 1,
+      "fuel": "BatteryElectric",
+      "value": 7492
+    },
+    {
+      "ym": "202001",
+      "year": 2020,
+      "month": 1,
+      "fuel": "Hydrogen",
+      "value": 17
+    },
+    {
+      "ym": "202001",
+      "year": 2020,
+      "month": 1,
+      "fuel": "Others",
+      "value": 928
+    },
+    {
+      "ym": "202002",
+      "year": 2020,
+      "month": 2,
+      "fuel": "Diesel",
+      "value": 75852
+    },
+    {
+      "ym": "202002",
+      "year": 2020,
+      "month": 2,
+      "fuel": "Petrol",
+      "value": 125116
+    },
+    {
+      "ym": "202002",
+      "year": 2020,
+      "month": 2,
+      "fuel": "NonPluginHybrid",
+      "value": 21646
+    },
+    {
+      "ym": "202002",
+      "year": 2020,
+      "month": 2,
+      "fuel": "PluginHybrid",
+      "value": 8341
+    },
+    {
+      "ym": "202002",
+      "year": 2020,
+      "month": 2,
+      "fuel": "BatteryElectric",
+      "value": 8154
+    },
+    {
+      "ym": "202002",
+      "year": 2020,
+      "month": 2,
+      "fuel": "Hydrogen",
+      "value": 36
+    },
+    {
+      "ym": "202002",
+      "year": 2020,
+      "month": 2,
+      "fuel": "Others",
+      "value": 798
+    },
+    {
+      "ym": "202003",
+      "year": 2020,
+      "month": 3,
+      "fuel": "Diesel",
+      "value": 67937
+    },
+    {
+      "ym": "202003",
+      "year": 2020,
+      "month": 3,
+      "fuel": "Petrol",
+      "value": 107507
+    },
+    {
+      "ym": "202003",
+      "year": 2020,
+      "month": 3,
+      "fuel": "NonPluginHybrid",
+      "value": 19309
+    },
+    {
+      "ym": "202003",
+      "year": 2020,
+      "month": 3,
+      "fuel": "PluginHybrid",
+      "value": 9420
+    },
+    {
+      "ym": "202003",
+      "year": 2020,
+      "month": 3,
+      "fuel": "BatteryElectric",
+      "value": 10329
+    },
+    {
+      "ym": "202003",
+      "year": 2020,
+      "month": 3,
+      "fuel": "Hydrogen",
+      "value": 26
+    },
+    {
+      "ym": "202003",
+      "year": 2020,
+      "month": 3,
+      "fuel": "Others",
+      "value": 591
+    },
+    {
+      "ym": "202004",
+      "year": 2020,
+      "month": 4,
+      "fuel": "Diesel",
+      "value": 38836
+    },
+    {
+      "ym": "202004",
+      "year": 2020,
+      "month": 4,
+      "fuel": "Petrol",
+      "value": 60295
+    },
+    {
+      "ym": "202004",
+      "year": 2020,
+      "month": 4,
+      "fuel": "NonPluginHybrid",
+      "value": 10955
+    },
+    {
+      "ym": "202004",
+      "year": 2020,
+      "month": 4,
+      "fuel": "PluginHybrid",
+      "value": 5616
+    },
+    {
+      "ym": "202004",
+      "year": 2020,
+      "month": 4,
+      "fuel": "BatteryElectric",
+      "value": 4635
+    },
+    {
+      "ym": "202004",
+      "year": 2020,
+      "month": 4,
+      "fuel": "Hydrogen",
+      "value": 26
+    },
+    {
+      "ym": "202004",
+      "year": 2020,
+      "month": 4,
+      "fuel": "Others",
+      "value": 477
+    },
+    {
+      "ym": "202005",
+      "year": 2020,
+      "month": 5,
+      "fuel": "Diesel",
+      "value": 53218
+    },
+    {
+      "ym": "202005",
+      "year": 2020,
+      "month": 5,
+      "fuel": "Petrol",
+      "value": 85904
+    },
+    {
+      "ym": "202005",
+      "year": 2020,
+      "month": 5,
+      "fuel": "NonPluginHybrid",
+      "value": 16089
+    },
+    {
+      "ym": "202005",
+      "year": 2020,
+      "month": 5,
+      "fuel": "PluginHybrid",
+      "value": 6751
+    },
+    {
+      "ym": "202005",
+      "year": 2020,
+      "month": 5,
+      "fuel": "BatteryElectric",
+      "value": 5578
+    },
+    {
+      "ym": "202005",
+      "year": 2020,
+      "month": 5,
+      "fuel": "Hydrogen",
+      "value": 29
+    },
+    {
+      "ym": "202005",
+      "year": 2020,
+      "month": 5,
+      "fuel": "Others",
+      "value": 579
+    },
+    {
+      "ym": "202006",
+      "year": 2020,
+      "month": 6,
+      "fuel": "Diesel",
+      "value": 67300
+    },
+    {
+      "ym": "202006",
+      "year": 2020,
+      "month": 6,
+      "fuel": "Petrol",
+      "value": 113480
+    },
+    {
+      "ym": "202006",
+      "year": 2020,
+      "month": 6,
+      "fuel": "NonPluginHybrid",
+      "value": 19505
+    },
+    {
+      "ym": "202006",
+      "year": 2020,
+      "month": 6,
+      "fuel": "PluginHybrid",
+      "value": 10741
+    },
+    {
+      "ym": "202006",
+      "year": 2020,
+      "month": 6,
+      "fuel": "BatteryElectric",
+      "value": 8119
+    },
+    {
+      "ym": "202006",
+      "year": 2020,
+      "month": 6,
+      "fuel": "Hydrogen",
+      "value": 36
+    },
+    {
+      "ym": "202006",
+      "year": 2020,
+      "month": 6,
+      "fuel": "Others",
+      "value": 1091
+    },
+    {
+      "ym": "202007",
+      "year": 2020,
+      "month": 7,
+      "fuel": "Diesel",
+      "value": 89543
+    },
+    {
+      "ym": "202007",
+      "year": 2020,
+      "month": 7,
+      "fuel": "Petrol",
+      "value": 154352
+    },
+    {
+      "ym": "202007",
+      "year": 2020,
+      "month": 7,
+      "fuel": "NonPluginHybrid",
+      "value": 33369
+    },
+    {
+      "ym": "202007",
+      "year": 2020,
+      "month": 7,
+      "fuel": "PluginHybrid",
+      "value": 19116
+    },
+    {
+      "ym": "202007",
+      "year": 2020,
+      "month": 7,
+      "fuel": "BatteryElectric",
+      "value": 16798
+    },
+    {
+      "ym": "202007",
+      "year": 2020,
+      "month": 7,
+      "fuel": "Hydrogen",
+      "value": 41
+    },
+    {
+      "ym": "202007",
+      "year": 2020,
+      "month": 7,
+      "fuel": "Others",
+      "value": 1719
+    },
+    {
+      "ym": "202008",
+      "year": 2020,
+      "month": 8,
+      "fuel": "Diesel",
+      "value": 69416
+    },
+    {
+      "ym": "202008",
+      "year": 2020,
+      "month": 8,
+      "fuel": "Petrol",
+      "value": 117897
+    },
+    {
+      "ym": "202008",
+      "year": 2020,
+      "month": 8,
+      "fuel": "NonPluginHybrid",
+      "value": 29093
+    },
+    {
+      "ym": "202008",
+      "year": 2020,
+      "month": 8,
+      "fuel": "PluginHybrid",
+      "value": 17089
+    },
+    {
+      "ym": "202008",
+      "year": 2020,
+      "month": 8,
+      "fuel": "BatteryElectric",
+      "value": 16076
+    },
+    {
+      "ym": "202008",
+      "year": 2020,
+      "month": 8,
+      "fuel": "Hydrogen",
+      "value": 38
+    },
+    {
+      "ym": "202008",
+      "year": 2020,
+      "month": 8,
+      "fuel": "Others",
+      "value": 1435
+    },
+    {
+      "ym": "202009",
+      "year": 2020,
+      "month": 9,
+      "fuel": "Diesel",
+      "value": 67901
+    },
+    {
+      "ym": "202009",
+      "year": 2020,
+      "month": 9,
+      "fuel": "Petrol",
+      "value": 120645
+    },
+    {
+      "ym": "202009",
+      "year": 2020,
+      "month": 9,
+      "fuel": "NonPluginHybrid",
+      "value": 33909
+    },
+    {
+      "ym": "202009",
+      "year": 2020,
+      "month": 9,
+      "fuel": "PluginHybrid",
+      "value": 20121
+    },
+    {
+      "ym": "202009",
+      "year": 2020,
+      "month": 9,
+      "fuel": "BatteryElectric",
+      "value": 21188
+    },
+    {
+      "ym": "202009",
+      "year": 2020,
+      "month": 9,
+      "fuel": "Hydrogen",
+      "value": 44
+    },
+    {
+      "ym": "202009",
+      "year": 2020,
+      "month": 9,
+      "fuel": "Others",
+      "value": 1419
+    },
+    {
+      "ym": "202010",
+      "year": 2020,
+      "month": 10,
+      "fuel": "Diesel",
+      "value": 71370
+    },
+    {
+      "ym": "202010",
+      "year": 2020,
+      "month": 10,
+      "fuel": "Petrol",
+      "value": 115382
+    },
+    {
+      "ym": "202010",
+      "year": 2020,
+      "month": 10,
+      "fuel": "NonPluginHybrid",
+      "value": 38070
+    },
+    {
+      "ym": "202010",
+      "year": 2020,
+      "month": 10,
+      "fuel": "PluginHybrid",
+      "value": 24856
+    },
+    {
+      "ym": "202010",
+      "year": 2020,
+      "month": 10,
+      "fuel": "BatteryElectric",
+      "value": 23158
+    },
+    {
+      "ym": "202010",
+      "year": 2020,
+      "month": 10,
+      "fuel": "Hydrogen",
+      "value": 25
+    },
+    {
+      "ym": "202010",
+      "year": 2020,
+      "month": 10,
+      "fuel": "Others",
+      "value": 1442
+    },
+    {
+      "ym": "202011",
+      "year": 2020,
+      "month": 11,
+      "fuel": "Diesel",
+      "value": 70624
+    },
+    {
+      "ym": "202011",
+      "year": 2020,
+      "month": 11,
+      "fuel": "Petrol",
+      "value": 117111
+    },
+    {
+      "ym": "202011",
+      "year": 2020,
+      "month": 11,
+      "fuel": "NonPluginHybrid",
+      "value": 41283
+    },
+    {
+      "ym": "202011",
+      "year": 2020,
+      "month": 11,
+      "fuel": "PluginHybrid",
+      "value": 30617
+    },
+    {
+      "ym": "202011",
+      "year": 2020,
+      "month": 11,
+      "fuel": "BatteryElectric",
+      "value": 28965
+    },
+    {
+      "ym": "202011",
+      "year": 2020,
+      "month": 11,
+      "fuel": "Hydrogen",
+      "value": 28
+    },
+    {
+      "ym": "202011",
+      "year": 2020,
+      "month": 11,
+      "fuel": "Others",
+      "value": 1522
+    },
+    {
+      "ym": "202012",
+      "year": 2020,
+      "month": 12,
+      "fuel": "Diesel",
+      "value": 67642
+    },
+    {
+      "ym": "202012",
+      "year": 2020,
+      "month": 12,
+      "fuel": "Petrol",
+      "value": 117228
+    },
+    {
+      "ym": "202012",
+      "year": 2020,
+      "month": 12,
+      "fuel": "NonPluginHybrid",
+      "value": 42001
+    },
+    {
+      "ym": "202012",
+      "year": 2020,
+      "month": 12,
+      "fuel": "PluginHybrid",
+      "value": 39092
+    },
+    {
+      "ym": "202012",
+      "year": 2020,
+      "month": 12,
+      "fuel": "BatteryElectric",
+      "value": 43671
+    },
+    {
+      "ym": "202012",
+      "year": 2020,
+      "month": 12,
+      "fuel": "Hydrogen",
+      "value": 37
+    },
+    {
+      "ym": "202012",
+      "year": 2020,
+      "month": 12,
+      "fuel": "Others",
+      "value": 1723
+    },
+    {
+      "ym": "202101",
+      "year": 2021,
+      "month": 1,
+      "fuel": "Diesel",
+      "value": 44327
+    },
+    {
+      "ym": "202101",
+      "year": 2021,
+      "month": 1,
+      "fuel": "Petrol",
+      "value": 63054
+    },
+    {
+      "ym": "202101",
+      "year": 2021,
+      "month": 1,
+      "fuel": "NonPluginHybrid",
+      "value": 24861
+    },
+    {
+      "ym": "202101",
+      "year": 2021,
+      "month": 1,
+      "fuel": "PluginHybrid",
+      "value": 20587
+    },
+    {
+      "ym": "202101",
+      "year": 2021,
+      "month": 1,
+      "fuel": "BatteryElectric",
+      "value": 16315
+    },
+    {
+      "ym": "202101",
+      "year": 2021,
+      "month": 1,
+      "fuel": "Hydrogen",
+      "value": 9
+    },
+    {
+      "ym": "202101",
+      "year": 2021,
+      "month": 1,
+      "fuel": "Others",
+      "value": 601
+    },
+    {
+      "ym": "202102",
+      "year": 2021,
+      "month": 2,
+      "fuel": "Diesel",
+      "value": 49318
+    },
+    {
+      "ym": "202102",
+      "year": 2021,
+      "month": 2,
+      "fuel": "Petrol",
+      "value": 73357
+    },
+    {
+      "ym": "202102",
+      "year": 2021,
+      "month": 2,
+      "fuel": "NonPluginHybrid",
+      "value": 30824
+    },
+    {
+      "ym": "202102",
+      "year": 2021,
+      "month": 2,
+      "fuel": "PluginHybrid",
+      "value": 21878
+    },
+    {
+      "ym": "202102",
+      "year": 2021,
+      "month": 2,
+      "fuel": "BatteryElectric",
+      "value": 18278
+    },
+    {
+      "ym": "202102",
+      "year": 2021,
+      "month": 2,
+      "fuel": "Hydrogen",
+      "value": 30
+    },
+    {
+      "ym": "202102",
+      "year": 2021,
+      "month": 2,
+      "fuel": "Others",
+      "value": 664
+    },
+    {
+      "ym": "202103",
+      "year": 2021,
+      "month": 3,
+      "fuel": "Diesel",
+      "value": 64518
+    },
+    {
+      "ym": "202103",
+      "year": 2021,
+      "month": 3,
+      "fuel": "Petrol",
+      "value": 115174
+    },
+    {
+      "ym": "202103",
+      "year": 2021,
+      "month": 3,
+      "fuel": "NonPluginHybrid",
+      "value": 45640
+    },
+    {
+      "ym": "202103",
+      "year": 2021,
+      "month": 3,
+      "fuel": "PluginHybrid",
+      "value": 35580
+    },
+    {
+      "ym": "202103",
+      "year": 2021,
+      "month": 3,
+      "fuel": "BatteryElectric",
+      "value": 30101
+    },
+    {
+      "ym": "202103",
+      "year": 2021,
+      "month": 3,
+      "fuel": "Hydrogen",
+      "value": 79
+    },
+    {
+      "ym": "202103",
+      "year": 2021,
+      "month": 3,
+      "fuel": "Others",
+      "value": 1257
+    },
+    {
+      "ym": "202104",
+      "year": 2021,
+      "month": 4,
+      "fuel": "Diesel",
+      "value": 50195
+    },
+    {
+      "ym": "202104",
+      "year": 2021,
+      "month": 4,
+      "fuel": "Petrol",
+      "value": 90072
+    },
+    {
+      "ym": "202104",
+      "year": 2021,
+      "month": 4,
+      "fuel": "NonPluginHybrid",
+      "value": 37106
+    },
+    {
+      "ym": "202104",
+      "year": 2021,
+      "month": 4,
+      "fuel": "PluginHybrid",
+      "value": 26985
+    },
+    {
+      "ym": "202104",
+      "year": 2021,
+      "month": 4,
+      "fuel": "BatteryElectric",
+      "value": 23816
+    },
+    {
+      "ym": "202104",
+      "year": 2021,
+      "month": 4,
+      "fuel": "Hydrogen",
+      "value": 38
+    },
+    {
+      "ym": "202104",
+      "year": 2021,
+      "month": 4,
+      "fuel": "Others",
+      "value": 1438
+    },
+    {
+      "ym": "202105",
+      "year": 2021,
+      "month": 5,
+      "fuel": "Diesel",
+      "value": 51456
+    },
+    {
+      "ym": "202105",
+      "year": 2021,
+      "month": 5,
+      "fuel": "Petrol",
+      "value": 86855
+    },
+    {
+      "ym": "202105",
+      "year": 2021,
+      "month": 5,
+      "fuel": "NonPluginHybrid",
+      "value": 37145
+    },
+    {
+      "ym": "202105",
+      "year": 2021,
+      "month": 5,
+      "fuel": "PluginHybrid",
+      "value": 27222
+    },
+    {
+      "ym": "202105",
+      "year": 2021,
+      "month": 5,
+      "fuel": "BatteryElectric",
+      "value": 26786
+    },
+    {
+      "ym": "202105",
+      "year": 2021,
+      "month": 5,
+      "fuel": "Hydrogen",
+      "value": 33
+    },
+    {
+      "ym": "202105",
+      "year": 2021,
+      "month": 5,
+      "fuel": "Others",
+      "value": 1138
+    },
+    {
+      "ym": "202106",
+      "year": 2021,
+      "month": 6,
+      "fuel": "Diesel",
+      "value": 54677
+    },
+    {
+      "ym": "202106",
+      "year": 2021,
+      "month": 6,
+      "fuel": "Petrol",
+      "value": 108302
+    },
+    {
+      "ym": "202106",
+      "year": 2021,
+      "month": 6,
+      "fuel": "NonPluginHybrid",
+      "value": 45250
+    },
+    {
+      "ym": "202106",
+      "year": 2021,
+      "month": 6,
+      "fuel": "PluginHybrid",
+      "value": 31311
+    },
+    {
+      "ym": "202106",
+      "year": 2021,
+      "month": 6,
+      "fuel": "BatteryElectric",
+      "value": 33420
+    },
+    {
+      "ym": "202106",
+      "year": 2021,
+      "month": 6,
+      "fuel": "Hydrogen",
+      "value": 40
+    },
+    {
+      "ym": "202106",
+      "year": 2021,
+      "month": 6,
+      "fuel": "Others",
+      "value": 1152
+    },
+    {
+      "ym": "202107",
+      "year": 2021,
+      "month": 7,
+      "fuel": "Diesel",
+      "value": 46660
+    },
+    {
+      "ym": "202107",
+      "year": 2021,
+      "month": 7,
+      "fuel": "Petrol",
+      "value": 93176
+    },
+    {
+      "ym": "202107",
+      "year": 2021,
+      "month": 7,
+      "fuel": "NonPluginHybrid",
+      "value": 39638
+    },
+    {
+      "ym": "202107",
+      "year": 2021,
+      "month": 7,
+      "fuel": "PluginHybrid",
+      "value": 30154
+    },
+    {
+      "ym": "202107",
+      "year": 2021,
+      "month": 7,
+      "fuel": "BatteryElectric",
+      "value": 25464
+    },
+    {
+      "ym": "202107",
+      "year": 2021,
+      "month": 7,
+      "fuel": "Hydrogen",
+      "value": 41
+    },
+    {
+      "ym": "202107",
+      "year": 2021,
+      "month": 7,
+      "fuel": "Others",
+      "value": 1260
+    },
+    {
+      "ym": "202108",
+      "year": 2021,
+      "month": 8,
+      "fuel": "Diesel",
+      "value": 34171
+    },
+    {
+      "ym": "202108",
+      "year": 2021,
+      "month": 8,
+      "fuel": "Petrol",
+      "value": 68598
+    },
+    {
+      "ym": "202108",
+      "year": 2021,
+      "month": 8,
+      "fuel": "NonPluginHybrid",
+      "value": 36223
+    },
+    {
+      "ym": "202108",
+      "year": 2021,
+      "month": 8,
+      "fuel": "PluginHybrid",
+      "value": 24497
+    },
+    {
+      "ym": "202108",
+      "year": 2021,
+      "month": 8,
+      "fuel": "BatteryElectric",
+      "value": 28860
+    },
+    {
+      "ym": "202108",
+      "year": 2021,
+      "month": 8,
+      "fuel": "Hydrogen",
+      "value": 47
+    },
+    {
+      "ym": "202108",
+      "year": 2021,
+      "month": 8,
+      "fuel": "Others",
+      "value": 911
+    },
+    {
+      "ym": "202109",
+      "year": 2021,
+      "month": 9,
+      "fuel": "Diesel",
+      "value": 31336
+    },
+    {
+      "ym": "202109",
+      "year": 2021,
+      "month": 9,
+      "fuel": "Petrol",
+      "value": 70667
+    },
+    {
+      "ym": "202109",
+      "year": 2021,
+      "month": 9,
+      "fuel": "NonPluginHybrid",
+      "value": 37317
+    },
+    {
+      "ym": "202109",
+      "year": 2021,
+      "month": 9,
+      "fuel": "PluginHybrid",
+      "value": 22842
+    },
+    {
+      "ym": "202109",
+      "year": 2021,
+      "month": 9,
+      "fuel": "BatteryElectric",
+      "value": 33655
+    },
+    {
+      "ym": "202109",
+      "year": 2021,
+      "month": 9,
+      "fuel": "Hydrogen",
+      "value": 57
+    },
+    {
+      "ym": "202109",
+      "year": 2021,
+      "month": 9,
+      "fuel": "Others",
+      "value": 1098
+    },
+    {
+      "ym": "202110",
+      "year": 2021,
+      "month": 10,
+      "fuel": "Diesel",
+      "value": 30890
+    },
+    {
+      "ym": "202110",
+      "year": 2021,
+      "month": 10,
+      "fuel": "Petrol",
+      "value": 64698
+    },
+    {
+      "ym": "202110",
+      "year": 2021,
+      "month": 10,
+      "fuel": "NonPluginHybrid",
+      "value": 27593
+    },
+    {
+      "ym": "202110",
+      "year": 2021,
+      "month": 10,
+      "fuel": "PluginHybrid",
+      "value": 23734
+    },
+    {
+      "ym": "202110",
+      "year": 2021,
+      "month": 10,
+      "fuel": "BatteryElectric",
+      "value": 30560
+    },
+    {
+      "ym": "202110",
+      "year": 2021,
+      "month": 10,
+      "fuel": "Hydrogen",
+      "value": 33
+    },
+    {
+      "ym": "202110",
+      "year": 2021,
+      "month": 10,
+      "fuel": "Others",
+      "value": 1175
+    },
+    {
+      "ym": "202111",
+      "year": 2021,
+      "month": 11,
+      "fuel": "Diesel",
+      "value": 31252
+    },
+    {
+      "ym": "202111",
+      "year": 2021,
+      "month": 11,
+      "fuel": "Petrol",
+      "value": 66021
+    },
+    {
+      "ym": "202111",
+      "year": 2021,
+      "month": 11,
+      "fuel": "NonPluginHybrid",
+      "value": 31352
+    },
+    {
+      "ym": "202111",
+      "year": 2021,
+      "month": 11,
+      "fuel": "PluginHybrid",
+      "value": 27897
+    },
+    {
+      "ym": "202111",
+      "year": 2021,
+      "month": 11,
+      "fuel": "BatteryElectric",
+      "value": 40270
+    },
+    {
+      "ym": "202111",
+      "year": 2021,
+      "month": 11,
+      "fuel": "Hydrogen",
+      "value": 31
+    },
+    {
+      "ym": "202111",
+      "year": 2021,
+      "month": 11,
+      "fuel": "Others",
+      "value": 1435
+    },
+    {
+      "ym": "202112",
+      "year": 2021,
+      "month": 12,
+      "fuel": "Diesel",
+      "value": 35646
+    },
+    {
+      "ym": "202112",
+      "year": 2021,
+      "month": 12,
+      "fuel": "Petrol",
+      "value": 72614
+    },
+    {
+      "ym": "202112",
+      "year": 2021,
+      "month": 12,
+      "fuel": "NonPluginHybrid",
+      "value": 36186
+    },
+    {
+      "ym": "202112",
+      "year": 2021,
+      "month": 12,
+      "fuel": "PluginHybrid",
+      "value": 32751
+    },
+    {
+      "ym": "202112",
+      "year": 2021,
+      "month": 12,
+      "fuel": "BatteryElectric",
+      "value": 48436
+    },
+    {
+      "ym": "202112",
+      "year": 2021,
+      "month": 12,
+      "fuel": "Hydrogen",
+      "value": 41
+    },
+    {
+      "ym": "202112",
+      "year": 2021,
+      "month": 12,
+      "fuel": "Others",
+      "value": 1956
+    },
+    {
+      "ym": "202201",
+      "year": 2022,
+      "month": 1,
+      "fuel": "Diesel",
+      "value": 39713
+    },
+    {
+      "ym": "202201",
+      "year": 2022,
+      "month": 1,
+      "fuel": "Petrol",
+      "value": 67575
+    },
+    {
+      "ym": "202201",
+      "year": 2022,
+      "month": 1,
+      "fuel": "NonPluginHybrid",
+      "value": 35226
+    },
+    {
+      "ym": "202201",
+      "year": 2022,
+      "month": 1,
+      "fuel": "PluginHybrid",
+      "value": 18900
+    },
+    {
+      "ym": "202201",
+      "year": 2022,
+      "month": 1,
+      "fuel": "BatteryElectric",
+      "value": 20892
+    },
+    {
+      "ym": "202201",
+      "year": 2022,
+      "month": 1,
+      "fuel": "Hydrogen",
+      "value": 31
+    },
+    {
+      "ym": "202201",
+      "year": 2022,
+      "month": 1,
+      "fuel": "Others",
+      "value": 1775
+    },
+    {
+      "ym": "202202",
+      "year": 2022,
+      "month": 2,
+      "fuel": "Diesel",
+      "value": 41471
+    },
+    {
+      "ym": "202202",
+      "year": 2022,
+      "month": 2,
+      "fuel": "Petrol",
+      "value": 69195
+    },
+    {
+      "ym": "202202",
+      "year": 2022,
+      "month": 2,
+      "fuel": "NonPluginHybrid",
+      "value": 37890
+    },
+    {
+      "ym": "202202",
+      "year": 2022,
+      "month": 2,
+      "fuel": "PluginHybrid",
+      "value": 21582
+    },
+    {
+      "ym": "202202",
+      "year": 2022,
+      "month": 2,
+      "fuel": "BatteryElectric",
+      "value": 28306
+    },
+    {
+      "ym": "202202",
+      "year": 2022,
+      "month": 2,
+      "fuel": "Hydrogen",
+      "value": 36
+    },
+    {
+      "ym": "202202",
+      "year": 2022,
+      "month": 2,
+      "fuel": "Others",
+      "value": 2032
+    },
+    {
+      "ym": "202203",
+      "year": 2022,
+      "month": 3,
+      "fuel": "Diesel",
+      "value": 45069
+    },
+    {
+      "ym": "202203",
+      "year": 2022,
+      "month": 3,
+      "fuel": "Petrol",
+      "value": 84123
+    },
+    {
+      "ym": "202203",
+      "year": 2022,
+      "month": 3,
+      "fuel": "NonPluginHybrid",
+      "value": 48425
+    },
+    {
+      "ym": "202203",
+      "year": 2022,
+      "month": 3,
+      "fuel": "PluginHybrid",
+      "value": 27288
+    },
+    {
+      "ym": "202203",
+      "year": 2022,
+      "month": 3,
+      "fuel": "BatteryElectric",
+      "value": 34474
+    },
+    {
+      "ym": "202203",
+      "year": 2022,
+      "month": 3,
+      "fuel": "Hydrogen",
+      "value": 36
+    },
+    {
+      "ym": "202203",
+      "year": 2022,
+      "month": 3,
+      "fuel": "Others",
+      "value": 1915
+    },
+    {
+      "ym": "202204",
+      "year": 2022,
+      "month": 4,
+      "fuel": "Diesel",
+      "value": 35289
+    },
+    {
+      "ym": "202204",
+      "year": 2022,
+      "month": 4,
+      "fuel": "Petrol",
+      "value": 65030
+    },
+    {
+      "ym": "202204",
+      "year": 2022,
+      "month": 4,
+      "fuel": "NonPluginHybrid",
+      "value": 35089
+    },
+    {
+      "ym": "202204",
+      "year": 2022,
+      "month": 4,
+      "fuel": "PluginHybrid",
+      "value": 21697
+    },
+    {
+      "ym": "202204",
+      "year": 2022,
+      "month": 4,
+      "fuel": "BatteryElectric",
+      "value": 22175
+    },
+    {
+      "ym": "202204",
+      "year": 2022,
+      "month": 4,
+      "fuel": "Hydrogen",
+      "value": 47
+    },
+    {
+      "ym": "202204",
+      "year": 2022,
+      "month": 4,
+      "fuel": "Others",
+      "value": 937
+    },
+    {
+      "ym": "202205",
+      "year": 2022,
+      "month": 5,
+      "fuel": "Diesel",
+      "value": 42000
+    },
+    {
+      "ym": "202205",
+      "year": 2022,
+      "month": 5,
+      "fuel": "Petrol",
+      "value": 74573
+    },
+    {
+      "ym": "202205",
+      "year": 2022,
+      "month": 5,
+      "fuel": "NonPluginHybrid",
+      "value": 37450
+    },
+    {
+      "ym": "202205",
+      "year": 2022,
+      "month": 5,
+      "fuel": "PluginHybrid",
+      "value": 23209
+    },
+    {
+      "ym": "202205",
+      "year": 2022,
+      "month": 5,
+      "fuel": "BatteryElectric",
+      "value": 29182
+    },
+    {
+      "ym": "202205",
+      "year": 2022,
+      "month": 5,
+      "fuel": "Hydrogen",
+      "value": 36
+    },
+    {
+      "ym": "202205",
+      "year": 2022,
+      "month": 5,
+      "fuel": "Others",
+      "value": 749
+    },
+    {
+      "ym": "202206",
+      "year": 2022,
+      "month": 6,
+      "fuel": "Diesel",
+      "value": 42495
+    },
+    {
+      "ym": "202206",
+      "year": 2022,
+      "month": 6,
+      "fuel": "Petrol",
+      "value": 83175
+    },
+    {
+      "ym": "202206",
+      "year": 2022,
+      "month": 6,
+      "fuel": "NonPluginHybrid",
+      "value": 39159
+    },
+    {
+      "ym": "202206",
+      "year": 2022,
+      "month": 6,
+      "fuel": "PluginHybrid",
+      "value": 26203
+    },
+    {
+      "ym": "202206",
+      "year": 2022,
+      "month": 6,
+      "fuel": "BatteryElectric",
+      "value": 32234
+    },
+    {
+      "ym": "202206",
+      "year": 2022,
+      "month": 6,
+      "fuel": "Hydrogen",
+      "value": 55
+    },
+    {
+      "ym": "202206",
+      "year": 2022,
+      "month": 6,
+      "fuel": "Others",
+      "value": 1237
+    },
+    {
+      "ym": "202207",
+      "year": 2022,
+      "month": 7,
+      "fuel": "Diesel",
+      "value": 41386
+    },
+    {
+      "ym": "202207",
+      "year": 2022,
+      "month": 7,
+      "fuel": "Petrol",
+      "value": 74094
+    },
+    {
+      "ym": "202207",
+      "year": 2022,
+      "month": 7,
+      "fuel": "NonPluginHybrid",
+      "value": 36250
+    },
+    {
+      "ym": "202207",
+      "year": 2022,
+      "month": 7,
+      "fuel": "PluginHybrid",
+      "value": 23712
+    },
+    {
+      "ym": "202207",
+      "year": 2022,
+      "month": 7,
+      "fuel": "BatteryElectric",
+      "value": 28815
+    },
+    {
+      "ym": "202207",
+      "year": 2022,
+      "month": 7,
+      "fuel": "Hydrogen",
+      "value": 52
+    },
+    {
+      "ym": "202207",
+      "year": 2022,
+      "month": 7,
+      "fuel": "Others",
+      "value": 1602
+    },
+    {
+      "ym": "202208",
+      "year": 2022,
+      "month": 8,
+      "fuel": "Diesel",
+      "value": 36332
+    },
+    {
+      "ym": "202208",
+      "year": 2022,
+      "month": 8,
+      "fuel": "Petrol",
+      "value": 69441
+    },
+    {
+      "ym": "202208",
+      "year": 2022,
+      "month": 8,
+      "fuel": "NonPluginHybrid",
+      "value": 35116
+    },
+    {
+      "ym": "202208",
+      "year": 2022,
+      "month": 8,
+      "fuel": "PluginHybrid",
+      "value": 24719
+    },
+    {
+      "ym": "202208",
+      "year": 2022,
+      "month": 8,
+      "fuel": "BatteryElectric",
+      "value": 32006
+    },
+    {
+      "ym": "202208",
+      "year": 2022,
+      "month": 8,
+      "fuel": "Hydrogen",
+      "value": 315
+    },
+    {
+      "ym": "202208",
+      "year": 2022,
+      "month": 8,
+      "fuel": "Others",
+      "value": 1254
+    },
+    {
+      "ym": "202209",
+      "year": 2022,
+      "month": 9,
+      "fuel": "Diesel",
+      "value": 38159
+    },
+    {
+      "ym": "202209",
+      "year": 2022,
+      "month": 9,
+      "fuel": "Petrol",
+      "value": 72375
+    },
+    {
+      "ym": "202209",
+      "year": 2022,
+      "month": 9,
+      "fuel": "NonPluginHybrid",
+      "value": 40097
+    },
+    {
+      "ym": "202209",
+      "year": 2022,
+      "month": 9,
+      "fuel": "PluginHybrid",
+      "value": 28336
+    },
+    {
+      "ym": "202209",
+      "year": 2022,
+      "month": 9,
+      "fuel": "BatteryElectric",
+      "value": 44389
+    },
+    {
+      "ym": "202209",
+      "year": 2022,
+      "month": 9,
+      "fuel": "Hydrogen",
+      "value": 21
+    },
+    {
+      "ym": "202209",
+      "year": 2022,
+      "month": 9,
+      "fuel": "Others",
+      "value": 1439
+    },
+    {
+      "ym": "202210",
+      "year": 2022,
+      "month": 10,
+      "fuel": "Diesel",
+      "value": 36554
+    },
+    {
+      "ym": "202210",
+      "year": 2022,
+      "month": 10,
+      "fuel": "Petrol",
+      "value": 66676
+    },
+    {
+      "ym": "202210",
+      "year": 2022,
+      "month": 10,
+      "fuel": "NonPluginHybrid",
+      "value": 36469
+    },
+    {
+      "ym": "202210",
+      "year": 2022,
+      "month": 10,
+      "fuel": "PluginHybrid",
+      "value": 32064
+    },
+    {
+      "ym": "202210",
+      "year": 2022,
+      "month": 10,
+      "fuel": "BatteryElectric",
+      "value": 35781
+    },
+    {
+      "ym": "202210",
+      "year": 2022,
+      "month": 10,
+      "fuel": "Hydrogen",
+      "value": 38
+    },
+    {
+      "ym": "202210",
+      "year": 2022,
+      "month": 10,
+      "fuel": "Others",
+      "value": 1060
+    },
+    {
+      "ym": "202211",
+      "year": 2022,
+      "month": 11,
+      "fuel": "Diesel",
+      "value": 39881
+    },
+    {
+      "ym": "202211",
+      "year": 2022,
+      "month": 11,
+      "fuel": "Petrol",
+      "value": 72663
+    },
+    {
+      "ym": "202211",
+      "year": 2022,
+      "month": 11,
+      "fuel": "NonPluginHybrid",
+      "value": 43697
+    },
+    {
+      "ym": "202211",
+      "year": 2022,
+      "month": 11,
+      "fuel": "PluginHybrid",
+      "value": 44581
+    },
+    {
+      "ym": "202211",
+      "year": 2022,
+      "month": 11,
+      "fuel": "BatteryElectric",
+      "value": 57980
+    },
+    {
+      "ym": "202211",
+      "year": 2022,
+      "month": 11,
+      "fuel": "Hydrogen",
+      "value": 95
+    },
+    {
+      "ym": "202211",
+      "year": 2022,
+      "month": 11,
+      "fuel": "Others",
+      "value": 1615
+    },
+    {
+      "ym": "202212",
+      "year": 2022,
+      "month": 12,
+      "fuel": "Diesel",
+      "value": 33925
+    },
+    {
+      "ym": "202212",
+      "year": 2022,
+      "month": 12,
+      "fuel": "Petrol",
+      "value": 64525
+    },
+    {
+      "ym": "202212",
+      "year": 2022,
+      "month": 12,
+      "fuel": "NonPluginHybrid",
+      "value": 40359
+    },
+    {
+      "ym": "202212",
+      "year": 2022,
+      "month": 12,
+      "fuel": "PluginHybrid",
+      "value": 69801
+    },
+    {
+      "ym": "202212",
+      "year": 2022,
+      "month": 12,
+      "fuel": "BatteryElectric",
+      "value": 104325
+    },
+    {
+      "ym": "202212",
+      "year": 2022,
+      "month": 12,
+      "fuel": "Hydrogen",
+      "value": 74
+    },
+    {
+      "ym": "202212",
+      "year": 2022,
+      "month": 12,
+      "fuel": "Others",
+      "value": 1309
+    },
+    {
+      "ym": "202301",
+      "year": 2023,
+      "month": 1,
+      "fuel": "Diesel",
+      "value": 39230
+    },
+    {
+      "ym": "202301",
+      "year": 2023,
+      "month": 1,
+      "fuel": "Petrol",
+      "value": 69922
+    },
+    {
+      "ym": "202301",
+      "year": 2023,
+      "month": 1,
+      "fuel": "NonPluginHybrid",
+      "value": 41919
+    },
+    {
+      "ym": "202301",
+      "year": 2023,
+      "month": 1,
+      "fuel": "PluginHybrid",
+      "value": 8853
+    },
+    {
+      "ym": "202301",
+      "year": 2023,
+      "month": 1,
+      "fuel": "BatteryElectric",
+      "value": 18136
+    },
+    {
+      "ym": "202301",
+      "year": 2023,
+      "month": 1,
+      "fuel": "Hydrogen",
+      "value": 19
+    },
+    {
+      "ym": "202301",
+      "year": 2023,
+      "month": 1,
+      "fuel": "Others",
+      "value": 1168
+    },
+    {
+      "ym": "202302",
+      "year": 2023,
+      "month": 2,
+      "fuel": "Diesel",
+      "value": 38433
+    },
+    {
+      "ym": "202302",
+      "year": 2023,
+      "month": 2,
+      "fuel": "Petrol",
+      "value": 75357
+    },
+    {
+      "ym": "202302",
+      "year": 2023,
+      "month": 2,
+      "fuel": "NonPluginHybrid",
+      "value": 47064
+    },
+    {
+      "ym": "202302",
+      "year": 2023,
+      "month": 2,
+      "fuel": "PluginHybrid",
+      "value": 11916
+    },
+    {
+      "ym": "202302",
+      "year": 2023,
+      "month": 2,
+      "fuel": "BatteryElectric",
+      "value": 32475
+    },
+    {
+      "ym": "202302",
+      "year": 2023,
+      "month": 2,
+      "fuel": "Hydrogen",
+      "value": 14
+    },
+    {
+      "ym": "202302",
+      "year": 2023,
+      "month": 2,
+      "fuel": "Others",
+      "value": 951
+    },
+    {
+      "ym": "202303",
+      "year": 2023,
+      "month": 3,
+      "fuel": "Diesel",
+      "value": 48597
+    },
+    {
+      "ym": "202303",
+      "year": 2023,
+      "month": 3,
+      "fuel": "Petrol",
+      "value": 103271
+    },
+    {
+      "ym": "202303",
+      "year": 2023,
+      "month": 3,
+      "fuel": "NonPluginHybrid",
+      "value": 67253
+    },
+    {
+      "ym": "202303",
+      "year": 2023,
+      "month": 3,
+      "fuel": "PluginHybrid",
+      "value": 16776
+    },
+    {
+      "ym": "202303",
+      "year": 2023,
+      "month": 3,
+      "fuel": "BatteryElectric",
+      "value": 44125
+    },
+    {
+      "ym": "202303",
+      "year": 2023,
+      "month": 3,
+      "fuel": "Hydrogen",
+      "value": 31
+    },
+    {
+      "ym": "202303",
+      "year": 2023,
+      "month": 3,
+      "fuel": "Others",
+      "value": 1308
+    },
+    {
+      "ym": "202304",
+      "year": 2023,
+      "month": 4,
+      "fuel": "Diesel",
+      "value": 36138
+    },
+    {
+      "ym": "202304",
+      "year": 2023,
+      "month": 4,
+      "fuel": "Petrol",
+      "value": 76519
+    },
+    {
+      "ym": "202304",
+      "year": 2023,
+      "month": 4,
+      "fuel": "NonPluginHybrid",
+      "value": 47681
+    },
+    {
+      "ym": "202304",
+      "year": 2023,
+      "month": 4,
+      "fuel": "PluginHybrid",
+      "value": 11787
+    },
+    {
+      "ym": "202304",
+      "year": 2023,
+      "month": 4,
+      "fuel": "BatteryElectric",
+      "value": 29740
+    },
+    {
+      "ym": "202304",
+      "year": 2023,
+      "month": 4,
+      "fuel": "Hydrogen",
+      "value": 24
+    },
+    {
+      "ym": "202304",
+      "year": 2023,
+      "month": 4,
+      "fuel": "Others",
+      "value": 1058
+    },
+    {
+      "ym": "202305",
+      "year": 2023,
+      "month": 5,
+      "fuel": "Diesel",
+      "value": 43505
+    },
+    {
+      "ym": "202305",
+      "year": 2023,
+      "month": 5,
+      "fuel": "Petrol",
+      "value": 87700
+    },
+    {
+      "ym": "202305",
+      "year": 2023,
+      "month": 5,
+      "fuel": "NonPluginHybrid",
+      "value": 57842
+    },
+    {
+      "ym": "202305",
+      "year": 2023,
+      "month": 5,
+      "fuel": "PluginHybrid",
+      "value": 13802
+    },
+    {
+      "ym": "202305",
+      "year": 2023,
+      "month": 5,
+      "fuel": "BatteryElectric",
+      "value": 42780
+    },
+    {
+      "ym": "202305",
+      "year": 2023,
+      "month": 5,
+      "fuel": "Hydrogen",
+      "value": 35
+    },
+    {
+      "ym": "202305",
+      "year": 2023,
+      "month": 5,
+      "fuel": "Others",
+      "value": 1302
+    },
+    {
+      "ym": "202306",
+      "year": 2023,
+      "month": 6,
+      "fuel": "Diesel",
+      "value": 46860
+    },
+    {
+      "ym": "202306",
+      "year": 2023,
+      "month": 6,
+      "fuel": "Petrol",
+      "value": 99682
+    },
+    {
+      "ym": "202306",
+      "year": 2023,
+      "month": 6,
+      "fuel": "NonPluginHybrid",
+      "value": 62319
+    },
+    {
+      "ym": "202306",
+      "year": 2023,
+      "month": 6,
+      "fuel": "PluginHybrid",
+      "value": 15930
+    },
+    {
+      "ym": "202306",
+      "year": 2023,
+      "month": 6,
+      "fuel": "BatteryElectric",
+      "value": 52988
+    },
+    {
+      "ym": "202306",
+      "year": 2023,
+      "month": 6,
+      "fuel": "Hydrogen",
+      "value": 34
+    },
+    {
+      "ym": "202306",
+      "year": 2023,
+      "month": 6,
+      "fuel": "Others",
+      "value": 2326
+    },
+    {
+      "ym": "202307",
+      "year": 2023,
+      "month": 7,
+      "fuel": "Diesel",
+      "value": 42496
+    },
+    {
+      "ym": "202307",
+      "year": 2023,
+      "month": 7,
+      "fuel": "Petrol",
+      "value": 83358
+    },
+    {
+      "ym": "202307",
+      "year": 2023,
+      "month": 7,
+      "fuel": "NonPluginHybrid",
+      "value": 53138
+    },
+    {
+      "ym": "202307",
+      "year": 2023,
+      "month": 7,
+      "fuel": "PluginHybrid",
+      "value": 14345
+    },
+    {
+      "ym": "202307",
+      "year": 2023,
+      "month": 7,
+      "fuel": "BatteryElectric",
+      "value": 48682
+    },
+    {
+      "ym": "202307",
+      "year": 2023,
+      "month": 7,
+      "fuel": "Hydrogen",
+      "value": 42
+    },
+    {
+      "ym": "202307",
+      "year": 2023,
+      "month": 7,
+      "fuel": "Others",
+      "value": 1216
+    },
+    {
+      "ym": "202308",
+      "year": 2023,
+      "month": 8,
+      "fuel": "Diesel",
+      "value": 39668
+    },
+    {
+      "ym": "202308",
+      "year": 2023,
+      "month": 8,
+      "fuel": "Petrol",
+      "value": 75598
+    },
+    {
+      "ym": "202308",
+      "year": 2023,
+      "month": 8,
+      "fuel": "NonPluginHybrid",
+      "value": 55844
+    },
+    {
+      "ym": "202308",
+      "year": 2023,
+      "month": 8,
+      "fuel": "PluginHybrid",
+      "value": 14552
+    },
+    {
+      "ym": "202308",
+      "year": 2023,
+      "month": 8,
+      "fuel": "BatteryElectric",
+      "value": 86649
+    },
+    {
+      "ym": "202308",
+      "year": 2023,
+      "month": 8,
+      "fuel": "Hydrogen",
+      "value": 51
+    },
+    {
+      "ym": "202308",
+      "year": 2023,
+      "month": 8,
+      "fuel": "Others",
+      "value": 1055
+    },
+    {
+      "ym": "202309",
+      "year": 2023,
+      "month": 9,
+      "fuel": "Diesel",
+      "value": 39900
+    },
+    {
+      "ym": "202309",
+      "year": 2023,
+      "month": 9,
+      "fuel": "Petrol",
+      "value": 78979
+    },
+    {
+      "ym": "202309",
+      "year": 2023,
+      "month": 9,
+      "fuel": "NonPluginHybrid",
+      "value": 57795
+    },
+    {
+      "ym": "202309",
+      "year": 2023,
+      "month": 9,
+      "fuel": "PluginHybrid",
+      "value": 15383
+    },
+    {
+      "ym": "202309",
+      "year": 2023,
+      "month": 9,
+      "fuel": "BatteryElectric",
+      "value": 31714
+    },
+    {
+      "ym": "202309",
+      "year": 2023,
+      "month": 9,
+      "fuel": "Hydrogen",
+      "value": 3
+    },
+    {
+      "ym": "202309",
+      "year": 2023,
+      "month": 9,
+      "fuel": "Others",
+      "value": 728
+    },
+    {
+      "ym": "202310",
+      "year": 2023,
+      "month": 10,
+      "fuel": "Diesel",
+      "value": 34881
+    },
+    {
+      "ym": "202310",
+      "year": 2023,
+      "month": 10,
+      "fuel": "Petrol",
+      "value": 71646
+    },
+    {
+      "ym": "202310",
+      "year": 2023,
+      "month": 10,
+      "fuel": "NonPluginHybrid",
+      "value": 57575
+    },
+    {
+      "ym": "202310",
+      "year": 2023,
+      "month": 10,
+      "fuel": "PluginHybrid",
+      "value": 16361
+    },
+    {
+      "ym": "202310",
+      "year": 2023,
+      "month": 10,
+      "fuel": "BatteryElectric",
+      "value": 37334
+    },
+    {
+      "ym": "202310",
+      "year": 2023,
+      "month": 10,
+      "fuel": "Hydrogen",
+      "value": 3
+    },
+    {
+      "ym": "202310",
+      "year": 2023,
+      "month": 10,
+      "fuel": "Others",
+      "value": 1159
+    },
+    {
+      "ym": "202311",
+      "year": 2023,
+      "month": 11,
+      "fuel": "Diesel",
+      "value": 39470
+    },
+    {
+      "ym": "202311",
+      "year": 2023,
+      "month": 11,
+      "fuel": "Petrol",
+      "value": 81734
+    },
+    {
+      "ym": "202311",
+      "year": 2023,
+      "month": 11,
+      "fuel": "NonPluginHybrid",
+      "value": 60463
+    },
+    {
+      "ym": "202311",
+      "year": 2023,
+      "month": 11,
+      "fuel": "PluginHybrid",
+      "value": 18124
+    },
+    {
+      "ym": "202311",
+      "year": 2023,
+      "month": 11,
+      "fuel": "BatteryElectric",
+      "value": 44942
+    },
+    {
+      "ym": "202311",
+      "year": 2023,
+      "month": 11,
+      "fuel": "Hydrogen",
+      "value": 2
+    },
+    {
+      "ym": "202311",
+      "year": 2023,
+      "month": 11,
+      "fuel": "Others",
+      "value": 966
+    },
+    {
+      "ym": "202312",
+      "year": 2023,
+      "month": 12,
+      "fuel": "Diesel",
+      "value": 37403
+    },
+    {
+      "ym": "202312",
+      "year": 2023,
+      "month": 12,
+      "fuel": "Petrol",
+      "value": 74894
+    },
+    {
+      "ym": "202312",
+      "year": 2023,
+      "month": 12,
+      "fuel": "NonPluginHybrid",
+      "value": 55687
+    },
+    {
+      "ym": "202312",
+      "year": 2023,
+      "month": 12,
+      "fuel": "PluginHybrid",
+      "value": 17894
+    },
+    {
+      "ym": "202312",
+      "year": 2023,
+      "month": 12,
+      "fuel": "BatteryElectric",
+      "value": 54654
+    },
+    {
+      "ym": "202312",
+      "year": 2023,
+      "month": 12,
+      "fuel": "Hydrogen",
+      "value": 6
+    },
+    {
+      "ym": "202312",
+      "year": 2023,
+      "month": 12,
+      "fuel": "Others",
+      "value": 1345
+    },
     {
       "ym": "202401",
       "year": 2024,
@@ -1546,7 +10367,7 @@
       "year": 2026,
       "month": 8,
       "fuel": "NonPluginHybrid",
-      "value": 59197
+      "value": 58710
     },
     {
       "ym": "202608",
@@ -1574,7 +10395,7 @@
       "year": 2026,
       "month": 8,
       "fuel": "Others",
-      "value": 971
+      "value": 1465
     },
     {
       "ym": "202609",
@@ -1623,7 +10444,7 @@
       "year": 2026,
       "month": 9,
       "fuel": "Others",
-      "value": 1614
+      "value": 1602
     }
   ]
 }

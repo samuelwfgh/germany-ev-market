@@ -1,46 +1,46 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-14T00:00:00Z",
+  "checked_at": "2026-10-14T07:58:30Z",
   "datasets": {
     "new_registrations": {
       "label": "New registrations",
-      "status": "seeded",
+      "status": "ok",
       "latest": "2026-09",
       "cadence": "monthly",
-      "source": "KBA / VDA + consolidated historical series",
-      "note": "Updater refreshes the long-run Germany rows and attempts an official KBA monthly overlay."
+      "source": "KBA / VDA + consolidated history",
+      "note": "1491 rows. Current-month overlay skipped: invalid literal for int() with base 10: ''"
     },
     "used_transfers": {
       "label": "Used transfers",
-      "status": "seeded",
+      "status": "ok",
       "latest": "2026-09 total / 2026-07 drivetrain",
       "cadence": "monthly",
       "source": "KBA FZ 9",
-      "note": "Detailed drivetrain series updates only when a complete source row can be validated."
+      "note": "No newer validated KBA workbook found; kept last known-good detailed series."
     },
     "road_fuels": {
       "label": "Road fuels",
-      "status": "seeded",
-      "latest": "2025-12 diesel / 2025-09 petrol",
+      "status": "ok",
+      "latest": "2025-12",
       "cadence": "monthly with publication lag",
-      "source": "BAFA / UFOP",
-      "note": "Missing values stay missing; the updater never interpolates them."
+      "source": "BAFA",
+      "note": "Validated BAFA reports: 202507, 202508, 202509, 202510, 202511, 202512"
     },
     "charging": {
       "label": "Charging infrastructure",
-      "status": "seeded",
+      "status": "ok",
       "latest": "2026-09-01",
       "cadence": "monthly",
       "source": "Bundesnetzagentur",
-      "note": "Normal, fast and simultaneous rated power where published."
+      "note": "157,762 normal + 56,572 fast; 9.38 GW. Historical workbook rows recognised: 0."
     },
     "hydrogen": {
       "label": "Hydrogen stations",
-      "status": "seeded",
+      "status": "ok",
       "latest": "2026-04",
       "cadence": "irregular snapshots",
       "source": "IPHE / H2 Mobility",
-      "note": "No monthly interpolation; only documented operational snapshots are appended."
+      "note": "58 stations in operation in documented snapshot."
     }
   }
 }

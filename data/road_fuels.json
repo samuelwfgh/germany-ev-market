@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-14T00:00:00Z",
+  "updated_at": "2026-10-14T07:58:25Z",
   "unit": "1000 tonnes",
   "source": {
-    "name": "BAFA official mineral-oil statistics / UFOP historical tables",
+    "name": "BAFA Amtliche Mineralöldaten",
     "url": "https://www.bafa.de/DE/Energie/Rohstoffe/Mineraloelstatistik/mineraloel_node.html"
   },
-  "definition": "Domestic deliveries/consumption for diesel incl. bio-component and petrol incl. bioethanol; not literal retail till sales.",
+  "definition": "Domestic deliveries/consumption of diesel and petrol. This is not literal filling-station till sales; published monthly values may be revised.",
   "rows": [
     {
       "ym": "201901",
@@ -558,43 +558,43 @@
       "ym": "202507",
       "year": 2025,
       "month": 7,
-      "Diesel": 2992.2,
-      "Petrol": 1603.9
+      "Diesel": 2709.6,
+      "Petrol": 588.2
     },
     {
       "ym": "202508",
       "year": 2025,
       "month": 8,
-      "Diesel": 2814.2,
-      "Petrol": 1509.8
+      "Diesel": 2493.2,
+      "Petrol": 532.1
     },
     {
       "ym": "202509",
       "year": 2025,
       "month": 9,
-      "Diesel": 2993.7,
-      "Petrol": 1502.8
+      "Diesel": 2615.5,
+      "Petrol": 638.6
     },
     {
       "ym": "202510",
       "year": 2025,
       "month": 10,
-      "Diesel": 2977.5,
-      "Petrol": null
+      "Diesel": 2612.6,
+      "Petrol": 655.9
     },
     {
       "ym": "202511",
       "year": 2025,
       "month": 11,
-      "Diesel": 2730.8,
-      "Petrol": null
+      "Diesel": 2577.4,
+      "Petrol": 631.1
     },
     {
       "ym": "202512",
       "year": 2025,
       "month": 12,
-      "Diesel": 2766.1,
-      "Petrol": null
+      "Diesel": 2670.3,
+      "Petrol": 655.6
     }
   ]
 }

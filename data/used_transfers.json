@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-14T00:00:00Z",
+  "updated_at": "2026-10-14T07:57:53Z",
   "latest_detailed": "2026-07",
   "latest_total": "2026-09",
   "source": {
@@ -165,7 +165,7 @@
       "year": 2026,
       "month": 9,
       "Used": 620366,
-      "New": 256774
+      "New": 256762
     }
   ]
 }
