@@ -1,0 +1,75 @@
+name: Update data and deploy Pages
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    # Daily at 06:17 UTC. The updater only commits when data actually changes.
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: germany-ev-market-pages
+  cancel-in-progress: false
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install updater dependencies
+        run: pip install -r requirements.txt
+
+      - name: Refresh public datasets
+        run: python scripts/update_data.py --data-dir data --verbose
+
+      - name: Validate datasets
+        run: python scripts/validate_data.py data
+
+      - name: Commit updated data
+        shell: bash
+        run: |
+          if git diff --quiet -- data; then
+            echo "No data changes."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/
+            git commit -m "data: automatic market update"
+            git push
+          fi
+
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: .
+
+  deploy:
+    needs: update-data
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
