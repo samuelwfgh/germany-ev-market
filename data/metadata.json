@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-19T13:16:15Z",
+  "checked_at": "2026-10-20T11:37:27Z",
   "datasets": {
     "new_registrations": {
       "label": "New registrations",
@@ -8,7 +8,7 @@
       "latest": "2026-09",
       "cadence": "monthly",
       "source": "KBA / VDA + consolidated history",
-      "note": "1491 rows. Current-month overlay skipped: GET failed: https://www.adac.de/news/neuzulassungen-kba/ (HTTP 403)"
+      "note": "1491 rows. Current-month overlay skipped: invalid literal for int() with base 10: ''"
     },
     "used_transfers": {
       "label": "Used transfers",
