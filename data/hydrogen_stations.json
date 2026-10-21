@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-20T11:37:27Z",
+  "updated_at": "2026-10-21T11:57:46Z",
   "latest": "2026-04",
   "cadence": "irregular documented snapshots; not interpolated monthly",
   "source": {
