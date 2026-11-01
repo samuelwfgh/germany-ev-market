@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-31T12:30:11Z",
+  "checked_at": "2026-11-01T13:24:47Z",
   "datasets": {
     "new_registrations": {
       "label": "New registrations",
@@ -24,7 +24,7 @@
       "latest": "2025-12",
       "cadence": "monthly with publication lag",
       "source": "BAFA",
-      "note": "Validated BAFA reports: 202507, 202508, 202509, 202510, 202511, 202512"
+      "note": "Validated BAFA reports: 202508, 202509, 202510, 202511, 202512"
     },
     "charging": {
       "label": "Charging infrastructure",
