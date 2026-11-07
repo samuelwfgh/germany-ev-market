@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-06T14:17:02Z",
-  "latest": "2026-09",
+  "updated_at": "2026-11-07T13:00:20Z",
+  "latest": "2026-10",
   "source": {
     "history": "Robbie Andrew consolidated monthly car-sales dataset (German rows; official registration sources collated)",
     "current_overlay": "ADAC rolling KBA summary when a complete latest-month parse is available",
@@ -10416,14 +10416,14 @@
       "year": 2026,
       "month": 9,
       "fuel": "NonPluginHybrid",
-      "value": 71190
+      "value": 70490
     },
     {
       "ym": "202609",
       "year": 2026,
       "month": 9,
       "fuel": "PluginHybrid",
-      "value": 27681
+      "value": 27680
     },
     {
       "ym": "202609",
@@ -10437,14 +10437,63 @@
       "year": 2026,
       "month": 9,
       "fuel": "Hydrogen",
-      "value": 0
+      "value": 2
     },
     {
       "ym": "202609",
       "year": 2026,
       "month": 9,
       "fuel": "Others",
-      "value": 1602
+      "value": 2313
+    },
+    {
+      "ym": "202610",
+      "year": 2026,
+      "month": 10,
+      "fuel": "Diesel",
+      "value": 23882
+    },
+    {
+      "ym": "202610",
+      "year": 2026,
+      "month": 10,
+      "fuel": "Petrol",
+      "value": 38516
+    },
+    {
+      "ym": "202610",
+      "year": 2026,
+      "month": 10,
+      "fuel": "NonPluginHybrid",
+      "value": 67432
+    },
+    {
+      "ym": "202610",
+      "year": 2026,
+      "month": 10,
+      "fuel": "PluginHybrid",
+      "value": 28499
+    },
+    {
+      "ym": "202610",
+      "year": 2026,
+      "month": 10,
+      "fuel": "BatteryElectric",
+      "value": 94086
+    },
+    {
+      "ym": "202610",
+      "year": 2026,
+      "month": 10,
+      "fuel": "Hydrogen",
+      "value": 6
+    },
+    {
+      "ym": "202610",
+      "year": 2026,
+      "month": 10,
+      "fuel": "Others",
+      "value": 2065
     }
   ]
 }
