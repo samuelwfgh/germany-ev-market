@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-12T15:15:34Z",
-  "latest": "2026-09-01",
+  "updated_at": "2026-11-13T14:35:28Z",
+  "latest": "2026-10-01",
   "source": {
     "name": "Bundesnetzagentur Ladesäulenregister",
     "url": "https://www.bundesnetzagentur.de/DE/Fachthemen/ElektrizitaetundGas/E-Mobilitaet/start.html"
@@ -74,6 +74,13 @@
       "normal": 157762,
       "fast": 56572,
       "power_mw": 9380
+    },
+    {
+      "date": "2026-10-01",
+      "label": "Oct 2026",
+      "normal": 160376,
+      "fast": 57737,
+      "power_mw": 9570
     }
   ]
 }

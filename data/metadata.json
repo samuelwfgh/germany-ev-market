@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-11-12T15:15:36Z",
+  "checked_at": "2026-11-13T14:35:29Z",
   "datasets": {
     "new_registrations": {
       "label": "New registrations",
@@ -29,10 +29,10 @@
     "charging": {
       "label": "Charging infrastructure",
       "status": "ok",
-      "latest": "2026-09-01",
+      "latest": "2026-10-01",
       "cadence": "monthly",
       "source": "Bundesnetzagentur",
-      "note": "157,762 normal + 56,572 fast; 9.38 GW. Historical workbook rows recognised: 0."
+      "note": "160,376 normal + 57,737 fast; 9.57 GW. Historical workbook rows recognised: 0."
     },
     "hydrogen": {
       "label": "Hydrogen stations",
