@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-11-17T16:00:05Z",
+  "checked_at": "2026-11-18T15:39:49Z",
   "datasets": {
     "new_registrations": {
       "label": "New registrations",
@@ -36,11 +36,11 @@
     },
     "hydrogen": {
       "label": "Hydrogen stations",
-      "status": "warning",
+      "status": "ok",
       "latest": "2026-04",
       "cadence": "irregular snapshots",
       "source": "IPHE / H2 Mobility",
-      "note": "Update failed; last known-good data retained. IPHE operational-station snapshot not found"
+      "note": "58 stations in operation in documented snapshot."
     }
   }
 }
